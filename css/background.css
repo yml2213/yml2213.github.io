@@ -1,0 +1,43 @@
+#web_bg {
+    /* 背景图像的地址（url括号里）  */
+    background: url(https://cdn.jsdelivr.net/gh/yml66/blog-img/img/11.jpg);
+    /* 背景图像不重复 */
+    background-repeat: no-repeat;
+    /* 背景图像大小 */
+    background-size: cover;
+  }
+
+/* 鼠标样式  */
+  body {
+    cursor: url(https://cdn.jsdelivr.net/gh/yml66/blog-img/img/%E9%BC%A0%E6%A0%871.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/yml66/blog-img/img/%E9%BC%A0%E6%A0%872.cur),
+        default;
+}
+
+
+/* 鱼塘固定宽度 */
+canvas:not(#ribbon-canvas), #web_bg {
+  margin-bottom: -0.5rem;
+  display: block;
+}
+
+.read-mode #web_bg{
+  /* 背景颜色 */
+  background:#00BBFF;
+}
+
+
+/* 文章页背景 */
+.layout_post>#post {
+  /* 以下代表白色透明度为0.3 */
+  background: rgba(255,255,255,.2);
+}
+/* 所有背景（包括首页卡片、文章页、页面页等） */
+#aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
+  /* 以下代表白色透明度为0.3 */
+  background: rgba(255,255,255,.8);
+}
