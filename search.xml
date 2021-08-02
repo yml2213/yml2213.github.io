@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>分享个Emby账号</title>
+      <link href="/2021/07/13/Ebmy%E8%B4%A6%E5%8F%B7%E5%88%86%E4%BA%AB/"/>
+      <url>/2021/07/13/Ebmy%E8%B4%A6%E5%8F%B7%E5%88%86%E4%BA%AB/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="分享一个emby账号"><a class="markdownIt-Anchor" href="#分享一个emby账号"></a> 分享一个Emby账号</h2><h3 id="你不知道emby是什么"><a class="markdownIt-Anchor" href="#你不知道emby是什么"></a> 你不知道Emby是什么？</h3><h4 id="emby简单介绍"><a class="markdownIt-Anchor" href="#emby简单介绍"></a> Emby简单介绍</h4><ol><li><p><strong>Emby</strong>（原名Media Browser）是一个<a href="https://zh.wikipedia.org/wiki/%E4%B8%BB%E5%BE%9E%E5%BC%8F%E6%9E%B6%E6%A7%8B">主从式架构</a>的<a href="https://zh.wikipedia.org/w/index.php?title=%E5%AA%92%E4%BD%93%E6%9C%8D%E5%8A%A1%E5%99%A8&amp;action=edit&amp;redlink=1">媒体服务器</a>软件，可以用来整理服务器上的视频和音频，并将音频和视频<a href="https://zh.wikipedia.org/wiki/%E6%B5%81%E5%BC%8F%E5%A4%84%E7%90%86">流式</a>传输到客户端设备。说人话就是相当于你自己的“爱优腾”，你可以在局域网、外网快捷观看你下载的视频、音频等。</p></li><li><p><strong>Emby客户端支持</strong></p><p>电脑Mac、Windows、Linux</p><p>移动端：IOS、Android、Ipad</p><p>电视盒子端：Apple TV、Android TV、Roku</p><p>Emby的默认端口是 http—8096、https–8920</p></li><li><p><strong>其他客户端:Infuse或者kodi  ----- 都支持emby服务器</strong></p></li><li><p><strong>Emby服务器</strong></p><p>emby的服务器可以在局域网中搭建,比如常见的NAS系统 群晖或者威联通等</p><p>除了局域网emby服务器,emby的服务器也可以是广域网中的</p></li></ol><h4 id="是不是有点迷糊了其实上面的都不重要"><a class="markdownIt-Anchor" href="#是不是有点迷糊了其实上面的都不重要"></a> 是不是有点迷糊了，其实上面的都不重要</h4><p>​<strong>你只需要学会怎么使用就够了</strong></p><ol><li>根据你要使用的客户端，下载相关的客户端，这个根据上面选择客户端即可</li><li>在客户端登录上本站分享的Emby账号，你就可以直接观看了，是不是超级简单</li><li>如果没有你想看的，可以在本站留言版—写下你想看的资源，我会尽力帮你下载（一般是从pt站下载的，请不要问我要下载地址，如果玩pt可以相互交流），一般只要你能在网上搜到的，我基本都可以下载到（吹个小🐂  ）223333</li></ol><h4 id="来几张截图"><a class="markdownIt-Anchor" href="#来几张截图"></a> 来几张截图</h4><p><img src="https://yml.cool:7788/images/2021/07/13/bWnd2g.png" alt="1" /></p><p><img src="https://yml.cool:7788/images/2021/07/13/xie08X.png" alt="2" /></p><p><img src="https://yml.cool:7788/images/2021/07/13/fut1IR.png" alt="" /></p><p><img src="https://yml.cool:7788/images/2021/07/13/JFTASK.png" alt="" /></p><p><img src="https://yml.cool:7788/images/2021/07/13/f110Td.png" alt="" /></p><h5 id="常见问题"><a class="markdownIt-Anchor" href="#常见问题"></a> 常见问题</h5><ol><li>你无法下载相关客户端——这个基本可以google+百度</li><li>无法观看视频——这个可能是某些视频格式限制在线播放——你可以考虑换个客户端或使用破解客户端</li><li>你是水果（苹果）系列的话，可以使用infuse</li><li>你是安卓或者盒子就更简单了，找一个破解客户端，安装即可</li><li>没有你想看的资源——留言版联系我或联系 “<a href="mailto:yml2213@icloud.com">yml2213@icloud.com</a>”</li><li>木了——    （随时补充）</li></ol><h2 id="emby账号"><a class="markdownIt-Anchor" href="#emby账号"></a> Emby账号</h2><p>账号：<span class="hide-inline"><button type="button" class="hide-button button--animated" style="background-color: #FF7242;color: #fff">点击查看账号  </button><span class="hide-content">blog </span></span></p><p>密码：<span class="hide-inline"><button type="button" class="hide-button button--animated" style="">Click  </button><span class="hide-content">menglei.xyz</span></span></p><h2 id="最后"><a class="markdownIt-Anchor" href="#最后"></a> 最后</h2><ul><li>遇到任何问题可联系我</li><li>祝你玩的愉快</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Emby </tag>
+            
+            <tag> 福利 </tag>
+            
+            <tag> PT </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker安装青龙面板2.2（薅羊毛-京东）</title>
+      <link href="/2021/06/24/docker%E5%AE%89%E8%A3%85%E9%9D%92%E9%BE%99%E9%9D%A2%E6%9D%BF2.2%EF%BC%88%E8%96%85%E7%BE%8A%E6%AF%9B-%E4%BA%AC%E4%B8%9C%EF%BC%89/"/>
+      <url>/2021/06/24/docker%E5%AE%89%E8%A3%85%E9%9D%92%E9%BE%99%E9%9D%A2%E6%9D%BF2.2%EF%BC%88%E8%96%85%E7%BE%8A%E6%AF%9B-%E4%BA%AC%E4%B8%9C%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="青龙面板是啥"><a class="markdownIt-Anchor" href="#青龙面板是啥"></a> 青龙面板是啥?</h1><ol><li>作者链接： <a href="https://github.com/whyour/qinglong">链接</a></li></ol><p><a href="https://github.com/whyour/qinglong"><img src="https://camo.githubusercontent.com/d4cf0306c9c32c8eb300e1343e561d032fb02731a6d8108d299d4de5310222f4/68747470733a2f2f71696e676c6f6e672e7768796f75722e636e2f71696e676c6f6e672e706e67" alt="img" /></a></p><h1 id="青龙wip"><a class="markdownIt-Anchor" href="#青龙wip"></a> 青龙(WIP)</h1><p>python和javaScript的定时任务管理面板</p><p><a href="https://qinglong.whyour.cn/nice.png"><img src="https://camo.githubusercontent.com/0add552e295462d4db29e634df339af36ac0c63b681eb4a7fb4c9ce7428de6db/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646f6e6174652d7765636861742d677265656e3f7374796c653d666f722d7468652d6261646765" alt="donate" /></a> <a href="https://img.shields.io/docker/cloud/build/whyour/qinglong"><img src="https://camo.githubusercontent.com/987164e5886ee0e9f47675b31838e307fbf79076687fc83afc48c3de47fd66c1/68747470733a2f2f696d672e736869656c64732e696f2f646f636b65722f636c6f75642f6275696c642f7768796f75722f71696e676c6f6e673f7374796c653d666f722d7468652d6261646765" alt="build status" /></a> <a href="https://hub.docker.com/r/whyour/qinglong"><img src="https://camo.githubusercontent.com/a213b1e49a10b7399fe49ddb071068da527225e908b30e2a156b39e62df32bdc/68747470733a2f2f696d672e736869656c64732e696f2f646f636b65722f70756c6c732f7768796f75722f71696e676c6f6e673f7374796c653d666f722d7468652d6261646765" alt="docker pulls" /></a> <a href="https://hub.docker.com/r/whyour/qinglong/tags?page=1&amp;ordering=last_updated"><img src="https://camo.githubusercontent.com/bedf287ab495e14a5ba4f3ab63fed25743512fc080ed593605303eba80c946f0/68747470733a2f2f696d672e736869656c64732e696f2f646f636b65722f762f7768796f75722f71696e676c6f6e673f7374796c653d666f722d7468652d6261646765" alt="docker version" /></a> <a href="https://hub.docker.com/r/whyour/qinglong"><img src="https://camo.githubusercontent.com/aedf78aca70d8f82a092a25a8f453a6597c0f793bd92b04bfa4bca0d9a22c01e/68747470733a2f2f696d672e736869656c64732e696f2f646f636b65722f73746172732f7768796f75722f71696e676c6f6e673f7374796c653d666f722d7468652d6261646765" alt="docker stars" /></a> <a href="https://hub.docker.com/r/whyour/qinglong"><img src="https://camo.githubusercontent.com/fc155b27799efc6a20dbb50b992c6d6bc0d397175ff74a81081a130dff10604e/68747470733a2f2f696d672e736869656c64732e696f2f646f636b65722f696d6167652d73697a652f7768796f75722f71696e676c6f6e673f7374796c653d666f722d7468652d6261646765" alt="docker image size" /></a></p><p>青龙，又名苍龙，在中国传统文化中是四象之一、<a href="https://zh.wikipedia.org/wiki/%E5%A4%A9%E4%B9%8B%E5%9B%9B%E7%81%B5">天之四灵</a>之一，根据五行学说，它是代表东方的灵兽，为青色的龙，五行属木，代表的季节是春季，八卦主震。苍龙与应龙一样，都是身具羽翼。《张果星宗》称“又有辅翼，方为真龙”。</p><p>《后汉书·律历志下》记载：日周于天，一寒一暑，四时备成，万物毕改，摄提迁次，青龙移辰，谓之岁。</p><p>在中国<a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%8D%81%E5%85%AB%E5%AE%BF">二十八宿</a>中，青龙是东方七宿（角、亢、氐、房、心、尾、箕）的总称。 在早期星宿信仰中，祂是最尊贵的天神。 但被道教信仰吸纳入其神系后，神格大跌，道教将其称为“孟章”，在不同的道经中有“帝君”、“圣将”、“神将”和“捕鬼将”等称呼，与白虎监兵神君一起，是道教的护卫天神。</p><ol start="2"><li>说人话就是脚本管理面板 --python和javaScript的脚本</li></ol><h1 id="青龙面板能干啥"><a class="markdownIt-Anchor" href="#青龙面板能干啥"></a> 青龙面板能干啥？</h1><ol><li>顾名思义——管理你的脚本</li><li>方便脚本的定时任务</li><li>可以薅羊毛（主要是京东的）</li></ol><h1 id="该怎么安装呢"><a class="markdownIt-Anchor" href="#该怎么安装呢"></a> 该怎么安装呢？</h1><ul><li><strong>准备部分</strong><ul><li>一个服务器或者电脑（<s>废话，不然怎么运行</s>）</li><li>一个灵活的小脑袋</li><li>一张不懂就问的嘴</li></ul></li><li><strong>教程部分</strong><ol><li><p>服务器或电脑安装docker （这个很简单，不会请隔壁<a href="https://www.baidu.com">百度</a>或<a href="%5BGoogle%5D(https://www.google.com/)">Google</a>）</p></li><li><p>从这里就开始有差别了，本人是（黑）群晖，docker有gui界面，比较方便操作,下面主讲gui界面操作<s>因为别的我也不会</s>  其他系统操作请看[这里](<a href="https://www.runoob.com/docker/docker-tutorial.html">Docker 教程 | 菜鸟教程 (runoob.com)</a>)</p></li><li><p>打开docker，在界面点注册表——搜索“qinglong”——选择drewnb这位大佬的<img src="https://yml.cool:7788/images/2021/06/24/image-20210624140225287.png" alt="image-20210624140225287" /></p></li><li><p>双击 或者点击“下载”  ，根据自己的需要选择版本——最好选择第二个（<s>典型我可以不用，但你不能没有</s>）</p><p>​2.2-jdc 为锁定版，以更改为本人源码（源码更改自limoe大佬），无bot，jdc随容器启动</p><p>​2.2-jdc-bot 为锁定版，以更改为本人源码（源码更改自limoe大佬），有bot，jdc随容器启动</p><p>​jdc有BUG弃用,请使用2.2-jdc或2.2-jdc-bot<img src="https://yml.cool:7788/images/2021/06/24/image-20210624140302097.png" alt="image-20210624140309726" /></p></li><li><p>下载完成后，点击映像（不同平台可能叫法不同），选择刚下载的映像</p></li><li><p>双击打开，进行设定</p></li><li><p>选择高级设定   用过的应该会操作了，我因为部署过了，所以给几张设定图片<img src="https://yml.cool:7788/images/2021/06/24/image-20210624141614626.png" alt="image-20210624141614626" /><img src="https://yml.cool:7788/images/2021/06/24/image-20210624141626293.png" alt="image-20210624141626293" /><img src="https://yml.cool:7788/images/2021/06/24/image-20210624141646356.png" alt="image-20210624141646356" /></p></li><li><p>如果还不会的，可以留言或者联系我</p></li><li><p>设定好以后会开启映像，然后就可以通过“你的IP:5700” 你的局域网ip+端口号的形式访问了，你应该会看到这个画面， 用户名：admin   密码：admin    ，然后他会提示你已经登录，初始后的密码存在于XXXXX（路径）<img src="https://yml.cool:7788/images/2021/06/24/image8035b88cf22b6eb6.png" alt="" />然后你就可以去提示的路径看到你的新密码 ，最后用新密码就能登录到面板了<img src="https://yml.cool:7788/images/2021/06/24/image-20210624142020604864d6638216c9b8a.png" alt="image-20210624142020604" /></p></li><li><p>登录以后默认的命令只有三个，你可以在这里添加新的脚本<img src="https://yml.cool:7788/images/2021/06/24/image-20210624142355036.png" alt="image-20210624142355036" /></p></li><li><p>我提供一个自用的脚本<code>ql repo https://github.com/chinnkarahoi/jd_scripts.git &quot;jd_|jx_|getJDCookie&quot; &quot;activity|backUp&quot; &quot;^jd[^_]|USER&quot;</code>  <img src="https://yml.cool:7788/images/2021/06/24/image-20210624142510975.png" alt="image-20210624142510975" />   这个脚本为京东薅羊毛脚本，具体使用步骤后面会提到</p></li><li><p>有关于添加定时的几个选项   名称：可以自定义命令： 可以用我的或者去<a href="https://www.kejiwanjia.com/zheteng/1178.html#comment-2124">这里</a>学习下       定时规则：一个叫cron表达式<s>好像是</s>  可以看看<a href="https://www.kejiwanjia.com/notes/1958.html">这里</a>，这两个是我找的在线规则网站  <a href="https://tool.lu/crontab/">网站1：解析</a>，<a href="https://cron.qqe2.com/">网站2：解析与编写都可</a> ，还不会的看<strong>准备部分</strong></p></li><li><p>用 你的 “ip+5701” 可以访问到 JDC，jdc就是一个可以扫码快速获取你的cookie的东西（应该是这样的），你应该会看到这样，<img src="https://yml.cool:7788/images/2021/06/24/image-20210624143719948.png" alt="image-20210624143738672" /></p></li><li><p>点击会出现或刷新二维码，用京东扫码后授权登录，你的cookie就可以被存放在青龙面板里，<img src="https://yml.cool:7788/images/2021/06/24/image-20210624144014688.png" alt="image-20210624144014688" /></p></li><li><p>然后去定时任务，选择你刚刚添加的  点击运行，等一会完成了<img src="https://yml.cool:7788/images/2021/06/24/image-20210624144819014.png" alt="image-20210624144819014" /></p></li></ol></li></ul><h1 id="其他问题"><a class="markdownIt-Anchor" href="#其他问题"></a> 其他问题</h1><ol><li>这样一个完整的流程下来，基本就可以运行了，每个任务都有自己的定时计划，默认是不用管他的</li><li>只要你保证主机而且docker运行，会一直给你做京东的任务，京豆也是会加好多</li><li>有其他任何问题可以留言</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> 青龙 </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我与我的黑群晖</title>
+      <link href="/2021/05/28/%E9%BB%91%E7%BE%A4%E6%99%96/"/>
+      <url>/2021/05/28/%E9%BB%91%E7%BE%A4%E6%99%96/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="黑群晖这件事也是折腾了许久"><a class="markdownIt-Anchor" href="#黑群晖这件事也是折腾了许久"></a> 黑群晖这件事也是折腾了许久</h2><p>​其实群晖这个东西在高中，甚至在大学就听说过，只恨自己是真的穷，买不起这些玩意；现在毕业了，自己也工作了，终于有点钱可以搞一下自己喜欢的东西了！</p><h4 id="那么开始吧"><a class="markdownIt-Anchor" href="#那么开始吧"></a> 那么开始吧！</h4><ol><li><p>首先，你需要一个电脑（这不是废话吗，没电脑，折腾空气吗？跟一颗喜欢折腾的心♥，不然直接白裙</p></li><li><p>然后，你需要登录这个 <a href="http://www.nasyun.com">这个</a> 或  <a href="https://www.openos.org/">这个</a> 网站，了解下黑群晖一些基本信息</p></li><li><p>然后你就可以看网站的教程自己黑了，我没啥可说的，哈哈哈哈哈哈哈；来张<a href="https://xpenology.com/forum/topic/13333-tutorialreference-6x-loaders-and-platforms/">截图</a>吧！</p><p><img src="https://cdn.jsdelivr.net/gh/yml2213/blog-img/picgo/20210528164727.png" alt="image-20210528164727413" /></p></li><li><p>其实需要注意的只有以下几点：</p><ul><li>你一定要明确自己的目的，然后再选择硬件配置，只是想简单使用，不做大型影音播放的话，最好选低功耗板U；想做家庭影音或在线视频库的需要配置高一点，最好是带核显的且大于4带的intel CPU，这样可以核显硬解很多高质量片源(10bit、h265啥的)，咱也不是特别懂，反正好像是918以上的支持核显硬解，说错了大佬轻喷</li><li>然后确认自己宽带服务商isp（公网ip有关）：<ul><li>如果你是电信—— 恭喜你，你是要到公网IP可能性最大的，当然，这个跟地区也有一定的关系</li><li>如果你是联通——也是有可能要到公网IP的，不过概率没有电信大，当然，也跟地区有关了，还有、还有、还有、最重要的   ——**感谢联通  **  <strong>感谢联通</strong>  <strong>感谢联通</strong>，让我们看到了无数小姐姐！</li><li>如果你是联通——垃圾移动······     别骂了，别骂了   虽然移动的概率是最低的，但是好像移动的可以通过ip V6来实现曲线救国，移动的小伙伴可以尝试下，我看的资料不多.</li><li>如果你是铁通、长城—— 不知道现在还有吗，自己测试吧</li></ul></li><li>然后就是折腾群晖套件、docker、影音库了    欢迎入坑，哈哈哈哈</li></ul></li><li><p>最后，黑群晖比很苹果要简单得多，只要搭建好了平台，安装系统，那就是几个小时的事</p></li><li><p>总结下：一入 <strong><s>黑果</s></strong> 群晖深似海，从此早睡是路人！</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 群晖 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Butterfly主题美化</title>
+      <link href="/2020/11/05/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E5%A4%87%E5%BF%98/"/>
+      <url>/2020/11/05/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E5%A4%87%E5%BF%98/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="butterfly主题美化备忘"><a class="markdownIt-Anchor" href="#butterfly主题美化备忘"></a> Butterfly主题美化备忘</h2><p>终于找到了自己喜欢的主题，折腾了这么久也终于可以安安稳稳的写点东西了，感觉自己想改得东西改的也有七七八八了，下一步就是找 <s>下个主题折腾</s> 安心写点东西了。</p><h2 id="那么开始吧"><a class="markdownIt-Anchor" href="#那么开始吧"></a> 那么开始吧</h2><h3 id="看板娘血小板-血小板-血小板"><a class="markdownIt-Anchor" href="#看板娘血小板-血小板-血小板"></a> 看板娘（血小板、血小板、血小板）</h3><ol><li><p>为了这个看板娘可是让我整了好久好久，Google、百度各种帖子，群里各种问问题，自己花样作死，终于到了一个自己可以勉强看得过的样子，虽然还没有做到最好，但是我已经尽我最大的努力了。后面会附上我引用的帖子和帮助过我的大佬，由于过程太复杂，不能把所有的帖子都放上，见谅吧。</p></li><li><p>下面是代码时间，基于<a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a> 3.3主题，hexo: 5.2.0,来吧，展示</p></li><li><p>在开始之前先说好哈，所有操作都是本人（小白）自己看教程加上自己的“小聪明”，对，就是马老师说的年轻人的小聪明，<s>我看到以后，“啪”的一下点进去了，很快哈</s></p></li><li><p>首先需要你找到主题配置文件，如果你严格按照Butterfly主题文档设置的话，应该在你blog的根目录中，有个名字为_config.butterfly.yml的文件，就是主题配置文件，打开，定位到 <em><strong>*inject*</strong></em> 然后就是在 <strong>bottom</strong> 项下添加如下代码：</p><pre><code> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">​#看板娘</span><br><span class="line">​ - &#x27;&lt;script data-pjax src=&quot;https://cdn.jsdelivr.net/gh/yml66/live2d/js/index.js&quot;&gt;&lt;/script&gt;&#x27;</span><br></pre></td></tr></table></figure></code></pre></li></ol><ul><li>是引用通过jsdelivr加速后的GitHub仓库的资源，反正这是我最终的解决办法了，如果你想自己整的话，可以克隆下我的仓库，或者直接去下面的链接中自己一步步的设置，如果想跟我同款的话可以直接按照上面设置。</li></ul><h3 id="看板娘有关的链接如下"><a class="markdownIt-Anchor" href="#看板娘有关的链接如下"></a> 看板娘有关的链接如下：</h3><p>​    - <a href="https://fxlabtinystar.cn/2020/08/14/Live2dAndHexo/">缘丶星</a><br />​<br />​    - <a href="https://github.com/galnetwen/Live2D">后宫学长</a><br />​<br />​    - <a href="https://github.com/JIAOBANTANG/live2d-xuexiaoban">模型出处</a><br />​<br />​    - <a href="https://fxlabtinystar.cn/2020/08/15/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%9B%A0Live2d%E9%80%A0%E6%88%90%E7%9A%84%E8%AE%BF%E9%97%AE%E5%8D%A1%E9%A1%BF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">手机端不显示</a><br />​<br />​    - 等等</p><h3 id="背景图片与鼠标样式-鼠标滑动等特效"><a class="markdownIt-Anchor" href="#背景图片与鼠标样式-鼠标滑动等特效"></a> 背景图片与鼠标样式、鼠标滑动等特效</h3><ul><li>这些都是从 <a href="https://www.antmoe.com/">小康大佬</a>大佬哪里偷来的，具体可以去哪里看的，按需选择！</li></ul><h2 id="完工睡觉"><a class="markdownIt-Anchor" href="#完工睡觉"></a> 完工，睡觉😴！</h2><p>​</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hi 好久不见</title>
+      <link href="/2020/11/05/%E9%9A%8F%E7%AC%94/"/>
+      <url>/2020/11/05/%E9%9A%8F%E7%AC%94/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="记一随笔"><a class="markdownIt-Anchor" href="#记一随笔"></a> 记一随笔</h3><ul><li>距离上次发表文章都是去年的事情了，现在除了去年的域名，什么都没剩下，自己也不知道怎么了，事情总是拿起了又放下，总感觉自己缺点啥，又总是不知道自己要啥！可能这就是“啥也不是”吧，23333</li><li>这几天心血来潮突然又把blog搞起来了，那就不要让他停下来了，总要给自己找点事情做吧，感觉自己的文字表达能力太弱了，想说啥都表达不出来，希望坚持✊ 写作可以慢慢的把自己的表达能力提高一丢丢，而且我建blog都不知道自己要干啥，可能就会当一个随笔，日记吧（正常人谁写日记！）呸，我这是blog！不叫日记！</li><li>有时候感觉自己的笑点跟别人的也不太一样，也不知道自己这次能坚持多久，不管了；加油——致自己！</li></ul><h3 id="关于blog"><a class="markdownIt-Anchor" href="#关于blog"></a> 关于blog</h3><ul><li>我想在这里分享一些自己发现的好东西：至少让自己下次找东西的时候不要找不到</li><li>然后就是如果有人看到的话，可以留言，提个意见；可能就真的会采纳你的建议，我看到的所有留言都会回复（能回复过来的话，23333）最尴尬的莫过于自己自娱自乐了吧！</li><li>就到这里吧</li></ul><h3 id="关于分享"><a class="markdownIt-Anchor" href="#关于分享"></a> 关于分享</h3><ul><li>我分享的东西如果有出处的话，我会打上出处，如果我忘记了，或者找不到了的话，并且侵犯了你的利益，请联系我，我会立即删除！</li><li>好了，该睡觉了 ！  晚安，打工人！</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
