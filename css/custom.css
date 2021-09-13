@@ -66,35 +66,35 @@
 /* 全局默认鼠标指针 */
 body,
 html{
-  cursor: url('https://yml.cool:7788/images/2021/07/08/11-3232.png'),auto !important;
+  cursor: url('https://cdn.jsdelivr.net/gh/yml2213/blog-img@master/uPic/选择.png'),auto !important;
 }
 /* 悬停图片时的鼠标指针 */
 img{
-  cursor: url('https://yml.cool:7788/images/2021/07/08/22-3232.png'),auto !important;
+  cursor: url('https://cdn.jsdelivr.net/gh/yml2213/blog-img@master/uPic/候选.png'),auto !important;
 }
 /* 选择链接标签时的鼠标指针 */
 a:hover{
-    cursor: url('https://yml.cool:7788/images/2021/07/08/22-3232.png'),auto;
+    cursor: url('https://cdn.jsdelivr.net/gh/yml2213/blog-img@master/uPic/链接选择.png'),auto;
 }
 /* 选中输入框时的鼠标指针 */
 input:hover{
-    cursor: url('https://yml.cool:7788/images/2021/07/08/33-3232.png'),auto;
+    cursor: url('https://cdn.jsdelivr.net/gh/yml2213/blog-img@master/uPic/输入.png'),auto;
 }
 /* 悬停按钮时的鼠标指针 */
 button:hover{
-    cursor: url('https://yml.cool:7788/images/2021/07/08/22-3232.png'),auto;
+    cursor: url('https://cdn.jsdelivr.net/gh/yml2213/blog-img@master/uPic/精确选择_1.png'),auto;
 }
 /* 悬停列表标签时的鼠标指针 */
 i:hover{
-    cursor: url('https://yml.cool:7788/images/2021/07/08/22-3232.png'),auto;
+    cursor: url('https://cdn.jsdelivr.net/gh/yml2213/blog-img@master/uPic/选择.png'),auto;
 }
 /* 悬停页脚链接标签（例如页脚徽标）时的鼠标指针 */
 #footer-wrap a:hover{
-      cursor: url('https://yml.cool:7788/images/2021/07/08/22-3232.png'),auto;
+      cursor: url('https://cdn.jsdelivr.net/gh/yml2213/blog-img@master/uPic/精确选择_1.png'),auto;
 }
 /* 悬停菜单栏时的鼠标指针 */
 #nav .site-page:hover{
-      cursor: url('https://yml.cool:7788/images/2021/07/08/link.png'),auto;
+      cursor: url('https://cdn.jsdelivr.net/gh/yml2213/blog-img@master/uPic/精确选择_1.png'),auto;
 }
 
 
