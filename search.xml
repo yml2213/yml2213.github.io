@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>京东薅羊毛指北</title>
+      <link href="/20210927523/"/>
+      <url>/20210927523/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2><ul><li>由于每次有人加入小分队就会问相关的一些问题，索性慢慢整理下来，也让后面加入的可以快速的了解整个流程</li><li>本文可能有很多错误以及没有写到的地方，请见笑</li><li>下文用“jd”代替“京东”</li></ul><h2 id="开始"><a class="markdownIt-Anchor" href="#开始"></a> 开始</h2><h3 id="开始接触jd羊毛是几个月前"><a class="markdownIt-Anchor" href="#开始接触jd羊毛是几个月前"></a> 开始接触jd羊毛是几个月前</h3><ul><li>当时偶然看到有人在讨论京东脚本，然后顺藤摸瓜就找到了大佬的github，然后就开始了一段薅羊毛之旅</li><li>本人是使用黑群晖-docker  青龙+傻妞+jd-qinglong短信验证</li><li>现在傻妞机器人已经具备群聊、私聊登录jd账号并获取cookie（后简称ck）的能力，后面会截图给出使用方法</li></ul><h3 id="加入小分队后要做的事"><a class="markdownIt-Anchor" href="#加入小分队后要做的事"></a> 加入小分队后要做的事</h3><ol><li><p>私聊或在群里发送“登录”，机器人会回复你相关信息，请根据提示进行操作即可登录jd并获取ck</p><ul><li>短信登录的jd后，ck有效期一般为<strong>一个月</strong>，当ck过期后，需要重新进行短信登录</li><li>ck包含你的jd信息，请在放心的地方登录账号，不要轻易随便登录陌生人的链接</li><li>ck据说可以通过更改jd密码更换</li><li><strong>记得关闭设置–支付设置–免密支付（没开通更好）</strong></li></ul></li><li><p>说说京东机器人可以做什么</p><ul><li>帮你登录jd并获取ck</li><li>你需要对机器人说 ”登录“，然后根据机器人回复输入”手机号“”验证码“，机器人会自动帮你登录，当提示登录成功后即完成，然后你可以发送查询，查询你的jd相关信息，如下图所示：<img src="https://img.menglei.xyz/images/2021/09/27/image-20210927162238334.png" alt="image-20210927162238334" /></li><li>当你的ck过期（一般一个月）后，你就需要重新按照以上步骤重新登录</li><li>机器人还具有其他小功能，例如随机图片，股市等，还在探索中（还没学透）</li></ul></li><li><p>登录后你的账号会存在与群辉–docker–qinglong中，然后青龙（qinglong）会根据其中的脚本给你做任务，最明显的特征就是<strong>京豆</strong>每天都会涨</p><ul><li>脚本做的任务非常多，但现在我还没熟悉过来（懒得研究）</li><li>有很多任务需要你<strong>手动进入一次</strong>才会执行，比方说“京东农场”、“京喜牧场”等，都需要你自己手动进入一次，选择相应的产品，脚本才能给你自动做任务</li><li>你最好需要下载的app有**“京喜”、“京东极速版”**</li></ul></li><li><p>下面按个看一下</p><ul><li><p><strong>”京东“app</strong></p><ul><li>首页搜索 “玩一玩” 这三个字，把里面所有的链接点一遍，选择商品、建立账号啥的，然后脚本会给你做这些任务<img src="https://img.menglei.xyz/images/2021/09/27/1117f69debbf7978899.jpg" alt="111" /></li><li>红包提现：京东玩一玩–领现金  ，点击即可提现到微信，第一次2元。第二次可以提现10元，第三次30元 ；反正我提了不少了<img src="https://img.menglei.xyz/images/2021/09/27/image-20210927160813550.png" alt="image-20210927160813550" /></li></ul></li><li><h4 id="京喜app"><a class="markdownIt-Anchor" href="#京喜app"></a> “京喜”app</h4><ul><li>很多红包是仅限在京喜app中使用的，你下载京喜后，登录你的京东账号，你就会发现头像下方有红包，可能是几块钱、也可能10几块，  但是你要记得，这个红包🧧周期短，可能每天过期几块钱，当你买东西花光了这里的红包，过几天他就会自动增长到几块钱（不知道卖啥的话，就买纸，哈哈哈哈哈）</li><li>京喜牧场：牧场中有鸡蛋，鸡蛋可以换相应的东西，根据自身需求换购<img src="https://img.menglei.xyz/images/2021/09/27/image-202109271552456177bd2df71d1d2ceb7.png" alt="image-20210927155245617" /></li><li>京喜工厂： 可以选择商品，脚本会自动给你跑（比京东工厂靠谱感觉）</li><li>京喜财富岛：可以换购商品，自行查看</li><li>京喜还有很多不知道的，欢迎补充</li></ul></li><li><p><strong>”京东极速版“app</strong></p><ul><li>这个app很爽呀，毕竟白嫖的多</li><li>正常下载，登录京东账号</li><li>下面有金币XXXX（个）–这里脚本每天会给你做任务，你会获得金币   10000=1元，基本每天可以获得1元左右，点击进入可以看到换红包🧧界面（推荐换购50元的）；红包属于无门槛宏红包，比如说你看到一个51元的产品，你可以花费1元+刚才的50元红包进行购买<img src="https://img.menglei.xyz/images/2021/09/27/image-20210927160151742.png" alt="image-20210927160151742" /><img src="https://img.menglei.xyz/images/2021/09/27/image-20210927160159678.png" alt="image-20210927160159678" /></li><li>别的我没怎么注意，这个金币已经很好了</li></ul></li></ul></li></ol><h3 id="你需要做的"><a class="markdownIt-Anchor" href="#你需要做的"></a> 你需要做的</h3><ul><li>其实，你需要做的很少，脚本会给你做很多</li><li>你需要将京东绑定微信，这样才能收到每天几毛钱的到账（有的人绑定了也不会收到，比较玄学）</li><li>就是默默买买买</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 薅羊毛 </tag>
+            
+            <tag> 傻妞 </tag>
+            
+            <tag> 京东 </tag>
+            
+            <tag> 指北 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>傻妞、青龙、京东短信验证配置与使用</title>
       <link href="/2021092459621/"/>
       <url>/2021092459621/</url>
@@ -16,11 +41,11 @@
             
             <tag> 青龙 </tag>
             
-            <tag> 群辉 </tag>
-            
             <tag> 傻妞 </tag>
             
             <tag> 京东 </tag>
+            
+            <tag> 群辉 </tag>
             
         </tags>
       
