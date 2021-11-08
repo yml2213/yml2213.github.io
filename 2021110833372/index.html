@@ -1,0 +1,590 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑 | 梦磊の博客</title><meta name="keywords" content="傻妞,nalan,踩坑,返利"><meta name="author" content="YML"><meta name="copyright" content="YML"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="沉迷薅羊毛无法自拔的我  赌狗一无所有 ！ 赌狗一无所有 ！ 赌狗一无所有 ！  赌狗一无所有 ！！ 赌狗一无所有 ！！ 赌狗一无所有 ！！  赌狗一无所有！！ ！赌狗一无所有！！ ！赌狗一无所有！！ ！  最近上了小姐姐的当，直接积分抽奖，积分都抽没了   啥也没抽到（让我哭一会）  赶上了小姐姐跟猫咪大佬的末班车，上了车，只能折腾最新的傻妞   最新的傻妞大佬整了个一键脚本，傻妞的安装配置也">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑">
+<meta property="og:url" content="http://menglei.xyz/2021110833372/index.html">
+<meta property="og:site_name" content="梦磊の博客">
+<meta property="og:description" content="沉迷薅羊毛无法自拔的我  赌狗一无所有 ！ 赌狗一无所有 ！ 赌狗一无所有 ！  赌狗一无所有 ！！ 赌狗一无所有 ！！ 赌狗一无所有 ！！  赌狗一无所有！！ ！赌狗一无所有！！ ！赌狗一无所有！！ ！  最近上了小姐姐的当，直接积分抽奖，积分都抽没了   啥也没抽到（让我哭一会）  赶上了小姐姐跟猫咪大佬的末班车，上了车，只能折腾最新的傻妞   最新的傻妞大佬整了个一键脚本，傻妞的安装配置也">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.menglei.xyz/images/2021/11/08/xqlPVL.jpg">
+<meta property="article:published_time" content="2021-11-08T19:15:54.000Z">
+<meta property="article:modified_time" content="2021-11-08T11:57:03.665Z">
+<meta property="article:author" content="YML">
+<meta property="article:tag" content="傻妞">
+<meta property="article:tag" content="nalan">
+<meta property="article:tag" content="踩坑">
+<meta property="article:tag" content="返利">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.menglei.xyz/images/2021/11/08/xqlPVL.jpg"><link rel="shortcut icon" href="https://img.menglei.xyz/images/2021/09/15/logo.png"><link rel="canonical" href="http://menglei.xyz/2021110833372/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-11-08 11:57:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/11/01/vue-color-avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tuku/"><i class="fa-fw fas fa-images"></i><span> 设计灵感</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-clock"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-beer"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-child"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img.menglei.xyz/images/2021/11/08/xqlPVL.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">梦磊の博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tuku/"><i class="fa-fw fas fa-images"></i><span> 设计灵感</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-clock"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-beer"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-child"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-11-08T19:15:54.000Z" title="发表于 2021-11-08 19:15:54">2021-11-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-08T11:57:03.665Z" title="更新于 2021-11-08 11:57:03">2021-11-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="沉迷薅羊毛无法自拔的我"><a class="markdownIt-Anchor" href="#沉迷薅羊毛无法自拔的我"></a> 沉迷薅羊毛无法自拔的我</h2>
+<h5 id="赌狗一无所有-赌狗一无所有-赌狗一无所有"><a class="markdownIt-Anchor" href="#赌狗一无所有-赌狗一无所有-赌狗一无所有"></a> 赌狗一无所有 ！ 赌狗一无所有 ！ 赌狗一无所有 ！</h5>
+<h5 id="赌狗一无所有-赌狗一无所有-赌狗一无所有-2"><a class="markdownIt-Anchor" href="#赌狗一无所有-赌狗一无所有-赌狗一无所有-2"></a> 赌狗一无所有 ！！ 赌狗一无所有 ！！ 赌狗一无所有 ！！</h5>
+<h5 id="赌狗一无所有-赌狗一无所有-赌狗一无所有-3"><a class="markdownIt-Anchor" href="#赌狗一无所有-赌狗一无所有-赌狗一无所有-3"></a> 赌狗一无所有！！ ！赌狗一无所有！！ ！赌狗一无所有！！ ！</h5>
+<h3 id="最近上了小姐姐的当直接积分抽奖积分都抽没了-啥也没抽到让我哭一会"><a class="markdownIt-Anchor" href="#最近上了小姐姐的当直接积分抽奖积分都抽没了-啥也没抽到让我哭一会"></a> 最近上了小姐姐的当，直接积分抽奖，积分都抽没了   啥也没抽到（让我哭一会）</h3>
+<h3 id="赶上了小姐姐跟猫咪大佬的末班车上了车只能折腾最新的傻妞"><a class="markdownIt-Anchor" href="#赶上了小姐姐跟猫咪大佬的末班车上了车只能折腾最新的傻妞"></a> 赶上了小姐姐跟猫咪大佬的末班车，上了车，只能折腾最新的傻妞</h3>
+<ol>
+<li>
+<p>最新的傻妞大佬整了个<strong>一键脚本</strong>，傻妞的安装配置也方便了许多；</p>
+<ol>
+<li>开始踩坑，一定使用<strong>root</strong>身份登陆
+<ul>
+<li>群晖      <img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/11/08/image-20211108163536303.png" alt="image-20211108163536303" /></li>
+<li>ubuntu   <img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/11/08/image-20211108163716108.png" alt="image-20211108163716108" /></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>然后按照大佬的最新教程：（可升级的一键安装版）</p>
+<ul>
+<li>国内用户升级先执行：set sillyGirl download_prefix <a target="_blank" rel="noopener" href="https://ghproxy.com/">https://ghproxy.com/</a></li>
+<li>一键安装：s=sillyGirl;a=arm64;if [[ $(uname -a | grep “x86_64”) != “” ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mo separator="true">;</mo><mi>w</mi><mi>g</mi><mi>e</mi><mi>t</mi><mi>h</mi><mi>t</mi><mi>t</mi><mi>p</mi><mi>s</mi><mo>:</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi>m</mi><mi>i</mi><mi>r</mi><mi>r</mi><mi>o</mi><mi>r</mi><mi mathvariant="normal">.</mi><mi>g</mi><mi>h</mi><mi>p</mi><mi>r</mi><mi>o</mi><mi>x</mi><mi>y</mi><mi mathvariant="normal">.</mi><mi>c</mi><mi>o</mi><mi>m</mi><mi mathvariant="normal">/</mi><mi>h</mi><mi>t</mi><mi>t</mi><mi>p</mi><mi>s</mi><mo>:</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi>g</mi><mi>i</mi><mi>t</mi><mi>h</mi><mi>u</mi><mi>b</mi><mi mathvariant="normal">.</mi><mi>c</mi><mi>o</mi><mi>m</mi><mi mathvariant="normal">/</mi><mi>c</mi><mi>d</mi><mi>l</mi><mi>e</mi><mi mathvariant="normal">/</mi></mrow><annotation encoding="application/x-tex">s;wget https://mirror.ghproxy.com/https://github.com/cdle/</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault">p</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">h</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">x</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">m</span><span class="mord">/</span><span class="mord mathdefault">h</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault">p</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">u</span><span class="mord mathdefault">b</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">m</span><span class="mord">/</span><span class="mord mathdefault">c</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord">/</span></span></span></span>{s}/releases/download/main/<span class='katex-error' title='ParseError: KaTeX parse error: Expected group after &#039;_&#039; at position 10: {s}_linux_̲'>{s}_linux_</span>a -O $s &amp;&amp; chmod 777 $s;pkill -9 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mo separator="true">;</mo></mrow><annotation encoding="application/x-tex">s;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mpunct">;</span></span></span></span>(pwd)/$s</li>
+<li>迁移傻妞只需备份/etc/sillyGirl/sillyGirl.cache，删了等于重装<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/11/08/image-20211108193744735.png" alt="image-20211108193744735" /></li>
+</ul>
+</li>
+<li>
+<p>然后会安装超级多的东西</p>
+<ul>
+<li>
+<pre class="highlight"><code class="">root@yml-ubuntu:/home/yml# sudo -i
+root@yml-ubuntu:~# ls
+snap
+root@yml-ubuntu:~# pwd
+/root
+root@yml-ubuntu:~# set sillyGirl download_prefix https://ghproxy.com/
+root@yml-ubuntu:~# s=sillyGirl;a=arm64;if [[ $(uname -a | grep &quot;x86_64&quot;) != &quot;&quot; ]];then a=amd64;fi ;if [ ! -d $s ];then mkdir $s;fi ;cd $s;wget https://mirror.ghproxy.com/https://github.com/cdle/$&#123;s&#125;/releases/download/main/$&#123;s&#125;_linux_$a -O $s &amp;&amp; chmod 777 $s;pkill -9 $s;$(pwd)/$s
+--2021-11-08 15:52:28--  https://mirror.ghproxy.com/https://github.com/cdle/sillyGirl/releases/download/main/sillyGirl_linux_amd64
+正在解析主机 mirror.ghproxy.com (mirror.ghproxy.com)... 132.226.238.71
+正在连接 mirror.ghproxy.com (mirror.ghproxy.com)|132.226.238.71|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 32643467 (31M) [application/octet-stream]
+正在保存至: “sillyGirl”
+
+sillyGirl                          100%[================================================================&gt;]  31.13M  4.15MB/s    用时 9.4s
+
+2021-11-08 15:52:39 (3.32 MB/s) - 已保存 “sillyGirl” [32643467/32643467])
+
+[GIN-debug] [WARNING] Running in &quot;debug&quot; mode. Switch to &quot;release&quot; mode in production.
+
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+2021/11/08 15:52:39.608 [W]  青龙登录失败：&#123;&quot;code&quot;:500,&quot;message&quot;:&quot;celebrate request validation failed&quot;&#125;
+
+[GIN-debug] GET    /wx/                      --&gt; github.com/cdle/sillyGirl/im/wxmp.init.0.func1 (1 handlers)
+[GIN-debug] POST   /wx/                      --&gt; github.com/cdle/sillyGirl/im/wxmp.init.0.func1 (1 handlers)
+[GIN-debug] PUT    /wx/                      --&gt; github.com/cdle/sillyGirl/im/wxmp.init.0.func1 (1 handlers)
+[GIN-debug] PATCH  /wx/                      --&gt; github.com/cdle/sillyGirl/im/wxmp.init.0.func1 (1 handlers)
+[GIN-debug] HEAD   /wx/                      --&gt; github.com/cdle/sillyGirl/im/wxmp.init.0.func1 (1 handlers)
+[GIN-debug] OPTIONS /wx/                      --&gt; github.com/cdle/sillyGirl/im/wxmp.init.0.func1 (1 handlers)
+[GIN-debug] DELETE /wx/                      --&gt; github.com/cdle/sillyGirl/im/wxmp.init.0.func1 (1 handlers)
+[GIN-debug] CONNECT /wx/                      --&gt; github.com/cdle/sillyGirl/im/wxmp.init.0.func1 (1 handlers)
+[GIN-debug] TRACE  /wx/                      --&gt; github.com/cdle/sillyGirl/im/wxmp.init.0.func1 (1 handlers)
+2021/11/08 15:52:39.622 [W]  未提供telegram机器人token
+
+[GIN-debug] POST   /wx/receive               --&gt; github.com/cdle/sillyGirl/im/wx.init.0.func3 (1 handlers)
+[GIN-debug] GET    /relay                    --&gt; github.com/cdle/sillyGirl/im/wx.init.0.func4 (1 handlers)
+[GIN-debug] GET    /wximage                  --&gt; github.com/cdle/sillyGirl/im/wx.init.0.func5 (1 handlers)
+2021/11/08 15:52:39.637 [Q] 开始尝试登录并同步消息...
+2021/11/08 15:52:39.638 [Q] 使用协议: iPad
+2021/11/08 15:52:41.276 [Q] 请使用手机QQ扫描二维码 (qrcode.png) :
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   - 这样安装后：</span><br><span class="line">     </span><br><span class="line">     - 群晖目录及文件（经测试，删除root目录下的sillyGirl不是丢失傻妞配置，仅供参考，应该所有的参数都在备份文件里：/etc/sillyGirl/sillyGirl.cache）  ![image-20211108192545957](https://img.menglei.xyz/images/2021/11/08/image-20211108192545957.png)</span><br><span class="line">     - ubuntu目录及文件 ![image-20211108193139132](https://img.menglei.xyz/images/2021/11/08/image-20211108193139132.png)</span><br><span class="line"></span><br><span class="line">4. 安装完成后，请使用qq bot账号扫码，会绑定扫码qq为bot机器人（下面叫qqbot为a）</span><br><span class="line"></span><br><span class="line">5. 绑定后；qq bot（机器人a），可以跟自己对话，使用这个模式设置命令，不知道命令的看[小姐姐这一篇（傻妞命令大全）](https://www.kejiwanjia.com/jiaocheng/zheteng/notes/31910.html)</span><br><span class="line"></span><br><span class="line">6. 我习惯先设定自己qq大号（b）为管理员；命令请查询上边；然后对接青龙、nolan等</span><br><span class="line"></span><br><span class="line">## 傻妞安装完了，下面是对接环节</span><br><span class="line"></span><br><span class="line">### 对接青龙</span><br><span class="line"></span><br><span class="line">- 请点击跳转[sillyGirl傻妞命令大全 - 科技玩家 (kejiwanjia.com)](https://www.kejiwanjia.com/jiaocheng/zheteng/notes/31910.html#i-2) （小姐姐加锚点了，跳过去默认就是，不用翻了。小姐姐yyds）</span><br><span class="line"></span><br><span class="line">- 懒人福利（是我没错了）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="对接青龙"><a class="markdownIt-Anchor" href="#对接青龙"></a> 对接青龙</h1>
+<p>set qinglong host <a target="_blank" rel="noopener" href="http://xxxxxx">http://xxxxxx</a>:xx ##一定要加&quot;http://&quot;，我第一次没加，就翻车了。<br />
+set qinglong client_id xxxxxx ##第一步创建青龙应用获取的，直接复制粘贴<br />
+set qinglong client_secret xxxxx ##第一步创建青龙应用获取的，直接复制粘贴</p>
+<h1 id="使用命令"><a class="markdownIt-Anchor" href="#使用命令"></a> 使用命令</h1>
+<p>^ql\s+config<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \s at position 7: 
+  ^ql\̲s̲+envs'>
+  ^ql\s+envs</span><br />
+^ql\s+env\s+get\s+(.+)<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \s at position 7: 
+  ^ql\̲s̲+env\s+find\s+(…'>
+  ^ql\s+env\s+find\s+(.+)</span><br />
+^ql\s+env\s+set\s+(\S+)\s+(.+)<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \s at position 7: 
+  ^ql\̲s̲+env\s+remark\s…'>
+  ^ql\s+env\s+remark\s+(\S+)\s+(.+)</span><br />
+^ql\s+env\s+disable\s+(.+)<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \s at position 7: 
+  ^ql\̲s̲+env\s+enable\s…'>
+  ^ql\s+env\s+enable\s+(.+)</span><br />
+^ql\s+crons<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \s at position 7: 
+  ^ql\̲s̲+cron\s+status\…'>
+  ^ql\s+cron\s+status\s+(.+)</span><br />
+^ql\s+cron\s+run\s+(.+)<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \s at position 7: 
+  ^ql\̲s̲+cron\s+stop\s+…'>
+  ^ql\s+cron\s+stop\s+(.+)</span><br />
+^ql\s+cron\s+enable\s+(.+)<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \s at position 7: 
+  ^ql\̲s̲+cron\s+disable…'>
+  ^ql\s+cron\s+disable\s+(.+)</span><br />
+^ql\s+cron\s+find\s+(.+)<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \s at position 7: 
+  ^ql\̲s̲+cron\s+logs\s+…'>
+  ^ql\s+cron\s+logs\s+(.+)</span><br />
+^ql\s+cron\s+hide\s+duplicate$</p>
+<h1 id="cookie状态查询命令"><a class="markdownIt-Anchor" href="#cookie状态查询命令"></a> cookie状态查询命令</h1>
+<p>ql cookie status</p>
+<h1 id="下载单个脚本"><a class="markdownIt-Anchor" href="#下载单个脚本"></a> 下载单个脚本</h1>
+<p>ql raw ?</p>
+<h1 id="运行脚本"><a class="markdownIt-Anchor" href="#运行脚本"></a> 运行脚本</h1>
+<p>ql task ?</p>
+<h1 id="拉库指令"><a class="markdownIt-Anchor" href="#拉库指令"></a> 拉库指令</h1>
+<p>ql repo ? 例：ql repo <a target="_blank" rel="noopener" href="https://github.com/cdle/carry.git">https://github.com/cdle/carry.git</a><br />
+#关闭自动隐藏任务命令：<br />
+set qinglong autoCronHideDuplicate false</p>
+<pre class="highlight"><code class="">
+### 对接[Nolan](https://github.com/NolanHzy/nvjdc)
+
+- 请看官方
+- [nolan群组](https://t.me/joinchat/dL-NJh1G6bc2OGM1)
+- 对接XDD，需要填XDDUrl和XDDToken，青龙留空！！！ &quot;Config&quot;: [] 
+- 对接青龙，需要把XDDUrl和XDDToken留空，同时填好Config里的青龙配置！ 
+- 对接傻妞(芝士)，需要把XDDUrl和XDDToken还有Config都留空。
+-  对接傻妞(芝士)：
+  -  给傻妞发 set jd_cookie nolan_addr [http://xxx.xxx.xxx.xxx](http://xxx.xxx.xxx.xxx/):xxxx 
+- 不管对接什么，首先确保网页可以打开并且没有报错！！！再问关于对接什么什么出现问题是以上提到的直接送走！
+- 大佬被无脑问题搞得跑路了，请不要在大佬群里问无脑问题，提问前请看[提问的智慧](https://github.com/HandSonic/HTQ)
+
+### 对接更多···
+
+- 更多请看[小姐姐的教程](https://www.kejiwanjia.com/jiaocheng/zheteng/notes/31910.html#i-3)
+
+
+
+## 然后就是返利设置
+
+### 我目前测试情况，欢迎友好交流
+
+#### 京东全自动转链接，淘宝需要确认
+
+#### 具体步骤还是移步[小姐姐](https://www.kejiwanjia.com/jiaocheng/zheteng/notes/31949.html)
+
+##### 1. 我来说一下遇到的坑
+
+- 你需要在群里根据群机器人的验证正版，需要使用**一键安装版本**的傻妞
+- 京东可以根据以下步骤：
+- 第一步（前提使用一键安装版本的傻妞）
+  #关闭禁用京东返利
+  set otto disable_jd false 
+  \#关闭禁用淘宝返利
+  set otto disable_tb false 
+  \#开启京东返利调试模式
+  set otto jd_debug true 
+  \#开启淘宝返利调试模式
+  set otto tb_debug true 
+  \#关闭机器人自我回复
+  set qq onself false
+- 第二步
+  重启
+- 第三步
+  发京东短链接、淘口令给你的机器人。
+  第一次配置请不要跳过，全部按照格式重新配置。
+  老用户请把js给删了。
+  配置好后只转发采集群消息，其他无视
+- ![5463083875949d4751e1cc1b4f0f865](https://img.menglei.xyz/images/2021/11/08/5463083875949d4751e1cc1b4f0f865bedd02a6cbdde351.jpg)
+
+
+
+### 对接微信（可爱猫）
+
+- 研究ing
+- 我虚心请教各位大佬了
+- 最后，欢迎来我的[博客](https://menglei.xyz/)
+
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">YML</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://menglei.xyz/2021110833372/">http://menglei.xyz/2021110833372/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://menglei.xyz" target="_blank">梦磊の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%82%BB%E5%A6%9E/">傻妞</a><a class="post-meta__tags" href="/tags/nalan/">nalan</a><a class="post-meta__tags" href="/tags/%E8%B8%A9%E5%9D%91/">踩坑</a><a class="post-meta__tags" href="/tags/%E8%BF%94%E5%88%A9/">返利</a></div><div class="post_share"><div class="social-share" data-image="https://img.menglei.xyz/images/2021/11/08/xqlPVL.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021110458491/"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/11/04/15152319_c8d1f78fbf.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">github ac跑美团天天神券</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/20210927523/" title="京东薅羊毛指北"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/09/27/-pinTitle-.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-27</div><div class="title">京东薅羊毛指北</div></div></a></div><div><a href="/2021092459621/" title="傻妞、青龙、京东短信验证配置与使用"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/09/27/c53c811f880411ebb6edd017c2d2eca2.md.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-24</div><div class="title">傻妞、青龙、京东短信验证配置与使用</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/11/01/vue-color-avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">YML</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yml66" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2213290201&amp;site=qq&amp;menu=yes" target="_blank" title="qq"><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">hi，恭喜你发现新大陆！! <br>   (o゜▽゜)o☆[BINGO!]</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%89%E8%BF%B7%E8%96%85%E7%BE%8A%E6%AF%9B%E6%97%A0%E6%B3%95%E8%87%AA%E6%8B%94%E7%9A%84%E6%88%91"><span class="toc-number">1.</span> <span class="toc-text"> 沉迷薅羊毛无法自拔的我</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B5%8C%E7%8B%97%E4%B8%80%E6%97%A0%E6%89%80%E6%9C%89-%E8%B5%8C%E7%8B%97%E4%B8%80%E6%97%A0%E6%89%80%E6%9C%89-%E8%B5%8C%E7%8B%97%E4%B8%80%E6%97%A0%E6%89%80%E6%9C%89"><span class="toc-number">1.0.0.1.</span> <span class="toc-text"> 赌狗一无所有 ！ 赌狗一无所有 ！ 赌狗一无所有 ！</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B5%8C%E7%8B%97%E4%B8%80%E6%97%A0%E6%89%80%E6%9C%89-%E8%B5%8C%E7%8B%97%E4%B8%80%E6%97%A0%E6%89%80%E6%9C%89-%E8%B5%8C%E7%8B%97%E4%B8%80%E6%97%A0%E6%89%80%E6%9C%89-2"><span class="toc-number">1.0.0.2.</span> <span class="toc-text"> 赌狗一无所有 ！！ 赌狗一无所有 ！！ 赌狗一无所有 ！！</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B5%8C%E7%8B%97%E4%B8%80%E6%97%A0%E6%89%80%E6%9C%89-%E8%B5%8C%E7%8B%97%E4%B8%80%E6%97%A0%E6%89%80%E6%9C%89-%E8%B5%8C%E7%8B%97%E4%B8%80%E6%97%A0%E6%89%80%E6%9C%89-3"><span class="toc-number">1.0.0.3.</span> <span class="toc-text"> 赌狗一无所有！！ ！赌狗一无所有！！ ！赌狗一无所有！！ ！</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E8%BF%91%E4%B8%8A%E4%BA%86%E5%B0%8F%E5%A7%90%E5%A7%90%E7%9A%84%E5%BD%93%E7%9B%B4%E6%8E%A5%E7%A7%AF%E5%88%86%E6%8A%BD%E5%A5%96%E7%A7%AF%E5%88%86%E9%83%BD%E6%8A%BD%E6%B2%A1%E4%BA%86-%E5%95%A5%E4%B9%9F%E6%B2%A1%E6%8A%BD%E5%88%B0%E8%AE%A9%E6%88%91%E5%93%AD%E4%B8%80%E4%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text"> 最近上了小姐姐的当，直接积分抽奖，积分都抽没了   啥也没抽到（让我哭一会）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%B6%E4%B8%8A%E4%BA%86%E5%B0%8F%E5%A7%90%E5%A7%90%E8%B7%9F%E7%8C%AB%E5%92%AA%E5%A4%A7%E4%BD%AC%E7%9A%84%E6%9C%AB%E7%8F%AD%E8%BD%A6%E4%B8%8A%E4%BA%86%E8%BD%A6%E5%8F%AA%E8%83%BD%E6%8A%98%E8%85%BE%E6%9C%80%E6%96%B0%E7%9A%84%E5%82%BB%E5%A6%9E"><span class="toc-number">1.2.</span> <span class="toc-text"> 赶上了小姐姐跟猫咪大佬的末班车，上了车，只能折腾最新的傻妞</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E6%8E%A5%E9%9D%92%E9%BE%99"><span class="toc-number"></span> <span class="toc-text"> 对接青龙</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number"></span> <span class="toc-text"> 使用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cookie%E7%8A%B6%E6%80%81%E6%9F%A5%E8%AF%A2%E5%91%BD%E4%BB%A4"><span class="toc-number"></span> <span class="toc-text"> cookie状态查询命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%8D%95%E4%B8%AA%E8%84%9A%E6%9C%AC"><span class="toc-number"></span> <span class="toc-text"> 下载单个脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC"><span class="toc-number"></span> <span class="toc-text"> 运行脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%89%E5%BA%93%E6%8C%87%E4%BB%A4"><span class="toc-number"></span> <span class="toc-text"> 拉库指令</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021110833372/" title="sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/11/08/xqlPVL.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑"/></a><div class="content"><a class="title" href="/2021110833372/" title="sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑">sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑</a><time datetime="2021-11-08T19:15:54.000Z" title="发表于 2021-11-08 19:15:54">2021-11-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021110458491/" title="github ac跑美团天天神券"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/11/04/15152319_c8d1f78fbf.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="github ac跑美团天天神券"/></a><div class="content"><a class="title" href="/2021110458491/" title="github ac跑美团天天神券">github ac跑美团天天神券</a><time datetime="2021-11-04T14:15:54.000Z" title="发表于 2021-11-04 14:15:54">2021-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/20210927523/" title="京东薅羊毛指北"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/09/27/-pinTitle-.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="京东薅羊毛指北"/></a><div class="content"><a class="title" href="/20210927523/" title="京东薅羊毛指北">京东薅羊毛指北</a><time datetime="2021-09-27T15:50:54.000Z" title="发表于 2021-09-27 15:50:54">2021-09-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021092459621/" title="傻妞、青龙、京东短信验证配置与使用"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/09/27/c53c811f880411ebb6edd017c2d2eca2.md.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="傻妞、青龙、京东短信验证配置与使用"/></a><div class="content"><a class="title" href="/2021092459621/" title="傻妞、青龙、京东短信验证配置与使用">傻妞、青龙、京东短信验证配置与使用</a><time datetime="2021-09-24T10:15:54.000Z" title="发表于 2021-09-24 10:15:54">2021-09-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/202108086191/" title="Cheveroto图床的搭建、使用与美化"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.menglei.xyz/images/2021/08/08/ZlGkJg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Cheveroto图床的搭建、使用与美化"/></a><div class="content"><a class="title" href="/202108086191/" title="Cheveroto图床的搭建、使用与美化">Cheveroto图床的搭建、使用与美化</a><time datetime="2021-08-08T15:15:54.000Z" title="发表于 2021-08-08 15:15:54">2021-08-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By YML</div><div class="footer_custom_text"><p><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index"><img class="icp-icon" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml.cool:7788/images/2021/06/29/6446d860dbbfe54.png"><span>  鲁ICP备2021023764号</span></a>  <br>  <br>  <a style="margin-inline:5px" target="_blank" href="https://hexo.io/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><a style="margin-inline:5px" target="_blank" href="https://butterfly.js.org/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><a style="margin-inline:5px" target="_blank" href="https://www.jsdelivr.com/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/CDN-%E5%8F%88%E6%8B%8D%E4%BA%91-blue?style=flat&logo=appveyor" title="本站使用又拍云源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://hexo-twikoo-gamma.vercel.app/',
+      region: 'ap-shandong'
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://hexo-twikoo-gamma.vercel.app/',
+      region: 'ap-shandong',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'U5krrjXnNHeUL4Rn0PHuSJjk-MdYXbMMI',
+      appKey: 'lIOIn4oWgccXxmq8YVQIYBfE',
+      placeholder: '-(゜-゜)つロ乾杯~  昵称输入QQ号的话，我就可以获取你的头像跟昵称了呦︿(￣︶￣)︿',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Twikoo' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://hexo-twikoo-gamma.vercel.app/',
+        region: 'ap-shandong',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="984492368" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><script defer src="/live2d-widget/autoload.js"></script><script defer src="https://cdn.jsdelivr.net/npm/akilar-live2d-widget/autoload.min.js"></script><script async src="/js/diytitle.js"></script><script defer src="/js/qipao.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="true"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="(ﾟ∀ﾟ),ヽ(✿ﾟ▽ﾟ)ノ,(｡◕∀◕｡),(๑ơ ₃ ơ)♥,(*´艸`*),(๑•̀ㅁ•́๑)✧,＼(◎o◎)／,⎝༼ ◕Д ◕ ༽⎠,(*´∀`)~♥,(♥д♥),ヾ (o ° ω ° O ) ノ゙" data-fontsize="15px" data-random="fals" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
