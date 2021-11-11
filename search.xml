@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>vlw机器人的配置、使用</title>
+      <link href="/2021111123099/"/>
+      <url>/2021111123099/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2><h3 id="可爱猫真的是太挑系统了"><a class="markdownIt-Anchor" href="#可爱猫真的是太挑系统了"></a> 可爱猫真的是太挑系统了</h3><ul><li>我在腾讯云的2012r2 可以正常运行，到了自己的win7、win10、win2012r2均不能正常联动微信，win10没反应，win7根2012r2闪退，我一度怀疑自己的时候，大佬支持新的微信框架了<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111191118867.png" alt="image-20211111191118867" /></li><li>真的是太好了，太好了  我是不想折腾可爱猫了，当时腾讯云部署的时候也折麽我好久，好久</li><li>废话不多说了，开搞<a href="http://a.vlmai.cn/">vlw</a></li><li>另外家庭快带也可以用奥😍 我的腾讯云已经退款了（感谢คิดถึง、以及群里用户的思路与实践）</li></ul><h2 id="正式开始"><a class="markdownIt-Anchor" href="#正式开始"></a> 正式开始</h2><h3 id="准备工作"><a class="markdownIt-Anchor" href="#准备工作"></a> 准备工作</h3><ul><li>win 平台的电脑一个（测试win7可行）✅</li><li>vlw(<a href="http://a.vlmai.cn/">http://a.vlmai.cn/</a>)框架。我下载的免费版本✅<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111192236689.png" alt="image-20211111192236689" /></li><li><a href="https://xyo.lanzoui.com/b0cknokbg">cn.sxyo.xYo_httpApi_WeChat.vlw.dl插件</a> ✅<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111192613290.png" alt="image-20211111192613290" /></li><li>以及电脑上安装微信，好像没有微信会自动给你网页链接，让你下载✅</li></ul><h3 id="开始实际操作"><a class="markdownIt-Anchor" href="#开始实际操作"></a> 开始实际操作</h3><h3 id="关于vlw的配置"><a class="markdownIt-Anchor" href="#关于vlw的配置"></a> 关于vlw的配置</h3><ul><li>首先给他安个家，最好是英文、拼音目录（我没放中文目录，没测试是否可行）</li><li>把插件放到plugin目录下<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111193323233.png" alt="image-20211111193323233" /></li><li>打开，登录微信，请忽略他的广告<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111194546361.png" alt="image-20211111194546361" /></li><li>插件页面，点击安装即可安装我们放进去的插件，然后启用，打开设置<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111194658630.png" alt="image-20211111194658630" /></li><li>插件设置<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111195311130.png" alt="image-20211111195311130" /></li><li>如果有防火墙记得开放相关端口，具体可以看小姐姐<a href="https://www.kejiwanjia.com/jiaocheng/zheteng/notes/30437.html">教程</a>（或者<a href="https://www.baidu.com/">百度一下，你就知道 (baidu.com)</a>、<a href="https://www.google.com/">Google</a>e），记得百度5分钟，群里（吹）俩小时</li></ul><h3 id="然后就是傻妞的配置了"><a class="markdownIt-Anchor" href="#然后就是傻妞的配置了"></a> 然后就是傻妞的配置了</h3><ul><li><p>首先，确定你是一键安装版（最新）的傻妞</p></li><li><p>可以 通过 “ list wx ” 命令查看你关于微信的设置（有些命令是错的，有些可能不应该有，就试一下，一起交流）<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111200713888.png" alt="image-20211111200713888" /></p><ul><li><p>第一条：第一条应该是消息回调地址（错了的话也不要说我，欢迎交流）<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111201209741.png" alt="image-20211111201209741" /></p></li><li><p>第七条：因该是一条错误的，原因是我设置指令错误（我猜的），你可以忽略</p></li><li><p>第八条： 这条是vlw地址，我的是  <a href="http://xn--eqrt2g">http://域名</a>:端口</p></li><li><p>第九条： 这个是你的token</p></li><li><p>关于以上消息的设置命令的设置（有错误请指出）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set wx vlw addr http://域名:傻妞端口/wx/receive   ##对应第一条</span><br><span class="line">set wx dynamic_ip true   ##设置动态网络地址，适用于傻妞家庭宽带而可爱猫在云服务器的情况下（根据自己情况，我是不是应该关了它）## 对应第二条</span><br><span class="line">set wx relay_mode true  ##设置图片转发模式，否则可能会出现此图片来自xx未经允许不得使用的提示（来自小姐姐教程）##对应第五条</span><br><span class="line">set wx vlw_addr http://域名:端口   ##你的vlw框架的域名+端口；服务器就ip+端口   ##对应第八条</span><br><span class="line">set wx vlw_token 你的token  ##你设置的token  ##对应第九条</span><br></pre></td></tr></table></figure></li></ul></li><li><p>完成后重启傻妞，记得打开你的xlw框架服务</p></li><li><p>如果还不行的话，那就进入拍错阶段（恭喜你，已经入坑了）</p></li></ul><h2 id="排错阶段"><a class="markdownIt-Anchor" href="#排错阶段"></a> 排错阶段</h2><h3 id="首先学习小姐姐的方法"><a class="markdownIt-Anchor" href="#首先学习小姐姐的方法"></a> 首先学习<a href="https://www.kejiwanjia.com/jiaocheng/zheteng/notes/30437.html">小姐姐的方法</a></h3><ul><li>首先访问你的傻妞远程地址，正常是404（也就框架的消息回调地址）<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111203130720.png" alt="image-20211111203130720" /></li><li>然后是你的clw框架地址，（由于没有截图）正常可能是这样的<img src="https://img.menglei.xyz/images/2021/11/11/image-20211111203251552.png" alt="image-20211111203251552" /></li><li>都能访问的话，那就给傻妞发送   list wx   查看设置；根我的垃圾图片对比下</li><li>还不通的话，那就手动启动傻妞，然后微信发送命令，看看终端输出什么<ul><li>如果收不到，说明问题很大——慢慢检查吧</li><li>如果收到了，但是是这样的，说明傻妞设置的xlw框架有错误（跟我一样的问题）<img src="https://img.menglei.xyz/images/2021/11/11/9836DC0E038BAE617A6A37FBC464EB3B.jpg" alt="9836DC0E038BAE617A6A37FBC464EB3B" /></li><li>如果·····（没见过别的了，欢迎补充）</li></ul></li></ul><h2 id="结尾"><a class="markdownIt-Anchor" href="#结尾"></a> 结尾</h2><h3 id="终于完成了教程又水了一篇"><a class="markdownIt-Anchor" href="#终于完成了教程又水了一篇"></a> 终于完成了教程（又水了一篇）</h3><ul><li>以上内容都是个人测试，如果哪里错了，请指出，有交流，才有收获</li><li>欢迎使用我搭建的<a href="https://img.menglei.xyz/">图床)</a></li><li>最后，欢迎来<a href="https://menglei.xyz/">blog</a></li><li>祝您一次成功</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 傻妞 </tag>
+            
+            <tag> vlw机器人 </tag>
+            
+            <tag> 配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑</title>
       <link href="/2021110833372/"/>
       <url>/2021110833372/</url>
