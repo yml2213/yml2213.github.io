@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://menglei.xyz/202108086191/</loc>
-    <lastmod>2021-11-13</lastmod>
-  </url>
-  <url>
     <loc>http://menglei.xyz/2021071316196/</loc>
     <lastmod>2021-11-13</lastmod>
   </url>
@@ -37,11 +33,19 @@
     <lastmod>2021-11-13</lastmod>
   </url>
   <url>
+    <loc>http://menglei.xyz/2021111150064/</loc>
+    <lastmod>2021-11-13</lastmod>
+  </url>
+  <url>
     <loc>http://menglei.xyz/2020110554071/</loc>
     <lastmod>2021-11-13</lastmod>
   </url>
   <url>
     <loc>http://menglei.xyz/2021052814177/</loc>
+    <lastmod>2021-11-13</lastmod>
+  </url>
+  <url>
+    <loc>http://menglei.xyz/202108086191/</loc>
     <lastmod>2021-11-13</lastmod>
   </url>
 </urlset> 
