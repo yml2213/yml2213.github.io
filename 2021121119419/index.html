@@ -1,20 +1,20 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻) | 梦磊の博客</title><meta name="keywords" content="ubuntu,docker,傻妞,oicq"><meta name="author" content="YML"><meta name="copyright" content="YML"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="背景  群辉”垃圾“（别的很是很香的）  没错，群辉的gui操作确实很强，超级强；但是他的包管理，他的命令限制太多了；根本没有一个好用的包管理软件，而你可能会说可以安装ipkg鸭；但是你知道吗，ipkg也是个年久失修的玩意了。 是否受够了每次修改傻妞等都要远程ssh链接到群辉里，然后从普通用户切换到root提权，然后一通cd，最后还要用vim来修改你想改的文件 是否受够了群辉”垃圾“的设定。系统">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻) | 梦磊の博客</title><meta name="keywords" content="傻妞,docker,ubuntu,oicq"><meta name="author" content="YML"><meta name="copyright" content="YML"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="背景  群辉”垃圾“（别的很是很香的）  没错，群辉的 gui 操作确实很强，超级强；但是他的包管理，他的命令限制太多了；根本没有一个好用的包管理软件，而你可能会说可以安装 ipkg 鸭；但是你知道吗，ipkg 也是个年久失修的玩意了。 是否受够了每次修改傻妞等都要远程 ssh 链接到群辉里，然后从普通用户切换到 root 提权，然后一通 cd，最后还要用 vim 来修改你想改的文件 是否受够了">
 <meta property="og:type" content="article">
 <meta property="og:title" content="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)">
-<meta property="og:url" content="http://menglei.xyz/2021121119419/index.html">
+<meta property="og:url" content="https://ymlclub.cn/2021121119419/index.html">
 <meta property="og:site_name" content="梦磊の博客">
-<meta property="og:description" content="背景  群辉”垃圾“（别的很是很香的）  没错，群辉的gui操作确实很强，超级强；但是他的包管理，他的命令限制太多了；根本没有一个好用的包管理软件，而你可能会说可以安装ipkg鸭；但是你知道吗，ipkg也是个年久失修的玩意了。 是否受够了每次修改傻妞等都要远程ssh链接到群辉里，然后从普通用户切换到root提权，然后一通cd，最后还要用vim来修改你想改的文件 是否受够了群辉”垃圾“的设定。系统">
+<meta property="og:description" content="背景  群辉”垃圾“（别的很是很香的）  没错，群辉的 gui 操作确实很强，超级强；但是他的包管理，他的命令限制太多了；根本没有一个好用的包管理软件，而你可能会说可以安装 ipkg 鸭；但是你知道吗，ipkg 也是个年久失修的玩意了。 是否受够了每次修改傻妞等都要远程 ssh 链接到群辉里，然后从普通用户切换到 root 提权，然后一通 cd，最后还要用 vim 来修改你想改的文件 是否受够了">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://yml-img.ml:521/images/2022/02/28/KRwZYL.jpg">
+<meta property="og:image" content="https://tucang.cc/api/image/show/81e3d98c251e59025044e1e00a6cf9a9">
 <meta property="article:published_time" content="2021-12-11T09:15:54.000Z">
-<meta property="article:modified_time" content="2022-06-29T03:06:07.514Z">
+<meta property="article:modified_time" content="2022-06-29T07:55:51.553Z">
 <meta property="article:author" content="YML">
-<meta property="article:tag" content="ubuntu">
-<meta property="article:tag" content="docker">
 <meta property="article:tag" content="傻妞">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="oicq">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://yml-img.ml:521/images/2022/02/28/KRwZYL.jpg"><link rel="shortcut icon" href="https://yml-img.ml:521/images/2022/02/28/logo.png"><link rel="canonical" href="http://menglei.xyz/2021121119419/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://tucang.cc/api/image/show/81e3d98c251e59025044e1e00a6cf9a9"><link rel="shortcut icon" href="https://tucang.cc/api/image/show/375dd736d1dcb007e5a46f3b92b1a51f"><link rel="canonical" href="https://ymlclub.cn/2021121119419/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -61,7 +61,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-06-29 03:06:07'
+  postUpdate: '2022-06-29 07:55:51'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -134,29 +134,29 @@
     }
     detectApple()
     document.addEventListener('pjax:complete', detectApple)})(window)</script><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="梦磊の博客" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="iron-container iron-circle"><div class="iron-box1 iron-circle iron-center"></div><div class="iron-box2 iron-circle iron-center"></div><div class="iron-box3 iron-circle iron-center"></div><div class="iron-box4 iron-circle iron-center"></div><div class="iron-box5 iron-circle iron-center"></div><div class="iron-box6 iron-circle"><div class="iron-coil" style="--i: 0"></div><div class="iron-coil" style="--i: 1"></div><div class="iron-coil" style="--i: 2"></div><div class="iron-coil" style="--i: 3"></div><div class="iron-coil" style="--i: 4"></div><div class="iron-coil" style="--i: 5"></div><div class="iron-coil" style="--i: 6"></div><div class="iron-coil" style="--i: 7"></div></div></div></div><div id="web_bg"> </div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/vue-color-avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shouye"></use></svg><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/tuku/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tubiaozhizuomoban"></use></svg><span> 设计灵感</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shijian"></use></svg><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiewenzhang"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fun"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yingshi"></use></svg><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-lianjie"></use></svg><span> 友链</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://yml-img.ml:521/images/2022/02/28/KRwZYL.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">梦磊の博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shouye"></use></svg><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/tuku/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tubiaozhizuomoban"></use></svg><span> 设计灵感</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shijian"></use></svg><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiewenzhang"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fun"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yingshi"></use></svg><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-lianjie"></use></svg><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-11T09:15:54.000Z" title="发表于 2021-12-11 09:15:54">2021-12-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-29T03:06:07.514Z" title="更新于 2022-06-29 03:06:07">2022-06-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2>
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="iron-container iron-circle"><div class="iron-box1 iron-circle iron-center"></div><div class="iron-box2 iron-circle iron-center"></div><div class="iron-box3 iron-circle iron-center"></div><div class="iron-box4 iron-circle iron-center"></div><div class="iron-box5 iron-circle iron-center"></div><div class="iron-box6 iron-circle"><div class="iron-coil" style="--i: 0"></div><div class="iron-coil" style="--i: 1"></div><div class="iron-coil" style="--i: 2"></div><div class="iron-coil" style="--i: 3"></div><div class="iron-coil" style="--i: 4"></div><div class="iron-coil" style="--i: 5"></div><div class="iron-coil" style="--i: 6"></div><div class="iron-coil" style="--i: 7"></div></div></div></div><div id="web_bg"> </div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/5d7d149a750eca73e0f91dd6d35eaefd" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shouye"></use></svg><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/tuku/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tubiaozhizuomoban"></use></svg><span> 设计灵感</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shijian"></use></svg><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiewenzhang"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fun"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yingshi"></use></svg><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-lianjie"></use></svg><span> 友链</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://tucang.cc/api/image/show/81e3d98c251e59025044e1e00a6cf9a9')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">梦磊の博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shouye"></use></svg><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/tuku/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tubiaozhizuomoban"></use></svg><span> 设计灵感</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shijian"></use></svg><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiewenzhang"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fun"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yingshi"></use></svg><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-lianjie"></use></svg><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-11T09:15:54.000Z" title="发表于 2021-12-11 09:15:54">2021-12-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-29T07:55:51.553Z" title="更新于 2022-06-29 07:55:51">2022-06-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2>
 <h3 id="群辉垃圾别的很是很香的"><a class="markdownIt-Anchor" href="#群辉垃圾别的很是很香的"></a> 群辉”垃圾“（别的很是很香的）</h3>
 <ul>
-<li>没错，群辉的gui操作确实很强，超级强；但是他的包管理，他的命令限制太多了；根本没有一个好用的包管理软件，而你可能会说可以安装ipkg鸭；但是你知道吗，ipkg也是个年久失修的玩意了。</li>
-<li>是否受够了每次修改傻妞等都要远程ssh链接到群辉里，然后从普通用户切换到root提权，然后一通cd，最后还要用vim来修改你想改的文件</li>
-<li>是否受够了群辉”垃圾“的设定。系统分区就给2.3G，动不动就爆满，满了以后还不敢乱搞。毕竟可能一搞坏了就是半条命</li>
+<li>没错，群辉的 gui 操作确实很强，超级强；但是他的包管理，他的命令限制太多了；根本没有一个好用的包管理软件，而你可能会说可以安装 ipkg 鸭；但是你知道吗，ipkg 也是个年久失修的玩意了。</li>
+<li>是否受够了每次修改傻妞等都要远程 ssh 链接到群辉里，然后从普通用户切换到 root 提权，然后一通 cd，最后还要用 vim 来修改你想改的文件</li>
+<li>是否受够了群辉”垃圾“的设定。系统分区就给 2.3G，动不动就爆满，满了以后还不敢乱搞。毕竟可能一搞坏了就是半条命</li>
 <li>是否受够了群辉是不是抽风的 wget·········</li>
 </ul>
 <h3 id="新出路"><a class="markdownIt-Anchor" href="#新出路"></a> 新出路</h3>
 <ul>
-<li>昨天在帮一个朋友远程的时候，他的群辉wget死活不行了，群辉官方说重置系统，但是他舍不得，我就帮他用docker里的ubuntu 用wget下载了一键安装板最新的傻妞，然后转移到了他安装的地方，受此启发，想到了用ubuntu接管整个傻妞跟onebot</li>
-<li>在群辉的docker里部署一个ubuntu，然后整个傻妞跟傻妞需要的node-onebot等全放ubuntu中，这样不但好管理，而且好备份等</li>
+<li>昨天在帮一个朋友远程的时候，他的群辉 wget 死活不行了，群辉官方说重置系统，但是他舍不得，我就帮他用 docker 里的 ubuntu 用 wget 下载了一键安装板最新的傻妞，然后转移到了他安装的地方，受此启发，想到了用 ubuntu 接管整个傻妞跟 onebot</li>
+<li>在群辉的 docker 里部署一个 ubuntu，然后整个傻妞跟傻妞需要的 node-onebot 等全放 ubuntu 中，这样不但好管理，而且好备份等</li>
 <li>大体思路就是这样了，其实听到这里，已经有很多人可以自己操作去了，我为了方便跟我一样的小白，还是啰嗦啰嗦，写一遍教程吧，可能有没提到的地方，也请大佬们指教了</li>
 </ul>
 <h2 id="优缺点"><a class="markdownIt-Anchor" href="#优缺点"></a> 优缺点</h2>
 <h3 id="优点"><a class="markdownIt-Anchor" href="#优点"></a> 优点</h3>
 <ul>
 <li>上面已经说了很多了，方便管理、部署、备份等</li>
-<li>不在依赖群辉的系统空间，也省去了ssh链接群辉的必要，减少了误操作引起群辉问题的几率</li>
-<li>docker的ubuntu是超级轻量的，一个完整的最新包仅仅27m，解压后仅仅73m<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/UsOx01.jpg" alt="image-20211211190502028" /><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/DXpkwd.jpg" alt="image-20211211190533044" /></li>
-<li>这就是docker的优点了，超级轻量（同时也意味着很多东西需要自己安装；不要怕，我们有apt）</li>
-<li>部署后超级轻量，占用很低<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/vudAQc.jpg" alt="image-20211211190741649" /></li>
-<li>还有就是可以吧你需要的文件夹挂载出来，这样就可以在群辉的<code>File Station</code>里面进行界面的操作了，更改傻妞配置什么的也不需要ssh使用命令修改了</li>
+<li>不在依赖群辉的系统空间，也省去了 ssh 链接群辉的必要，减少了误操作引起群辉问题的几率</li>
+<li>docker 的 ubuntu 是超级轻量的，一个完整的最新包仅仅 27m，解压后仅仅 73m<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/32c0196bdb6343b09f0c3c6d5a52a993" alt="image-20211211190502028" /><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/ef6eed1fcac7f905bf4ef4dae68a7ff2" alt="image-20211211190533044" /></li>
+<li>这就是 docker 的优点了，超级轻量（同时也意味着很多东西需要自己安装；不要怕，我们有 apt）</li>
+<li>部署后超级轻量，占用很低<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/6d7cabbbd8257961967fc7cdef958520" alt="image-20211211190741649" /></li>
+<li>还有就是可以吧你需要的文件夹挂载出来，这样就可以在群辉的<code>File Station</code>里面进行界面的操作了，更改傻妞配置什么的也不需要 ssh 使用命令修改了</li>
 <li>暂时就这么多吧······</li>
 </ul>
 <h3 id="缺点"><a class="markdownIt-Anchor" href="#缺点"></a> 缺点</h3>
@@ -166,39 +166,39 @@
 <li>暂时想不到了······</li>
 </ul>
 <h3 id="说干就干开搞"><a class="markdownIt-Anchor" href="#说干就干开搞"></a> 说干就干，开搞</h3>
-<h3 id="首先你需要搞个ubuntu"><a class="markdownIt-Anchor" href="#首先你需要搞个ubuntu"></a> 首先，你需要搞个ubuntu</h3>
+<h3 id="首先你需要搞个-ubuntu"><a class="markdownIt-Anchor" href="#首先你需要搞个-ubuntu"></a> 首先，你需要搞个 ubuntu</h3>
 <ul>
 <li>
-<p>这个直接群辉docker——注册表——搜索<code>ubuntu</code>——直接拉最新版即可（或者你喜欢那个拉那个）<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/x6FF2H.jpg" alt="image-20211211191547909" /></p>
+<p>这个直接群辉 docker——注册表——搜索<code>ubuntu</code>——直接拉最新版即可（或者你喜欢那个拉那个）<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/d4199fa7547239871b1d8aa87e1cdbeb" alt="image-20211211191547909" /></p>
 </li>
 <li>
 <p>安装时选择高级设置</p>
 <ul>
 <li>
-<p>勾选下自动启动，这样群辉重启后会自动运行这个，虽然还要手动运行傻妞<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/IYwDWh.jpg" alt="image-20211211191652126" /></p>
+<p>勾选下自动启动，这样群辉重启后会自动运行这个，虽然还要手动运行傻妞<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/45bf1c3e741bf01030810b70f5c6c171" alt="image-20211211191652126" /></p>
 </li>
 <li>
-<p>按照你的需要自行映射下文件夹（不能把整个etc目录映射，又出现奇怪的bug），这里在啰嗦下，有的还是不太明白傻妞会占用两个目录</p>
+<p>按照你的需要自行映射下文件夹（不能把整个 etc 目录映射，又出现奇怪的 bug），这里在啰嗦下，有的还是不太明白傻妞会占用两个目录</p>
 <blockquote>
 <ol>
-<li>使用一键安装板的傻妞的时候，除了在你执行的目录创建一个sillyGirl目录外，还会在<code>/etc/sliiyGirl</code>生成一个配置文件夹</li>
+<li>使用一键安装板的傻妞的时候，除了在你执行的目录创建一个 sillyGirl 目录外，还会在<code>/etc/sliiyGirl</code>生成一个配置文件夹</li>
 <li>例如：
 <ol>
 <li>我在<code>/home</code>目录下执行了傻妞一键安装的命令</li>
-<li>这样  在我的<code>/home/sillyGirl</code>下会生成傻妞的文件目录如下<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/TV18gU.jpg" alt="image-20211211192356093" /></li>
-<li>与此同时，在<code>etc/sillyGirl</code>目录下也会生成傻妞的文件夹。目录如下<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/z7g0G8.jpg" alt="image-20211211192543456" /></li>
+<li>这样 在我的<code>/home/sillyGirl</code>下会生成傻妞的文件目录如下<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/aea7976b7f7dc46c775271fb59438949" alt="image-20211211192356093" /></li>
+<li>与此同时，在<code>etc/sillyGirl</code>目录下也会生成傻妞的文件夹。目录如下<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/977e6ff47c871a472af267a4bcb5b0c0" alt="image-20211211192543456" /></li>
 <li>这就是你删除了安装目录的傻妞，配置还没丢失的原因；也就是我做这个映射的原因</li>
-<li>我的傻妞、<s>onebot</s>  oicq 都会在<code>home</code>目录执行,然后<code>/etc/sillyGirl</code>映射可以gui修改傻妞配置,root映射方便修改oicq 配置文件</li>
+<li>我的傻妞、<s>onebot</s> oicq 都会在<code>home</code>目录执行,然后<code>/etc/sillyGirl</code>映射可以 gui 修改傻妞配置,root 映射方便修改 oicq 配置文件</li>
 </ol>
 </li>
 </ol>
 </blockquote>
 <ul>
-<li><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/blZdPh300e3c17476c6c6a.png" alt="image-20211211191734629" /></li>
+<li><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/1f5c142fe5853198240894875a113295" alt="image-20211211191734629" /></li>
 </ul>
 </li>
 <li>
-<p>端口设置: 选择你想用的傻妞端口即可(同时不能与已有端口重复)<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/11/image-20211211192904163.png" alt="image-20211211192904163" /></p>
+<p>端口设置: 选择你想用的傻妞端口即可(同时不能与已有端口重复)<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/b848e7bcddd3aa6daa720a4a1d95344a" alt="image-20211211192904163" /></p>
 </li>
 </ul>
 </li>
@@ -209,50 +209,50 @@
 <h3 id="环境配置"><a class="markdownIt-Anchor" href="#环境配置"></a> 环境配置</h3>
 <h4 id="首先我们再来顺一下需要什么东西"><a class="markdownIt-Anchor" href="#首先我们再来顺一下需要什么东西"></a> 首先,我们再来顺一下需要什么东西</h4>
 <ul>
-<li>安装傻妞-----需要wget</li>
-<li><s>拉取onebot我们需要git</s>(使用oicq,暂时不需要了)</li>
-<li><s>使用node-onebot-----需要node  npm</s></li>
-<li>使用oicq-----需要node  npm</li>
-<li>修改文件----需要nano(vim)等<strong>编辑器</strong></li>
-<li>最后就是pm2----用来守护我们的oicq   sillyGirl 等程序</li>
+<li>安装傻妞-----需要 wget</li>
+<li><s>拉取 onebot 我们需要 git</s>(使用 oicq,暂时不需要了)</li>
+<li><s>使用 node-onebot-----需要 node npm</s></li>
+<li>使用 oicq-----需要 node npm</li>
+<li>修改文件----需要 nano(vim)等<strong>编辑器</strong></li>
+<li>最后就是 pm2----用来守护我们的 oicq sillyGirl 等程序</li>
 </ul>
 <h4 id="那就开始吧"><a class="markdownIt-Anchor" href="#那就开始吧"></a> 那就开始吧</h4>
 <ul>
-<li>那就先安装wget
+<li>那就先安装 wget
 <ul>
 <li>首先,执行<code>apt update</code> 更新下软件包列表</li>
-<li>在执行<code>apt -y install wget</code>这样就可以安装好了wget  ✅</li>
+<li>在执行<code>apt -y install wget</code>这样就可以安装好了 wget ✅</li>
 </ul>
 </li>
-<li>然后是git
+<li>然后是 git
 <ul>
-<li>执行<code>apt -y install git</code>这样就可以安装好了git  ✅</li>
+<li>执行<code>apt -y install git</code>这样就可以安装好了 git ✅</li>
 </ul>
 </li>
-<li>然后是node(放弃nvm方法,使用n 安装管理node)
+<li>然后是 node(放弃 nvm 方法,使用 n 安装管理 node)
 <ul>
-<li>首先<code>apt -y install npm</code>   安装一个基础版本的npm(时间有点长,耐心等待)</li>
-<li>然后我们使用npm安装<code>n</code>管理node</li>
+<li>首先<code>apt -y install npm</code> 安装一个基础版本的 npm(时间有点长,耐心等待)</li>
+<li>然后我们使用 npm 安装<code>n</code>管理 node</li>
 <li>使用<code>npm install -g n</code>安装<code>n</code></li>
-<li>然后检查<code>n</code>是否安装   <code>n --version</code><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/15/image-20211215223938327.png" alt="image-20211215223938327" /></li>
-<li>成功后就可以方便的安装node了</li>
-<li>使用<code>n lts</code> 即可安装Node.js lts (长期服务)版本—v16.13.1 版本(可能版本号不对,因为写的时候这个就是最新的)</li>
-<li>node是包含npm的,此时你可以使用<code>npm -v</code>测试是否成功(npm -v 报错的重启ubuntu即可解决)</li>
-<li>这样你的node也安装好了 ✅</li>
+<li>然后检查<code>n</code>是否安装 <code>n --version</code><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/6e5428a895ab21a25ff4c66d52966438" alt="image-20211215223938327" /></li>
+<li>成功后就可以方便的安装 node 了</li>
+<li>使用<code>n lts</code> 即可安装 Node.js lts (长期服务)版本—v16.13.1 版本(可能版本号不对,因为写的时候这个就是最新的)</li>
+<li>node 是包含 npm 的,此时你可以使用<code>npm -v</code>测试是否成功(npm -v 报错的重启 ubuntu 即可解决)</li>
+<li>这样你的 node 也安装好了 ✅</li>
 </ul>
 </li>
 <li>顺便安装几个编辑器吧
 <ul>
-<li>这个直接使用apt即可</li>
-<li>安装nano <code>apt -y install nano</code></li>
-<li>安装vim <code>apt -y install vim</code></li>
-<li>安装过程遇到选地区的请自行选择(没记错的话6 亚洲   70 上海)</li>
-<li>这样你的nano  vim  也安装好了 ✅</li>
+<li>这个直接使用 apt 即可</li>
+<li>安装 nano <code>apt -y install nano</code></li>
+<li>安装 vim <code>apt -y install vim</code></li>
+<li>安装过程遇到选地区的请自行选择(没记错的话 6 亚洲 70 上海)</li>
+<li>这样你的 nano vim 也安装好了 ✅</li>
 </ul>
 </li>
-<li>最后就是安装pm2了
+<li>最后就是安装 pm2 了
 <ul>
-<li>是不是想直接<code>apt -y install pm2</code>了    年轻了;我们需要使用npm安装
+<li>是不是想直接<code>apt -y install pm2</code>了 年轻了;我们需要使用 npm 安装
 <ul>
 <li>请执行 **<code>npm install -g pm2</code>**即可安装</li>
 <li>执行**<code>pm2 -v</code>**即可检查是否安装成功</li>
@@ -265,36 +265,36 @@
 <h4 id="这样我们先来配置傻妞"><a class="markdownIt-Anchor" href="#这样我们先来配置傻妞"></a> 这样我们先来配置傻妞</h4>
 <ul>
 <li>
-<p>首先cd到你想安装的文件夹   我安装在<code>home</code>目录下   执行 <code>cd /home</code><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/11/image-20211211201504317.png" alt="image-20211211201504317" /></p>
+<p>首先 cd 到你想安装的文件夹 我安装在<code>home</code>目录下 执行 <code>cd /home</code><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/2507a2b0642f4017a84f2fb5f3594e6d" alt="image-20211211201504317" /></p>
 </li>
 <li>
-<p><s>然后国内用户执行 <code>set sillyGirl download_prefix https://ghproxy.com/</code>(使用git代理加速下载)</s>()(已经不需要了)</p>
+<p><s>然后国内用户执行 <code>set sillyGirl download_prefix https://ghproxy.com/</code>(使用 git 代理加速下载)</s>()(已经不需要了)</p>
 </li>
 <li>
 <p>在执行下面的命令,即可一键安装傻妞到/home 目录下(同时<code>/etc/sillyGirl</code>文件夹下也会生成配置文件)(如果命令不能用请自行获取最新:<a target="_blank" rel="noopener" href="https://t.me/trialerr">tg</a>)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s=sillyGirl;a=arm64;<span class="keyword">if</span> [[ $(uname -a | grep <span class="string">&quot;x86_64&quot;</span>) != <span class="string">&quot;&quot;</span> ]];<span class="keyword">then</span> a=amd64;<span class="keyword">fi</span> ;<span class="keyword">if</span> [ ! -d <span class="variable">$s</span> ];<span class="keyword">then</span> mkdir <span class="variable">$s</span>;<span class="keyword">fi</span> ;<span class="built_in">cd</span> <span class="variable">$s</span>;wget http://github.yanyuge.workers.dev/https://github.com/cdle/<span class="variable">$&#123;s&#125;</span>/releases/download/main/<span class="variable">$&#123;s&#125;</span>_linux_<span class="variable">$a</span> -O <span class="variable">$s</span> &amp;&amp; chmod 777 <span class="variable">$s</span>;pkill -9 <span class="variable">$s</span>;$(<span class="built_in">pwd</span>)/<span class="variable">$s</span></span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>下面如果你想全新安装傻妞,可以跳过配置文件拷贝部分;你想使用原来的配置文件  请继续往下看</p>
+<p>下面如果你想全新安装傻妞,可以跳过配置文件拷贝部分;你想使用原来的配置文件 请继续往下看</p>
 </li>
 <li>
 <p>############配置文件拷贝部分开始#################</p>
 </li>
 <li>
-<p>首先删除所有生成的配置文件   <code>rm -rf /etc/sillyGirl</code> 这样你这个文件夹以及文件夹内的所有文件都会被删除</p>
+<p>首先删除所有生成的配置文件 <code>rm -rf /etc/sillyGirl</code> 这样你这个文件夹以及文件夹内的所有文件都会被删除</p>
 </li>
 <li>
-<p>然后ssh 链接到你的群辉  执行这个命令</p>
+<p>然后 ssh 链接到你的群辉 执行这个命令</p>
 <ul>
 <li>
 <p><code>cp -r /etc/sillyGirl /volume1/docker/ubunu/etc/sillyGirl</code></p>
 <blockquote>
-<p>命令解释   cp -r A B</p>
+<p>命令解释 cp -r A B</p>
 <ul>
 <li>A B 为两个地址</li>
 <li>A B 之间有空格</li>
-<li>A是需要复制的文件地址</li>
-<li>B是要复制到哪里去</li>
+<li>A 是需要复制的文件地址</li>
+<li>B 是要复制到哪里去</li>
 <li>请根据自己的<strong>实际位置</strong>修改命令</li>
 <li>具体请看 <a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-cp.html">菜鸟教程</a></li>
 </ul>
@@ -306,181 +306,182 @@
 <p>############配置文件拷贝部分结束#################</p>
 </li>
 <li>
-<p>这样你就已经把傻妞完整的迁移到了 docker里的ubuntu</p>
+<p>这样你就已经把傻妞完整的迁移到了 docker 里的 ubuntu</p>
 </li>
 <li>
-<p>执行<code>cd /home/sillyGirl</code>  cd到傻妞文件夹(根据自己目录更更改.跟我一样无需更改)</p>
+<p>执行<code>cd /home/sillyGirl</code> cd 到傻妞文件夹(根据自己目录更更改.跟我一样无需更改)</p>
 </li>
 <li>
 <p>然后执行<code>./sillyGirl</code>即可运行傻妞.与你群辉的没有差异</p>
 </li>
 <li>
-<p>还请你记得这里的傻妞http服务端口,后面的onebot需要使用(端口号要统一)<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/08/image-20211208213541658.png" alt="port" /></p>
+<p>还请你记得这里的傻妞 http 服务端口,后面的 onebot 需要使用(端口号要统一)<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/1e6a99c3f39464e414d17a2e7ca8c043" alt="port" /></p>
 </li>
 <li>
 <p>傻妞完结撒花</p>
 </li>
 </ul>
-<h4 id="然后我们配置node-onebot-oicq"><a class="markdownIt-Anchor" href="#然后我们配置node-onebot-oicq"></a> 然后我们配置<s>node-onebot</s>  oicq</h4>
+<h4 id="然后我们配置node-onebot-oicq"><a class="markdownIt-Anchor" href="#然后我们配置node-onebot-oicq"></a> 然后我们配置<s>node-onebot</s> oicq</h4>
 <ul>
 <li>
-<p><s><code>cd /home</code>  cd到你要安装的目录</s></p>
+<p><s><code>cd /home</code> cd 到你要安装的目录</s></p>
 </li>
 <li>
 <p><s>打开后克隆这个仓库</s></p>
 <p><s><code>git clone https://ghproxy.com/https://github.com/takayama-lily/node-onebot.git</code></s></p>
-<p><s>然后就会有很多文件会出现在node-onebot这个文件夹📂里</s></p>
+<p><s>然后就会有很多文件会出现在 node-onebot 这个文件夹 📂 里</s></p>
 </li>
 <li>
 <p><s>然后重点来了</s></p>
 <ul>
 <li>
-<p><s><code>cdnode-onebot</code>  cd到这个目录下</s></p>
+<p><s><code>cdnode-onebot</code> cd 到这个目录下</s></p>
 </li>
 <li>
-<p><s>新建一个config.js文件（后面命令找不到会自动新建，所以跳过）</s></p>
+<p><s>新建一个 config.js 文件（后面命令找不到会自动新建，所以跳过）</s></p>
 </li>
 <li>
-<p><s><code>nano config.js</code>使用nano编辑器打开（没有会新建）config.js文件</s></p>
+<p><s><code>nano config.js</code>使用 nano 编辑器打开（没有会新建）config.js 文件</s></p>
 </li>
 <li>
-<p><s>然后保存空文件-----按ctrl+o   然后回车确认修改的内容；然后ctrl+x 推出编辑器</s></p>
+<p><s>然后保存空文件-----按 ctrl+o 然后回车确认修改的内容；然后 ctrl+x 推出编辑器</s></p>
 </li>
 <li>
-<p><s>直接使用群辉的文本编辑器打开config.js进行编辑(ununtu的中文可能乱码,百度一堆解决办法;我就不放链接了,直接使用群辉的编辑器)</s></p>
+<p><s>直接使用群辉的文本编辑器打开 config.js 进行编辑(ununtu 的中文可能乱码,百度一堆解决办法;我就不放链接了,直接使用群辉的编辑器)</s></p>
 </li>
 <li>
 <p><s>粘贴上模板配置文件，下面引用大佬的模板及说明</s></p>
 </li>
 <li>
 <pre class="highlight"><code class="js"><span class="hljs-built_in">module</span>.exports = &#123;
-    <span class="hljs-comment">//通用配置</span>
-    <span class="hljs-attr">general</span>: &#123;
-        <span class="hljs-attr">platform</span>:           <span class="hljs-number">1</span>,      <span class="hljs-comment">//1:安卓手机 2:aPad 3:安卓手表 4:MacOS 5:iPad</span>
-        <span class="hljs-attr">debug</span>:              <span class="hljs-literal">false</span>,  <span class="hljs-comment">//开启debug</span>
-        <span class="hljs-attr">use_cqhttp_notice</span>:  <span class="hljs-literal">true</span>,   <span class="hljs-comment">//是否使用cqhttp标准的notice事件格式</span>
-        <span class="hljs-attr">host</span>:               <span class="hljs-string">"localhost"</span>,  <span class="hljs-comment">//监听主机名</span>
-        <span class="hljs-attr">port</span>:               <span class="hljs-number">5700</span>,       <span class="hljs-comment">//端口</span>
-        <span class="hljs-attr">use_http</span>:           <span class="hljs-literal">false</span>,      <span class="hljs-comment">//启用http</span>
-        <span class="hljs-attr">use_ws</span>:             <span class="hljs-literal">false</span>,      <span class="hljs-comment">//启用正向ws，和http使用相同地址和端口</span>
-        <span class="hljs-attr">access_token</span>:       <span class="hljs-string">""</span>,         <span class="hljs-comment">//访问api的token</span>
-        <span class="hljs-attr">secret</span>:             <span class="hljs-string">""</span>,         <span class="hljs-comment">//上报数据的sha1签名密钥</span>
-        <span class="hljs-attr">post_timeout</span>:       <span class="hljs-number">30</span>,         <span class="hljs-comment">//post超时时间(秒)</span>
-        <span class="hljs-attr">post_message_format</span>:<span class="hljs-string">"array"</span>,    <span class="hljs-comment">//"string"或"array"</span>
-        <span class="hljs-attr">enable_cors</span>:        <span class="hljs-literal">false</span>,      <span class="hljs-comment">//是否允许跨域请求</span>
-        <span class="hljs-attr">enable_heartbeat</span>:   <span class="hljs-literal">false</span>,      <span class="hljs-comment">//是否启用ws心跳</span>
-        <span class="hljs-attr">heartbeat_interval</span>: <span class="hljs-number">15000</span>,      <span class="hljs-comment">//ws心跳间隔(毫秒)</span>
-        <span class="hljs-attr">rate_limit_interval</span>:<span class="hljs-number">500</span>,        <span class="hljs-comment">//使用_rate_limited后缀限速调用api的排队间隔时间(毫秒)</span>
-        <span class="hljs-attr">event_filter</span>:       <span class="hljs-string">""</span>,         <span class="hljs-comment">//json格式的事件过滤器文件路径</span>
-        <span class="hljs-attr">post_url</span>: [ <span class="hljs-comment">//上报地址，可以添加多个url</span>
-            <span class="hljs-comment">// "http://your.address.com:80",</span>
-        ],
-        <span class="hljs-attr">ws_reverse_url</span>: [ <span class="hljs-comment">//反向ws地址，可以添加多个url</span>
-            <span class="hljs-string">"ws://localhost:8080/qq/receive"</span>,
-        ],
-        <span class="hljs-attr">ws_reverse_reconnect_interval</span>: <span class="hljs-number">3000</span>, <span class="hljs-comment">//反向ws断线重连间隔(毫秒)，设为负数直接不重连</span>
-        <span class="hljs-attr">ws_reverse_reconnect_on_code_1000</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">//反向ws是否在关闭状态码为1000的时候重连</span>
-    &#125;,
-    <span class="hljs-comment">//每个账号的单独配置(用于覆盖通用配置)</span>
-    <span class="hljs-number">147258369</span>: &#123;
-    &#125;,
+  <span class="hljs-comment">//通用配置</span>
+  <span class="hljs-attr">general</span>: &#123;
+    <span class="hljs-attr">platform</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">//1:安卓手机 2:aPad 3:安卓手表 4:MacOS 5:iPad</span>
+    <span class="hljs-attr">debug</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">//开启debug</span>
+    <span class="hljs-attr">use_cqhttp_notice</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">//是否使用cqhttp标准的notice事件格式</span>
+    <span class="hljs-attr">host</span>: <span class="hljs-string">"localhost"</span>, <span class="hljs-comment">//监听主机名</span>
+    <span class="hljs-attr">port</span>: <span class="hljs-number">5700</span>, <span class="hljs-comment">//端口</span>
+    <span class="hljs-attr">use_http</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">//启用http</span>
+    <span class="hljs-attr">use_ws</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">//启用正向ws，和http使用相同地址和端口</span>
+    <span class="hljs-attr">access_token</span>: <span class="hljs-string">""</span>, <span class="hljs-comment">//访问api的token</span>
+    <span class="hljs-attr">secret</span>: <span class="hljs-string">""</span>, <span class="hljs-comment">//上报数据的sha1签名密钥</span>
+    <span class="hljs-attr">post_timeout</span>: <span class="hljs-number">30</span>, <span class="hljs-comment">//post超时时间(秒)</span>
+    <span class="hljs-attr">post_message_format</span>: <span class="hljs-string">"array"</span>, <span class="hljs-comment">//"string"或"array"</span>
+    <span class="hljs-attr">enable_cors</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">//是否允许跨域请求</span>
+    <span class="hljs-attr">enable_heartbeat</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">//是否启用ws心跳</span>
+    <span class="hljs-attr">heartbeat_interval</span>: <span class="hljs-number">15000</span>, <span class="hljs-comment">//ws心跳间隔(毫秒)</span>
+    <span class="hljs-attr">rate_limit_interval</span>: <span class="hljs-number">500</span>, <span class="hljs-comment">//使用_rate_limited后缀限速调用api的排队间隔时间(毫秒)</span>
+    <span class="hljs-attr">event_filter</span>: <span class="hljs-string">""</span>, <span class="hljs-comment">//json格式的事件过滤器文件路径</span>
+    <span class="hljs-attr">post_url</span>: [
+      <span class="hljs-comment">//上报地址，可以添加多个url</span>
+      <span class="hljs-comment">// "http://your.address.com:80",</span>
+    ],
+    <span class="hljs-attr">ws_reverse_url</span>: [
+      <span class="hljs-comment">//反向ws地址，可以添加多个url</span>
+      <span class="hljs-string">"ws://localhost:8080/qq/receive"</span>,
+    ],
+    <span class="hljs-attr">ws_reverse_reconnect_interval</span>: <span class="hljs-number">3000</span>, <span class="hljs-comment">//反向ws断线重连间隔(毫秒)，设为负数直接不重连</span>
+    <span class="hljs-attr">ws_reverse_reconnect_on_code_1000</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">//反向ws是否在关闭状态码为1000的时候重连</span>
+  &#125;,
+  <span class="hljs-comment">//每个账号的单独配置(用于覆盖通用配置)</span>
+  <span class="hljs-number">147258369</span>: &#123;&#125;,
 &#125;;
 </code></pre>
 </li>
 <li>
-<p><s>我的配置如下(仅供参考)</s><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/11/image-202112112050100959cd5e1caf91b92a9.png" alt="image-20211211205010095" /></p>
+<p><s>我的配置如下(仅供参考)</s>!</p>
 </li>
 <li>
-<p><s>第一个：模式   使用1-安卓  会把自己的qq挤下线；使用2-ipad正常  其他未测试</s></p>
+<p><s>第一个：模式 使用 1-安卓 会把自己的 qq 挤下线；使用 2-ipad 正常 其他未测试</s></p>
 </li>
 <li>
-<p><s>第二个：地址  这里填你傻妞的地址（分几种请情况）</s></p>
+<p><s>第二个：地址 这里填你傻妞的地址（分几种请情况）</s></p>
 <ul>
-<li><s>（1）同一台设备  默认127.0.0.1（localhost）即可，自己改端口  （不对请指教）</s></li>
-<li><s>（2）在同一局域网中 跟我格式一样即可   填局域网ip+端口   后面默认</s></li>
-<li><s>（3）在不同的网络下，请直接填写相应的ip+端口</s></li>
+<li><s>（1）同一台设备 默认 127.0.0.1（localhost）即可，自己改端口 （不对请指教）</s></li>
+<li><s>（2）在同一局域网中 跟我格式一样即可 填局域网 ip+端口 后面默认</s></li>
+<li><s>（3）在不同的网络下，请直接填写相应的 ip+端口</s></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p><s>设置完以后    自己保存;这样onebot也部署完成了</s></p>
+<p><s>设置完以后 自己保存;这样 onebot 也部署完成了</s></p>
 </li>
 <li>
-<p><strong>oicq配置</strong> onebot的可以借鉴(基本没用了)</p>
+<p><strong>oicq 配置</strong> onebot 的可以借鉴(基本没用了)</p>
 </li>
 <li>
-<p>安装oicq  执行<code>npm i -g oicq@1</code> 即可完成安装</p>
+<p>安装 oicq 执行<code>npm i -g oicq@1</code> 即可完成安装</p>
 </li>
 <li>
-<p>安装完成oicq后，先执行<code>oicq XXXXX</code> 命令，系统会生成默认配置文件</p>
+<p>安装完成 oicq 后，先执行<code>oicq XXXXX</code> 命令，系统会生成默认配置文件</p>
 </li>
 <li>
-<p>配置文件一般在<code>/root/.oicq</code>文件夹📂内   ,名字是<code>config.js</code></p>
+<p>配置文件一般在<code>/root/.oicq</code>文件夹 📂 内 ,名字是<code>config.js</code></p>
 </li>
 <li>
 <p>我们通过<code>vim</code> <code>nano</code>等编辑器编辑这个<code>config.js</code>文件(也可以去前面映射的群辉文件夹自己更改)</p>
 </li>
 <li>
-<p>我的文件(参考下)<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/15/image-20211215231745783.png" alt="image-20211215231745783" /></p>
+<p>我的文件(参考下)<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/afbb341abd4826879f039925998faef0" alt="image-20211215231745783" /></p>
 </li>
 </ul>
-<h4 id="傻妞与onrbot-oicq-联动"><a class="markdownIt-Anchor" href="#傻妞与onrbot-oicq-联动"></a> 傻妞与<s>onrbot</s>   oicq  联动</h4>
+<h4 id="傻妞与onrbot-oicq-联动"><a class="markdownIt-Anchor" href="#傻妞与onrbot-oicq-联动"></a> 傻妞与<s>onrbot</s> oicq 联动</h4>
 <ul>
 <li>现在需要配置的基本完成了，到了关键的时候了
 <ul>
-<li>首先-----<code>cd /home/sillyGirl</code> cd到傻妞的路径下</li>
-<li>手动运行傻妞   <code>./sillyGirl</code></li>
-<li>然后可以看到傻妞开放http服务的通知，记得跟你上面config.js的端口对应上;不对应的去你映射的<code>/etc/sillyGirl</code>修改傻妞的sets.conf配置文件(没有的话新建:并按照<a target="_blank" rel="noopener" href="https://www.kejiwanjia.com/jiaocheng/zheteng/19778.html">小姐姐教程填写</a>)</li>
-<li>重新启动,直到你的端口对应起来  傻妞的端口----你ununtu开放的端口-----onebot的端口(我的图片之前的.别太较真)<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/08/image-20211208213541658.png" alt="image-20211208213541658" /></li>
-<li>然后执行 <code>oicq XXXXXXX</code> (XXXXX是你的qq号,记得跟<code>config.js</code>里的对应)</li>
+<li>首先-----<code>cd /home/sillyGirl</code> cd 到傻妞的路径下</li>
+<li>手动运行傻妞 <code>./sillyGirl</code></li>
+<li>然后可以看到傻妞开放 http 服务的通知，记得跟你上面 config.js 的端口对应上;不对应的去你映射的<code>/etc/sillyGirl</code>修改傻妞的 sets.conf 配置文件(没有的话新建:并按照<a target="_blank" rel="noopener" href="https://www.kejiwanjia.com/jiaocheng/zheteng/19778.html">小姐姐教程填写</a>)</li>
+<li>重新启动,直到你的端口对应起来 傻妞的端口----你 ununtu 开放的端口-----onebot 的端口(我的图片之前的.别太较真)<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/1e6a99c3f39464e414d17a2e7ca8c043" alt="image-20211208213541658" /></li>
+<li>然后执行 <code>oicq XXXXXXX</code> (XXXXX 是你的 qq 号,记得跟<code>config.js</code>里的对应)</li>
 <li>然后就会跑代码，然后就是扫码登录（出现连接不上服务就多试几次就可以了）</li>
-<li>然后看到反向ws代理连接成功就证明联动成功了</li>
-<li>然后，然后，然后   没有然后了；快去查询试试吧</li>
+<li>然后看到反向 ws 代理连接成功就证明联动成功了</li>
+<li>然后，然后，然后 没有然后了；快去查询试试吧</li>
 </ul>
 </li>
 </ul>
-<h4 id="使用pm2守护我们的onebot-oicq"><a class="markdownIt-Anchor" href="#使用pm2守护我们的onebot-oicq"></a> 使用pm2守护我们的<s>onebot</s>  oicq</h4>
+<h4 id="使用-pm2-守护我们的onebot-oicq"><a class="markdownIt-Anchor" href="#使用-pm2-守护我们的onebot-oicq"></a> 使用 pm2 守护我们的<s>onebot</s> oicq</h4>
 <ul>
 <li>好不容易安装好的,不能让他轻易死掉呀</li>
-<li>首先 <code>ctrl + c</code>关闭<s>onebot</s>  oicq</li>
-<li>执行 <code>pm2 start &quot;oicq QQ号&quot;</code>即可<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/15/image-20211215232202882.png" alt="image-20211215232202882" /></li>
-<li><strong>如果有多个机器人,请手动运行下 <code>oicq QQ号</code>后,确认没问题后, 在使用pm2守护</strong></li>
+<li>首先 <code>ctrl + c</code>关闭<s>onebot</s> oicq</li>
+<li>执行 <code>pm2 start &quot;oicq QQ号&quot;</code>即可<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/2db433352202fd29a8a18e917e740433" alt="image-20211215232202882" /></li>
+<li><strong>如果有多个机器人,请手动运行下 <code>oicq QQ号</code>后,确认没问题后, 在使用 pm2 守护</strong></li>
 </ul>
-<h4 id="使用pm2守护我们的傻妞"><a class="markdownIt-Anchor" href="#使用pm2守护我们的傻妞"></a> 使用pm2守护我们的傻妞</h4>
+<h4 id="使用-pm2-守护我们的傻妞"><a class="markdownIt-Anchor" href="#使用-pm2-守护我们的傻妞"></a> 使用 pm2 守护我们的傻妞</h4>
 <ul>
-<li>不能只守护onebot,傻妞也需要我们守护下呀
+<li>不能只守护 onebot,傻妞也需要我们守护下呀
 <ul>
-<li>cd 到傻妞的目录,然后<code>pm2 start &quot;./sillyGirl -d&quot;</code><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/15/image-20211215232702332.png" alt="image-20211215232702332" /></li>
-<li>确认下是否成功 <code>pm2 list</code>,看到傻妞的进程就是成功了<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/15/image-20211215232724453.png" alt="image-20211215232724453" /></li>
+<li>cd 到傻妞的目录,然后<code>pm2 start &quot;./sillyGirl&quot;</code><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/cbaee9c3dd1954ac0a41276bfb45e54b" alt="image-20211215232702332" /></li>
+<li>确认下是否成功 <code>pm2 list</code>,看到傻妞的进程就是成功了<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/bdd14b129a6c52d8e993f5488271b47b" alt="image-20211215232724453" /></li>
 </ul>
 </li>
 </ul>
-<h4 id="然后就是开启pm2开机启动与保存守护列表"><a class="markdownIt-Anchor" href="#然后就是开启pm2开机启动与保存守护列表"></a> 然后就是开启pm2开机启动与保存守护列表</h4>
+<h4 id="然后就是开启-pm2-开机启动与保存守护列表"><a class="markdownIt-Anchor" href="#然后就是开启-pm2-开机启动与保存守护列表"></a> 然后就是开启 pm2 开机启动与保存守护列表</h4>
 <ul>
-<li>执行<code>pm2 startup</code>                       可以创建pm2的开机自启动</li>
-<li>执行<code>pm2 save</code>                             保存当前应用列表</li>
-<li>执行<code>pm2 resurrect</code>                   重新加载保存的应用列表</li>
-<li>其他常用pm2命令
+<li>执行<code>pm2 startup</code> 可以创建 pm2 的开机自启动</li>
+<li>执行<code>pm2 save</code> 保存当前应用列表</li>
+<li>执行<code>pm2 resurrect</code> 重新加载保存的应用列表</li>
+<li>其他常用 pm2 命令
 <ul>
-<li><code>pm2 list</code>                              列表 PM2 启动的所有的应用程序</li>
-<li><code>pm2 monit</code>                            显示每个应用程序的CPU和内存占用情况</li>
-<li><code>pm2 logs</code>                              显示所有应用程序的日志</li>
-<li><code>pm2 logs [app-name]</code>        显示指定应用程序的日志</li>
-<li><code>pm2 stop all</code>                      停止所有的应用程序</li>
-<li><code>pm2 stop 0</code>                          停止 id为 0的指定应用程序</li>
-<li><code>pm2 restart all</code>                重启所有应用</li>
-<li><code>pm2 delete all</code>                  关闭并删除所有应用</li>
-<li><code>pm2 delete 0</code>                       删除指定应用 id</li>
+<li><code>pm2 list</code> 列表 PM2 启动的所有的应用程序</li>
+<li><code>pm2 monit</code> 显示每个应用程序的 CPU 和内存占用情况</li>
+<li><code>pm2 logs</code> 显示所有应用程序的日志</li>
+<li><code>pm2 logs [app-name]</code> 显示指定应用程序的日志</li>
+<li><code>pm2 stop all</code> 停止所有的应用程序</li>
+<li><code>pm2 stop 0</code> 停止 id 为 0 的指定应用程序</li>
+<li><code>pm2 restart all</code> 重启所有应用</li>
+<li><code>pm2 delete all</code> 关闭并删除所有应用</li>
+<li><code>pm2 delete 0</code> 删除指定应用 id</li>
 </ul>
 </li>
 </ul>
 <h4 id="完结撒花"><a class="markdownIt-Anchor" href="#完结撒花"></a> 完结撒花</h4>
 <ul>
-<li>撒花  撒花  撒花</li>
+<li>撒花 撒花 撒花</li>
 <li>终于完了呀,码字好累</li>
 </ul>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">YML</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://menglei.xyz/2021121119419/">http://menglei.xyz/2021121119419/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://menglei.xyz" target="_blank">梦磊の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ubuntu/">ubuntu</a><a class="post-meta__tags" href="/tags/docker/">docker</a><a class="post-meta__tags" href="/tags/%E5%82%BB%E5%A6%9E/">傻妞</a><a class="post-meta__tags" href="/tags/oicq/">oicq</a></div><div class="post_share"><div class="social-share" data-image="https://yml-img.ml:521/images/2022/02/28/KRwZYL.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://fastly.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">打赏请随意（点击有彩蛋）</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://yml-img.ml:521/images/2022/02/28/wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://yml-img.ml:521/images/2022/02/28/zfb.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://fastly.jsdelivr.net/npm/yml2213-mp3@1.0.0/%E5%97%B7%E5%91%9C.m4a"></audio><script defer="defer" src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021122635704/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/QiYAqX.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">记一次auto.js脚本编写</div></div></a></div><div class="next-post pull-right"><a href="/2021121050270/"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/----.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Quantumult X(圈x)系列之小白快速入门篇（转载）</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021111817870/" title="给你的docker里面跑一个ubuntu吧"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/11/18/i7M7FB.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-18</div><div class="title">给你的docker里面跑一个ubuntu吧</div></div></a></div><div><a href="/202106245593/" title="docker安装青龙面板2.2（薅羊毛-京东）"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/eCdiSb.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-24</div><div class="title">docker安装青龙面板2.2（薅羊毛-京东）</div></div></a></div><div><a href="/2021110833372/" title="sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/11/08/xqlPVL.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-08</div><div class="title">sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑</div></div></a></div><div><a href="/2021111119046/" title="vlw框架的配置、使用"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/11/11/TZUlHg.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-11</div><div class="title">vlw框架的配置、使用</div></div></a></div><div><a href="/20210927523/" title="京东薅羊毛不完全指北"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/1fqYXS.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-27</div><div class="title">京东薅羊毛不完全指北</div></div></a></div><div><a href="/2021120828455/" title="使用onebot对接新版傻妞"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/08/dc4046c9f30c15104cff5b1fd514d63e.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-08</div><div class="title">使用onebot对接新版傻妞</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/vue-color-avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">YML</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yml2213"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yml2213" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2213290201&amp;site=qq&amp;menu=yes" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://qm.qq.com/cgi-bin/qm/qr?k=fAjxG9OEA7GjmbMfuZWI702gEPzD1Ey8&amp;jump_from=webapi" target="_blank" title="Group"><i class="fas fa-users"></i></a><a class="social-icon" href="https://fastly.jsdelivr.net/gh/yml2213/yml2213.github.io/atom.xml" target="_blank" title="rss"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">哇,又有大佬来看我の博客啦！ <br>  <img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/lKSaL6.gif"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text"> 背景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BE%A4%E8%BE%89%E5%9E%83%E5%9C%BE%E5%88%AB%E7%9A%84%E5%BE%88%E6%98%AF%E5%BE%88%E9%A6%99%E7%9A%84"><span class="toc-number">1.1.</span> <span class="toc-text"> 群辉”垃圾“（别的很是很香的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%87%BA%E8%B7%AF"><span class="toc-number">1.2.</span> <span class="toc-text"> 新出路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text"> 优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">2.1.</span> <span class="toc-text"> 优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-number">2.2.</span> <span class="toc-text"> 缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E5%B9%B2%E5%B0%B1%E5%B9%B2%E5%BC%80%E6%90%9E"><span class="toc-number">2.3.</span> <span class="toc-text"> 说干就干，开搞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E4%BD%A0%E9%9C%80%E8%A6%81%E6%90%9E%E4%B8%AAubuntu"><span class="toc-number">2.4.</span> <span class="toc-text"> 首先，你需要搞个ubuntu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">2.5.</span> <span class="toc-text"> 环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E6%88%91%E4%BB%AC%E5%86%8D%E6%9D%A5%E9%A1%BA%E4%B8%80%E4%B8%8B%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF"><span class="toc-number">2.5.1.</span> <span class="toc-text"> 首先,我们再来顺一下需要什么东西</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%82%A3%E5%B0%B1%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="toc-number">2.5.2.</span> <span class="toc-text"> 那就开始吧</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%99%E6%A0%B7%E6%88%91%E4%BB%AC%E5%85%88%E6%9D%A5%E9%85%8D%E7%BD%AE%E5%82%BB%E5%A6%9E"><span class="toc-number">2.5.3.</span> <span class="toc-text"> 这样我们先来配置傻妞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%84%B6%E5%90%8E%E6%88%91%E4%BB%AC%E9%85%8D%E7%BD%AEnode-onebot-oicq"><span class="toc-number">2.5.4.</span> <span class="toc-text"> 然后我们配置node-onebot  oicq</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%82%BB%E5%A6%9E%E4%B8%8Eonrbot-oicq-%E8%81%94%E5%8A%A8"><span class="toc-number">2.5.5.</span> <span class="toc-text"> 傻妞与onrbot   oicq  联动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8pm2%E5%AE%88%E6%8A%A4%E6%88%91%E4%BB%AC%E7%9A%84onebot-oicq"><span class="toc-number">2.5.6.</span> <span class="toc-text"> 使用pm2守护我们的onebot  oicq</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8pm2%E5%AE%88%E6%8A%A4%E6%88%91%E4%BB%AC%E7%9A%84%E5%82%BB%E5%A6%9E"><span class="toc-number">2.5.7.</span> <span class="toc-text"> 使用pm2守护我们的傻妞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%84%B6%E5%90%8E%E5%B0%B1%E6%98%AF%E5%BC%80%E5%90%AFpm2%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8E%E4%BF%9D%E5%AD%98%E5%AE%88%E6%8A%A4%E5%88%97%E8%A1%A8"><span class="toc-number">2.5.8.</span> <span class="toc-text"> 然后就是开启pm2开机启动与保存守护列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%8C%E7%BB%93%E6%92%92%E8%8A%B1"><span class="toc-number">2.5.9.</span> <span class="toc-text"> 完结撒花</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022041231679/" title="如何写一个简单的签到脚本(小白向)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/04/11/technology-3389893_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何写一个简单的签到脚本(小白向)"/></a><div class="content"><a class="title" href="/2022041231679/" title="如何写一个简单的签到脚本(小白向)">如何写一个简单的签到脚本(小白向)</a><time datetime="2022-04-12T17:00:54.000Z" title="发表于 2022-04-12 17:00:54">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022020945082/" title="通过浏览器获取cookie"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/xhhMQG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通过浏览器获取cookie"/></a><div class="content"><a class="title" href="/2022020945082/" title="通过浏览器获取cookie">通过浏览器获取cookie</a><time datetime="2022-02-09T10:00:54.000Z" title="发表于 2022-02-09 10:00:54">2022-02-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021123119294/" title="我的第一个Java Scripts脚本"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/31/technology-1283624_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一个Java Scripts脚本"/></a><div class="content"><a class="title" href="/2021123119294/" title="我的第一个Java Scripts脚本">我的第一个Java Scripts脚本</a><time datetime="2021-12-31T14:20:54.000Z" title="发表于 2021-12-31 14:20:54">2021-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021122635704/" title="记一次auto.js脚本编写"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/QiYAqX.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记一次auto.js脚本编写"/></a><div class="content"><a class="title" href="/2021122635704/" title="记一次auto.js脚本编写">记一次auto.js脚本编写</a><time datetime="2021-12-26T11:15:54.000Z" title="发表于 2021-12-26 11:15:54">2021-12-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021121119419/" title="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/KRwZYL.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)"/></a><div class="content"><a class="title" href="/2021121119419/" title="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)">巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)</a><time datetime="2021-12-11T09:15:54.000Z" title="发表于 2021-12-11 09:15:54">2021-12-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright"><span>&copy;2019 - 2022</span><svg style="width:1.5em; height:1.5em" aria-hidden="true"><use xlink:href="#icon-Butterfly"></use></svg><span>YML</span></div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/鲁ICP备-2021023764号-d021d6?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3JpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDExNi4xNjQ2NTUsIDIwMjEvMDEvMjYtMTU6NDE6MjAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6OTJhYTAzNGEtZTA5Ny03NzQ5LWFiNWEtN2UyYjEyNTE5NmY2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU0OUI0MzdBNEU3QTExRUNBRUIzOEUzRjg5QTdFMTE3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU0OUI0Mzc5NEU3QTExRUNBRUIzOEUzRjg5QTdFMTE3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NDkzYjU2ZS1jNjJjLWNiNGYtYTMwZi1jOWQ5NzBjY2U5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTJhYTAzNGEtZTA5Ny03NzQ5LWFiNWEtN2UyYjEyNTE5NmY2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+4ZgnQgAABOtJREFUeNqslX9sE2UYx793vV6vt3a9/lpX10n2Q2ATxpShgmMIGgHDBs6EgDEqBhE0SCDyh4Z/CMbAPzOiQcyEKIQYFRKSbSGMOaPAIhgDceA2Rhnb2rF1/bH22rv2rnf1LeAUg/Ef3tzzXN6893zyvfd5nvelcrkcHuRg8i6LobuTQuILAOUiBk914pHVW4qlG5eafjz165sZOcs+8/y8VkdNzcm+E98EqhqbAbaCfB9C5NrJ2/HOmTvuAO8zlhLb/NWW7U05eZAbzfAw2AVIx/s/lQ+2fVz/bHkbWT9MrP3fgfR9YFz354e6X93UtTaZHuZmWgzYyE1gMzeKRQs9cCz0MBs3nXmxc//ePNT0f0Bf5tKe058ci2P9xnK87kvA9sVVRAY0RPwa4qsOYrXWi21H1qH1hIrcwJff5wX8F7BqpH2Xv2FVb4NQ6cE7rl4MHUuALhWgiQqQ0UG5BfRsPY+1/CV4nn4Mz63qaJw8d+gGiZ11DzDV5weTPm1pG7CyF8fqsLJORPIygY3EQQkmmKIa0ucnYCxzgkvKCH99Ac3LFXRfr8bRs5rXQqXMjrLX7lHo03/5oUWnzCTVEgrFMSTGAaOmAtE0qAoe7HwB9K0UWOgID8kocWQAikIsScPkZloIo2waONx/5iUlGKy3W1hSQybkvF646ouRRA7iIie09T5YdteC31YD2s2jaL4LKYlsA6lhbxEPBC4vjY72vDEN5C32qoSootydJlvsROcFHsyyQkQaZ0ALiqB+T0HqmIA6NAV2Zz0c2+fh+JHY7Zqtncsg5Q8hHfD7poF6dKwxEWMwxyfC9wSLA0cL8NPeAGoXeGHjrZCuxqCHMkj3xmANTuHKnmvYf8QET62AuSVxhIMZqNH++mkgzaQEMUGjcPIa1i7XkFUtUNvH4fz2N9AlRihuA/QiBq5lXni7byDcegUpxYDmJiOskUGICQaMlTZOt56Zf7iLnnWzSfOUYMOTIlpK3DgQrII6ehVOEkDbzJCJSrGyCEG7F9/RJHmFAjY8FULW6oPwKAXeXtoxDSQai3KJHMb8IuZUDeHD9+Zj184GtItzgYSKJikCh0DjeIeVJIokAXbseJvDgspBjA2SaVqCnhXnTQMZQanLWj1Qx1UEQn14t96E5q4CdJ+S0E/XYEX1dXjNYWTbSqDEZJTO5vHBipuY6LkJSeXAuVjCYGfnWVT++MokL74cubDvmDyuIBMmtRcYRsWaWpg8pKu0CHkYJEMybGUOYIaTrIcxdHIAstUFS7kF5mIetsr1S1j7Cz//BYSBMr0SvdLymZaWbeGz42AKciheUgUtKkOVUqB5osRRAIo1ItLjR1ZjYKurgJpGxDarYR1r5LsI8M4vZ8I68XIwPW6WOY9u8yyrhBZPkR5OkCJlYWAFsCQPylQSqUAMHFHJ+TzITElIB8WcuTQJheyuw363bAw4l7f3ix63FhtJFjNxHTpRoGsGpCdF0hE6lEgcycFJUAbj7ZZL3wrDaKbhWex1sbz4FrG/T2yTc0H+tSY2dnafEvhjA2uQCninCdkUaS9KhSEzhayswDrbBQNngCInQRe4QNmLR7JMRSvHuz+65wq4OyRiW2N9nt1yfHJlRh1d8lC1u1oXKQsn0A7GbIV4CyNmtyAxRQ2Xo/5Qlzwc65yxGPo/z0PqQV9SfwowADr3CMhT4y5gAAAAAElFTkSuQmCC" title="本站已备案"></a>  <a style="margin-inline:5px" target="_blank" href="https://hexo.io/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><a style="margin-inline:5px" target="_blank" href="https://butterfly.js.org/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><a style="margin-inline:5px" target="_blank" href="https://www.jsdelivr.com/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/CDN-%E5%8F%88%E6%8B%8D%E4%BA%91-blue?style=flat&logo=appveyor" title="本站使用又拍云源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script async="async">var preloader = {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">YML</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ymlclub.cn/2021121119419/">https://ymlclub.cn/2021121119419/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ymlclub.cn" target="_blank">梦磊の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%82%BB%E5%A6%9E/">傻妞</a><a class="post-meta__tags" href="/tags/docker/">docker</a><a class="post-meta__tags" href="/tags/ubuntu/">ubuntu</a><a class="post-meta__tags" href="/tags/oicq/">oicq</a></div><div class="post_share"><div class="social-share" data-image="https://tucang.cc/api/image/show/81e3d98c251e59025044e1e00a6cf9a9" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://fastly.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">打赏请随意（点击有彩蛋）</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://tucang.cc/api/image/show/820effc7bb31d11ddbf58d85917426c2" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://tucang.cc/api/image/show/bc499b73802cd2cfa8ebdb79a5f3a23d" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://fastly.jsdelivr.net/npm/yml2213-mp3@1.0.0/%E5%97%B7%E5%91%9C.m4a"></audio><script defer="defer" src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021122635704/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/e8b03c4e1f4aaf8b0d81c3b876d0a965" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">记一次auto.js脚本编写</div></div></a></div><div class="next-post pull-right"><a href="/2021120142806/"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/31759f5c04caabb0e6598ee0acd6fd26" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Cron解析拓展</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021110833372/" title="sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/11be12ece9f28f0be198fe436a687279" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-08</div><div class="title">sillyGirl（一键脚本）配置、使用、以及对接Nolan、青龙、以及设置返利的一些坑</div></div></a></div><div><a href="/2021111119046/" title="vlw框架的配置、使用"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/6766c446a675e7dd7e38aaac6155f817" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-11</div><div class="title">vlw框架的配置、使用</div></div></a></div><div><a href="/20210927523/" title="京东薅羊毛不完全指北"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/bd21d9992ac1021868948bae8a2202a6" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-27</div><div class="title">京东薅羊毛不完全指北</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/5d7d149a750eca73e0f91dd6d35eaefd" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">YML</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yml2213"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yml2213" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2213290201&amp;site=qq&amp;menu=yes" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://qm.qq.com/cgi-bin/qm/qr?k=fAjxG9OEA7GjmbMfuZWI702gEPzD1Ey8&amp;jump_from=webapi" target="_blank" title="Group"><i class="fas fa-users"></i></a><a class="social-icon" href="https://fastly.jsdelivr.net/gh/yml2213/yml2213.github.io/atom.xml" target="_blank" title="rss"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">哇,又有大佬来看我の博客啦！ <br>  <img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/lKSaL6.gif"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text"> 背景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BE%A4%E8%BE%89%E5%9E%83%E5%9C%BE%E5%88%AB%E7%9A%84%E5%BE%88%E6%98%AF%E5%BE%88%E9%A6%99%E7%9A%84"><span class="toc-number">1.1.</span> <span class="toc-text"> 群辉”垃圾“（别的很是很香的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%87%BA%E8%B7%AF"><span class="toc-number">1.2.</span> <span class="toc-text"> 新出路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text"> 优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">2.1.</span> <span class="toc-text"> 优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-number">2.2.</span> <span class="toc-text"> 缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E5%B9%B2%E5%B0%B1%E5%B9%B2%E5%BC%80%E6%90%9E"><span class="toc-number">2.3.</span> <span class="toc-text"> 说干就干，开搞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E4%BD%A0%E9%9C%80%E8%A6%81%E6%90%9E%E4%B8%AA-ubuntu"><span class="toc-number">2.4.</span> <span class="toc-text"> 首先，你需要搞个 ubuntu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">2.5.</span> <span class="toc-text"> 环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E6%88%91%E4%BB%AC%E5%86%8D%E6%9D%A5%E9%A1%BA%E4%B8%80%E4%B8%8B%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF"><span class="toc-number">2.5.1.</span> <span class="toc-text"> 首先,我们再来顺一下需要什么东西</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%82%A3%E5%B0%B1%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="toc-number">2.5.2.</span> <span class="toc-text"> 那就开始吧</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%99%E6%A0%B7%E6%88%91%E4%BB%AC%E5%85%88%E6%9D%A5%E9%85%8D%E7%BD%AE%E5%82%BB%E5%A6%9E"><span class="toc-number">2.5.3.</span> <span class="toc-text"> 这样我们先来配置傻妞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%84%B6%E5%90%8E%E6%88%91%E4%BB%AC%E9%85%8D%E7%BD%AEnode-onebot-oicq"><span class="toc-number">2.5.4.</span> <span class="toc-text"> 然后我们配置node-onebot oicq</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%82%BB%E5%A6%9E%E4%B8%8Eonrbot-oicq-%E8%81%94%E5%8A%A8"><span class="toc-number">2.5.5.</span> <span class="toc-text"> 傻妞与onrbot oicq 联动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-pm2-%E5%AE%88%E6%8A%A4%E6%88%91%E4%BB%AC%E7%9A%84onebot-oicq"><span class="toc-number">2.5.6.</span> <span class="toc-text"> 使用 pm2 守护我们的onebot oicq</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-pm2-%E5%AE%88%E6%8A%A4%E6%88%91%E4%BB%AC%E7%9A%84%E5%82%BB%E5%A6%9E"><span class="toc-number">2.5.7.</span> <span class="toc-text"> 使用 pm2 守护我们的傻妞</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%84%B6%E5%90%8E%E5%B0%B1%E6%98%AF%E5%BC%80%E5%90%AF-pm2-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8E%E4%BF%9D%E5%AD%98%E5%AE%88%E6%8A%A4%E5%88%97%E8%A1%A8"><span class="toc-number">2.5.8.</span> <span class="toc-text"> 然后就是开启 pm2 开机启动与保存守护列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%8C%E7%BB%93%E6%92%92%E8%8A%B1"><span class="toc-number">2.5.9.</span> <span class="toc-text"> 完结撒花</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022041231679/" title="如何写一个简单的签到脚本(小白向)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/b5893c3f97763b4680f149b3a8a3a79a" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何写一个简单的签到脚本(小白向)"/></a><div class="content"><a class="title" href="/2022041231679/" title="如何写一个简单的签到脚本(小白向)">如何写一个简单的签到脚本(小白向)</a><time datetime="2022-04-12T17:00:54.000Z" title="发表于 2022-04-12 17:00:54">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022020945082/" title="通过浏览器获取cookie"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/c3815bcc380770bdd8a37fcd17ec54b3" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通过浏览器获取cookie"/></a><div class="content"><a class="title" href="/2022020945082/" title="通过浏览器获取cookie">通过浏览器获取cookie</a><time datetime="2022-02-09T10:00:54.000Z" title="发表于 2022-02-09 10:00:54">2022-02-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021123119294/" title="我的第一个Java Scripts脚本"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/6a70071ae9520f14586038b90a0ee614" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一个Java Scripts脚本"/></a><div class="content"><a class="title" href="/2021123119294/" title="我的第一个Java Scripts脚本">我的第一个Java Scripts脚本</a><time datetime="2021-12-31T14:20:54.000Z" title="发表于 2021-12-31 14:20:54">2021-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021122635704/" title="记一次auto.js脚本编写"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/e8b03c4e1f4aaf8b0d81c3b876d0a965" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记一次auto.js脚本编写"/></a><div class="content"><a class="title" href="/2021122635704/" title="记一次auto.js脚本编写">记一次auto.js脚本编写</a><time datetime="2021-12-26T11:15:54.000Z" title="发表于 2021-12-26 11:15:54">2021-12-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021121119419/" title="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://tucang.cc/api/image/show/81e3d98c251e59025044e1e00a6cf9a9" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)"/></a><div class="content"><a class="title" href="/2021121119419/" title="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)">巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)</a><time datetime="2021-12-11T09:15:54.000Z" title="发表于 2021-12-11 09:15:54">2021-12-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright"><span>&copy;2019 - 2022</span><svg style="width:1.5em; height:1.5em" aria-hidden="true"><use xlink:href="#icon-Butterfly"></use></svg><span>YML</span></div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/鲁ICP备-2021023764号-d021d6?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3JpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDExNi4xNjQ2NTUsIDIwMjEvMDEvMjYtMTU6NDE6MjAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6OTJhYTAzNGEtZTA5Ny03NzQ5LWFiNWEtN2UyYjEyNTE5NmY2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU0OUI0MzdBNEU3QTExRUNBRUIzOEUzRjg5QTdFMTE3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU0OUI0Mzc5NEU3QTExRUNBRUIzOEUzRjg5QTdFMTE3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NDkzYjU2ZS1jNjJjLWNiNGYtYTMwZi1jOWQ5NzBjY2U5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTJhYTAzNGEtZTA5Ny03NzQ5LWFiNWEtN2UyYjEyNTE5NmY2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+4ZgnQgAABOtJREFUeNqslX9sE2UYx793vV6vt3a9/lpX10n2Q2ATxpShgmMIGgHDBs6EgDEqBhE0SCDyh4Z/CMbAPzOiQcyEKIQYFRKSbSGMOaPAIhgDceA2Rhnb2rF1/bH22rv2rnf1LeAUg/Ef3tzzXN6893zyvfd5nvelcrkcHuRg8i6LobuTQuILAOUiBk914pHVW4qlG5eafjz165sZOcs+8/y8VkdNzcm+E98EqhqbAbaCfB9C5NrJ2/HOmTvuAO8zlhLb/NWW7U05eZAbzfAw2AVIx/s/lQ+2fVz/bHkbWT9MrP3fgfR9YFz354e6X93UtTaZHuZmWgzYyE1gMzeKRQs9cCz0MBs3nXmxc//ePNT0f0Bf5tKe058ci2P9xnK87kvA9sVVRAY0RPwa4qsOYrXWi21H1qH1hIrcwJff5wX8F7BqpH2Xv2FVb4NQ6cE7rl4MHUuALhWgiQqQ0UG5BfRsPY+1/CV4nn4Mz63qaJw8d+gGiZ11DzDV5weTPm1pG7CyF8fqsLJORPIygY3EQQkmmKIa0ucnYCxzgkvKCH99Ac3LFXRfr8bRs5rXQqXMjrLX7lHo03/5oUWnzCTVEgrFMSTGAaOmAtE0qAoe7HwB9K0UWOgID8kocWQAikIsScPkZloIo2waONx/5iUlGKy3W1hSQybkvF646ouRRA7iIie09T5YdteC31YD2s2jaL4LKYlsA6lhbxEPBC4vjY72vDEN5C32qoSootydJlvsROcFHsyyQkQaZ0ALiqB+T0HqmIA6NAV2Zz0c2+fh+JHY7Zqtncsg5Q8hHfD7poF6dKwxEWMwxyfC9wSLA0cL8NPeAGoXeGHjrZCuxqCHMkj3xmANTuHKnmvYf8QET62AuSVxhIMZqNH++mkgzaQEMUGjcPIa1i7XkFUtUNvH4fz2N9AlRihuA/QiBq5lXni7byDcegUpxYDmJiOskUGICQaMlTZOt56Zf7iLnnWzSfOUYMOTIlpK3DgQrII6ehVOEkDbzJCJSrGyCEG7F9/RJHmFAjY8FULW6oPwKAXeXtoxDSQai3KJHMb8IuZUDeHD9+Zj184GtItzgYSKJikCh0DjeIeVJIokAXbseJvDgspBjA2SaVqCnhXnTQMZQanLWj1Qx1UEQn14t96E5q4CdJ+S0E/XYEX1dXjNYWTbSqDEZJTO5vHBipuY6LkJSeXAuVjCYGfnWVT++MokL74cubDvmDyuIBMmtRcYRsWaWpg8pKu0CHkYJEMybGUOYIaTrIcxdHIAstUFS7kF5mIetsr1S1j7Cz//BYSBMr0SvdLymZaWbeGz42AKciheUgUtKkOVUqB5osRRAIo1ItLjR1ZjYKurgJpGxDarYR1r5LsI8M4vZ8I68XIwPW6WOY9u8yyrhBZPkR5OkCJlYWAFsCQPylQSqUAMHFHJ+TzITElIB8WcuTQJheyuw363bAw4l7f3ix63FhtJFjNxHTpRoGsGpCdF0hE6lEgcycFJUAbj7ZZL3wrDaKbhWex1sbz4FrG/T2yTc0H+tSY2dnafEvhjA2uQCninCdkUaS9KhSEzhayswDrbBQNngCInQRe4QNmLR7JMRSvHuz+65wq4OyRiW2N9nt1yfHJlRh1d8lC1u1oXKQsn0A7GbIV4CyNmtyAxRQ2Xo/5Qlzwc65yxGPo/z0PqQV9SfwowADr3CMhT4y5gAAAAAElFTkSuQmCC" title="本站已备案"></a>  <a style="margin-inline:5px" target="_blank" href="https://hexo.io/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><a style="margin-inline:5px" target="_blank" href="https://butterfly.js.org/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><a style="margin-inline:5px" target="_blank" href="https://www.jsdelivr.com/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/CDN-%E5%8F%88%E6%8B%8D%E4%BA%91-blue?style=flat&logo=appveyor" title="本站使用又拍云源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script async="async">var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")

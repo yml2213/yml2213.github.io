@@ -9,8 +9,8 @@ Disallow: /photos/
 Disallow: /*.css
 Disallow: /*.js
 
-Sitemap: https://menglei.xyz/sitemap.xml
-Sitemap: https://menglei.xyz/baidusitemap.xml
+Sitemap: https://ymlclub.cn/sitemap.xml
+Sitemap: https://ymlclub.cn/baidusitemap.xml
 
 Sitemap: http://menglei.xyz/sitemap.xml
 Sitemap: http://menglei.xyz/baidusitemap.xml

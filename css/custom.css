@@ -72,42 +72,42 @@ div#category {
 /* 全局默认鼠标指针 */
 body,
 html {
-  cursor: url('https://yml-img.ml:521/images/2022/02/28/81b8312a9431fde6159614900f4f0131.png'), auto !important;
+  cursor: url('https://tucang.cc/api/image/show/6dbcf6f04682311ca1b11e356b1d6701'), auto !important;
 }
 
 /* 悬停图片时的鼠标指针 */
 img {
-  cursor: url('https://yml-img.ml:521/images/2022/02/28/83ed8d46caa37479ea8ca1a10f474d0d.png'), auto !important;
+  cursor: url('https://tucang.cc/api/image/show/6c0b45bba92e9375f6dc992dfafa18c5'), auto !important;
 }
 
 /* 选择链接标签时的鼠标指针 */
 a:hover {
-  cursor: url('https://yml-img.ml:521/images/2022/02/28/7e4c6403a21a152cfeefd70698a9a7cd.png'), auto;
+  cursor: url('https://tucang.cc/api/image/show/c2334deefab68af84f7c04a9f4581f46'), auto;
 }
 
 /* 选中输入框时的鼠标指针 */
 input:hover {
-  cursor: url('https://yml-img.ml:521/images/2022/02/28/2a54d3390e6febc7c2aea03c686afdf4.png'), auto;
+  cursor: url('https://tucang.cc/api/image/show/907eda220ac1226e6d8b20e2fc493c34'), auto;
 }
 
 /* 悬停按钮时的鼠标指针 */
 button:hover {
-  cursor: url('https://yml-img.ml:521/images/2022/02/28/83ed8d46caa37479ea8ca1a10f474d0d.png'), auto;
+  cursor: url('https://tucang.cc/api/image/show/6c0b45bba92e9375f6dc992dfafa18c5'), auto;
 }
 
 /* 悬停列表标签时的鼠标指针 */
 i:hover {
-  cursor: url('https://yml-img.ml:521/images/2022/02/28/81b8312a9431fde6159614900f4f0131.png'), auto;
+  cursor: url('https://tucang.cc/api/image/show/0c718ab7a193904224f5265c6571c01d'), auto;
 }
 
 /* 悬停页脚链接标签（例如页脚徽标）时的鼠标指针 */
 #footer-wrap a:hover {
-  cursor: url('https://yml-img.ml:521/images/2022/02/28/_1.png'), auto;
+  cursor: url('https://tucang.cc/api/image/show/0c718ab7a193904224f5265c6571c01d'), auto;
 }
 
 /* 悬停菜单栏时的鼠标指针 */
 #nav .site-page:hover {
-  cursor: url('https://yml-img.ml:521/images/2022/02/28/83ed8d46caa37479ea8ca1a10f474d0d.png'), auto;
+  cursor: url('https://tucang.cc/api/image/show/6c0b45bba92e9375f6dc992dfafa18c5'), auto;
 }
 
 
