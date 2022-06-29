@@ -1,0 +1,752 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quantumult X(圈x)系列之小白快速入门篇（转载） | 梦磊の博客</title><meta name="keywords" content="配置,Quantumult X,转载"><meta name="author" content="YML"><meta name="copyright" content="YML"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="背景:中秋节终于把圈x买了，摸索了一天，终于略知一二了。整体感觉还是非常值得入手的一款App，比较中意的是去广告这些，真的很舒服，看油管终于不用等广告了。脚本功能的话，还是不太建议手机跑，感觉太消耗手机了。简单记录梳理一下我的摸索过程。 推荐学习基地 TG群组：QuanXApp TG频道：QuanXNews 超详细教程：Quantumult X 不完全教程 教程真的巨详细，但是对于小白入门学习来说">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quantumult X(圈x)系列之小白快速入门篇（转载）">
+<meta property="og:url" content="http://menglei.xyz/2021121050270/index.html">
+<meta property="og:site_name" content="梦磊の博客">
+<meta property="og:description" content="背景:中秋节终于把圈x买了，摸索了一天，终于略知一二了。整体感觉还是非常值得入手的一款App，比较中意的是去广告这些，真的很舒服，看油管终于不用等广告了。脚本功能的话，还是不太建议手机跑，感觉太消耗手机了。简单记录梳理一下我的摸索过程。 推荐学习基地 TG群组：QuanXApp TG频道：QuanXNews 超详细教程：Quantumult X 不完全教程 教程真的巨详细，但是对于小白入门学习来说">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yml-img.ml:521/images/2021/12/10/----.jpg">
+<meta property="article:published_time" content="2021-12-10T01:15:54.000Z">
+<meta property="article:modified_time" content="2022-06-20T03:19:26.590Z">
+<meta property="article:author" content="YML">
+<meta property="article:tag" content="配置">
+<meta property="article:tag" content="Quantumult X">
+<meta property="article:tag" content="转载">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yml-img.ml:521/images/2021/12/10/----.jpg"><link rel="shortcut icon" href="https://yml-img.ml:521/images/2022/02/28/logo.png"><link rel="canonical" href="http://menglei.xyz/2021121050270/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://fastly.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://fastly.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Quantumult X(圈x)系列之小白快速入门篇（转载）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-20 11:19:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="梦磊の博客" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="iron-container iron-circle"><div class="iron-box1 iron-circle iron-center"></div><div class="iron-box2 iron-circle iron-center"></div><div class="iron-box3 iron-circle iron-center"></div><div class="iron-box4 iron-circle iron-center"></div><div class="iron-box5 iron-circle iron-center"></div><div class="iron-box6 iron-circle"><div class="iron-coil" style="--i: 0"></div><div class="iron-coil" style="--i: 1"></div><div class="iron-coil" style="--i: 2"></div><div class="iron-coil" style="--i: 3"></div><div class="iron-coil" style="--i: 4"></div><div class="iron-coil" style="--i: 5"></div><div class="iron-coil" style="--i: 6"></div><div class="iron-coil" style="--i: 7"></div></div></div></div><div id="web_bg"> </div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/vue-color-avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shouye"></use></svg><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/tuku/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tubiaozhizuomoban"></use></svg><span> 设计灵感</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shijian"></use></svg><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiewenzhang"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fun"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yingshi"></use></svg><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-lianjie"></use></svg><span> 友链</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://yml-img.ml:521/images/2021/12/10/----.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">梦磊の博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shouye"></use></svg><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/tuku/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tubiaozhizuomoban"></use></svg><span> 设计灵感</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shijian"></use></svg><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiewenzhang"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fun"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yingshi"></use></svg><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-lianjie"></use></svg><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Quantumult X(圈x)系列之小白快速入门篇（转载）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-10T01:15:54.000Z" title="发表于 2021-12-10 09:15:54">2021-12-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-20T03:19:26.590Z" title="更新于 2022-06-20 11:19:26">2022-06-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>12分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Quantumult X(圈x)系列之小白快速入门篇（转载）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>背景</strong>:中秋节终于把圈x买了，摸索了一天，终于略知一二了。整体感觉还是非常值得入手的一款App，比较中意的是去广告这些，真的很舒服，看油管终于不用等广告了。脚本功能的话，还是不太建议手机跑，感觉太消耗手机了。简单记录梳理一下我的摸索过程。</p>
+<p><strong>推荐学习基地</strong><br />
+TG群组：<a target="_blank" rel="noopener" href="https://t.me/QuanX_API">QuanXApp</a><br />
+TG频道：<a target="_blank" rel="noopener" href="https://t.me/QuanX_API">QuanXNews</a><br />
+超详细教程：<a target="_blank" rel="noopener" href="https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917">Quantumult X 不完全教程</a><br />
+教程真的巨详细，但是对于小白入门学习来说，可能有点枯燥。<br />
+建议先跟着小姐姐快速入门，再慢慢去读大佬梳理的教科书级教程。</p>
+<p><strong>软件介绍</strong><br />
+Quantumult X 是 Quantumult 作者推出的一款网络dl工具。目前仅IOS端可用。</p>
+<p><strong>主要功能</strong><br />
+扶梯子?，支持策略分流<br />
+屏蔽广告（油管等）、解锁会员（网易云音乐等）<br />
+运行js脚本（京东签到等）</p>
+<p><strong>软件下载</strong><br />
+Appstore购买下载。国区无法下载，需要外区ID，这里推荐美国ID购买，因为本站有相关教程。<br />
+如果你没有美区ID，推荐?的教程自行注册，并购买美国apple礼品卡充值ID再购买。<br />
+听起来很麻烦，其实你学会之后就很容易了，也不用再去淘宝购买，小姐姐还是喜欢自己来。</p>
+<p>推荐教程：</p>
+<ul>
+<li>[<a target="_blank" rel="noopener" href="https://www.kejiwanjia.com/operate/kuajing/608.html">2021年3月]美国苹果账号Apple ID注册教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.kejiwanjia.com/jiaocheng/zheteng/18438.html">如何优雅地购买美区Apple礼品卡并购买应用？</a></li>
+</ul>
+<p>废话不多说了，下载好软件，小姐姐直接带你入门。</p>
+<h2 id="基本配置"><a class="markdownIt-Anchor" href="#基本配置"></a> 基本配置</h2>
+<h3 id="说在前面"><a class="markdownIt-Anchor" href="#说在前面"></a> 说在前面</h3>
+<p>本文主要是帮助小白快速上手入门，选择简单的方式给大家举?，不做太多理论叙述。<br />
+方便玩家快速理解和上手，最后会说一个“小白配置”。</p>
+<p>后面再另些几篇展开说说各功能，一起进阶学习。<br />
+因为我更希望是让玩家弄懂每个设置背后的意义，最后能自己愉快地玩耍。<br />
+建议大家先跟着教程分步操作，体验一下知道玩法了，再最后享用小白配置。</p>
+<p>圈x的配置，其实就是由不同的配置片段组成，它有一个核心的“<strong>配置文件</strong>”。</p>
+<p>配置方式：<strong>1、软件ui交互</strong>；<strong>2、直接编辑“配置文件”</strong><br />
+简单的软件设置通过“方式1”更方便，但有的通过“方式2”更快捷。<br />
+经常听说的“懒人包”，其实就是直接给了你们编辑好的核心“配置文件”。</p>
+<h3 id="软件设置"><a class="markdownIt-Anchor" href="#软件设置"></a> 软件设置</h3>
+<h4 id="初始化设置粗略熟悉一下基本设置"><a class="markdownIt-Anchor" href="#初始化设置粗略熟悉一下基本设置"></a> 初始化设置：粗略熟悉一下基本设置</h4>
+<p>初次打开软件，请允许添加VPN配置</p>
+<p>右下角<strong>大风车</strong>?分别有<strong>节点、分流、重写、MitM、工具&amp;分析、配置文件、其他设置</strong>?拉到最后选择“<strong>其他设置</strong>”</p>
+<ul>
+<li>模式：暂时先默认<br />
+资源：建议启用ICloud，换设备也能用。<br />
+通知：建议暂时都打开，熟悉后再按需选择<br />
+VPN：暂时先默认<br />
+其他：暂时不管</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083306124.png" alt="img" /></p>
+<p><strong>添加“资源解析器”</strong>：其作用就是将你导入订阅、规则、重写等资源解析并转换成圈x所支持的格式。为了避免后面引用资源出错，请先进行这项配置。</p>
+<p><strong>步骤：<strong>右下角</strong>大风车</strong>?拉到最后“配置文件-编辑”?右上角“小回车”?选择<code>[general]</code>?添加下面⬇️的连接?右上角“保存”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083306460.png" alt="img" /></p>
+<h3 id="节点设置"><a class="markdownIt-Anchor" href="#节点设置"></a> 节点设置</h3>
+<p>目前圈x支持5种类型节点：SS， SSR， VMess， HTTP(s)，Trojan（不支持VLESS，?）</p>
+<p>UI界面给了<strong>4种</strong>方式添加节点：</p>
+<ul>
+<li>单次只能添加1个节点：添加后，信息出现在配置文件的 <code>[server_local]</code>模块
+<ul>
+<li><strong>添加</strong>：仅支持SS</li>
+<li><strong>SS URI、扫码</strong>：支持SS、SSR，或圈x格式的trojan/vmess/http</li>
+</ul>
+</li>
+<li>单次添加<strong>多个</strong>节点：订阅后，信息出现在配置文件的 <code>[server_remote]</code>模块
+<ul>
+<li><strong>引用（订阅）</strong>：以此为</li>
+</ul>
+</li>
+</ul>
+<p><strong>步骤：<strong>右下角</strong>大风车</strong>?选择“节点-引用”?输入节点信息?打开资源解析器?右上角“保存”</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083306759.png" alt="img" /></p>
+<p>这里要用到“资源解析器”：不打开提示无法添加（如左图），打开则成功添加（如右图）。<br />
+现在你应该get到了“资源解析器”的作用了。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083306974.png" alt="img" /></p>
+<h3 id="分流规则-策略组"><a class="markdownIt-Anchor" href="#分流规则-策略组"></a> 分流规则、策略组</h3>
+<p>根据我自己理解说的大白话，可能不够严谨，大佬们求放过。小白们，希望你们能懂我的意思。写教程也很考验语文啊。</p>
+<ul>
+<li>
+<h5 id="分流规则配置文件中的filter_local本地添加-filter_remote远程订阅"><a class="markdownIt-Anchor" href="#分流规则配置文件中的filter_local本地添加-filter_remote远程订阅"></a> 分流规则:配置文件中的<code>[filter_local]</code>(本地添加)/ <code>[filter_remote]</code>(远程订阅)</h5>
+<ul>
+<li>
+<p>简单来说，就是把你访问的网址，按照你建立的分流规则来进行分流。</p>
+</li>
+<li>
+<p>存在优先级，越靠前越优先，不要随便打乱顺序。<br />
+其实也很好理解，你访问的网站被分流，最终到策略(组)处理。分流规则可能是包含与被包含关系。最先被匹配到的分流规则，按其对应节点或策略（组）被处理。</p>
+</li>
+<li>
+<p>例如：</p>
+<ul>
+<li>
+<p><strong>全球分流规则</strong>对应策略是<strong>直连</strong>，<strong>油管分流规则</strong>对应策略是<strong>拒绝</strong>，<strong>油管分流被全球分流</strong>包含。</p>
+</li>
+<li>
+<p><strong>全球分流规则</strong>在前面，你访问油管先匹配“全球分流规则”，对应被处理就是“<strong>直连</strong>”</p>
+</li>
+<li>
+<p><strong>油管分流规则</strong>在前面，你访问油管先匹配“油管分流规则”，对应被处理就是“<strong>拒绝</strong>”</p>
+</li>
+<li>
+<p>你们打不打麻将，大概意思就是被“<strong>截胡了</strong>”。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h5 id="策略组配置文件中的proxy模块"><a class="markdownIt-Anchor" href="#策略组配置文件中的proxy模块"></a> 策略组:配置文件中的<code>[proxy]</code>模块</h5>
+<ul>
+<li>服务于“分流规则”，你访问的网址被“分流规则”分流后，又由“策略组”来分发处理，可能是分配给“子策略(组)”，也可能给节点。简单来说，就是让你访问的网站自动走你设置好的节点或策略(组)。</li>
+</ul>
+</li>
+<li>
+<h5 id="整体流程访问的网站匹配分流规则a不同的节点或者是直连等策略组最终被处理处理效果取决于你的策略组或节点"><a class="markdownIt-Anchor" href="#整体流程访问的网站匹配分流规则a不同的节点或者是直连等策略组最终被处理处理效果取决于你的策略组或节点"></a> <strong>整体流程</strong>：访问的网站匹配分流规则A?不同的节点或者是“直连”等策略(组)?最终被处理（处理效果取决于你的策略(组)或节点）</h5>
+</li>
+</ul>
+<h4 id="分流规则"><a class="markdownIt-Anchor" href="#分流规则"></a> 分流规则</h4>
+<ul>
+<li>
+<p>添加：配置文件中的<code>[filter_local]</code>模块</p>
+<ul>
+<li>一条一条添加，不推荐，耗时麻烦。</li>
+</ul>
+</li>
+<li>
+<p>引用（订阅）：配置文件中<code>[filter_remote]</code>模块</p>
+<ul>
+<li>推荐，可以“远程订阅”大佬已经写好的。引用的就是一个list文件，引用时要用<strong>raw</strong>链接。</li>
+</ul>
+</li>
+</ul>
+<p>以“神机规则”为?，通过“rule-list引用”方式，进行远程订阅。<br />
+建议跟着添加一下，知道是什么意思就行，后面直接上懒人包。</p>
+<p>神机规则地址：<a target="_blank" rel="noopener" href="https://github.com/DivineEngine/Profiles/tree/master/Quantumult/Filter">https://github.com/DivineEngine/Profiles/tree/master/Quantumult/Filter</a></p>
+<h5 id="1-随便找一个list左上角raw复制浏览器地址比如chinalist"><a class="markdownIt-Anchor" href="#1-随便找一个list左上角raw复制浏览器地址比如chinalist"></a> 1、随便找一个list?左上角Raw?复制浏览器地址，比如China.list</h5>
+<p>注意在上面的优先生效，就是更细分的先生效吧，精准定位的意思。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083307020.png" alt="img" /></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083307078.png" alt="img" /></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083307148.png" alt="img" /></p>
+<h5 id="2-选择分流-引用标签chinalist可自定义资源路径粘贴raw链接右上角保存"><a class="markdownIt-Anchor" href="#2-选择分流-引用标签chinalist可自定义资源路径粘贴raw链接右上角保存"></a> 2、选择”分流-引用“?标签“Chinalist”（可自定义）?”资源路径“，粘贴raw链接?右上角”保存“</h5>
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/China.list">https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/China.list</a></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083307516.png" alt="img" /></p>
+<p><strong>策略组</strong></p>
+<p>添加策略组3种方式</p>
+<ul>
+<li>
+<p>通过配置文件<code>[policy]</code>模块添加</p>
+<ul>
+<li>支持添加<strong>所有</strong>类型策略组</li>
+</ul>
+</li>
+<li>
+<p>通过节点订阅列表添加</p>
+<ul>
+<li>支持添加策略组类型：<strong><code>static静态策略，available健康检查策略，round-robin负载均衡策略</code></strong></li>
+</ul>
+</li>
+<li>
+<p>通过订阅的<code>as-policy</code>参数生成并绑定策略组</p>
+<ul>
+<li>支持添加策略组类型：<strong><code>static静态策略，available健康检查策略，round-robin负载均衡策略</code></strong></li>
+</ul>
+</li>
+</ul>
+<p>简单了解一下就行，等下最后直接小白配置导入。先上手再说，真正使用你就懂了，实践出真理。</p>
+<h3 id="重写与mitm"><a class="markdownIt-Anchor" href="#重写与mitm"></a> 重写与MitM</h3>
+<p>如果你跟着小姐姐一起玩了elecv2p，对这个应该就不陌生了。可以实现一些<strong>去广告</strong>、<strong>跑脚本</strong>等功能。</p>
+<p>以<strong>NobyDa大佬</strong>的签到为?（野比大佬是真大佬，几乎哪里都是以他为例）</p>
+<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/NobyDa/Script/tree/master/QuantumultX">https://github.com/NobyDa/Script/tree/master/QuantumultX</a></p>
+<h4 id="重写对应配置文件中的rewrite_remote以及rewrite_local模块"><a class="markdownIt-Anchor" href="#重写对应配置文件中的rewrite_remote以及rewrite_local模块"></a> 重写：对应配置文件中的<code>[rewrite_remote]</code>以及<code>[rewrite_local]</code>模块</h4>
+<p>用于修改HTTP或HTTPS请求与响应（字面意思）</p>
+<ul>
+<li>添加：手动单条添加，对应<code>[rewrite_local]</code></li>
+<li>引用：远程引用大佬地址，一般是.conf为后缀的文件格式，注意引用时要用raw链接。对应<code>[rewrite_remote]</code></li>
+</ul>
+<p><strong>步骤</strong>:选择“重写-引用”?粘贴复制的raw链接?打开“重写”</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js.conf">https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js.conf</a> #签到订阅</li>
+<li><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_Remote_Cookie.conf">https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js_Remote_Cookie.conf</a> #cookie获取订阅</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083307827.png" alt="img" /></p>
+<p><strong>查看脚本</strong>：添加脚本订阅后，你可以查看脚本说明。以野比大佬的京东签到为?</p>
+<p><strong>步骤</strong>：选择“‘重写-浏览”?搜索“JD_DailyBonus.js“?点击最右边的按钮?</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083308348.png" alt="img" /></p>
+<h4 id="mitm对应配置文件中的mitm模块"><a class="markdownIt-Anchor" href="#mitm对应配置文件中的mitm模块"></a> <strong>MitM</strong>：对应配置文件中的<code>[mitm]</code>模块</h4>
+<p>用于HTTPS解析，只有配置了主机名的请求才会被解析。（字面意思）</p>
+<p>一般添加“重写”引用的时候，自动添加了主机名。</p>
+<p><strong>步骤</strong>:选择“MitM”-“生成证书”?“配置证书”?“信任证书”?打开“MitM”</p>
+<h5 id="1-生成并配置证书"><a class="markdownIt-Anchor" href="#1-生成并配置证书"></a> 1、生成并配置证书</h5>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083308603.png" alt="img" /></p>
+<h5 id="2-安装证书"><a class="markdownIt-Anchor" href="#2-安装证书"></a> 2、安装证书</h5>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083308800.png" alt="img" /></p>
+<h5 id="3-信任证书设置通用关于本机证书信任设置"><a class="markdownIt-Anchor" href="#3-信任证书设置通用关于本机证书信任设置"></a> 3、信任证书：设置?通用?关于本机?证书信任设置</h5>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083309014.png" alt="img" /></p>
+<h3 id="工具分析"><a class="markdownIt-Anchor" href="#工具分析"></a> <strong>工具&amp;分析</strong></h3>
+<p>暂时只说“<strong>构造HTTP请求</strong>”功能，跑脚本用，刚需。</p>
+<ul>
+<li>手动添加：一次一个</li>
+<li>任务仓库：一次多个，推荐
+<ul>
+<li>支持订阅任务仓库了，非常方便，可以一次性添加任务仓库，按需选择添加定时任务。</li>
+</ul>
+</li>
+</ul>
+<h4 id="手动添加"><a class="markdownIt-Anchor" href="#手动添加"></a> 手动添加</h4>
+<p><strong>步骤</strong>:左上角“➕”?选择“高级”?“标签”(自定义)-Cron表达式(按需定时)-添加脚本路径-添加图标(<a target="_blank" rel="noopener" href="https://www.kejiwanjia.com/jiaocheng/zheteng/notes/21016.html#%E6%9F%A5%E7%9C%8B%E8%84%9A%E6%9C%AC">查看脚本</a>可获得)</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083309403.png" alt="img" /></p>
+<p><strong>Cron表达式</strong>：还不懂的，看下面好好学习一下，花15分钟就差不多了。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.kejiwanjia.com/jiaocheng/zheteng/notes/1958.html">关于定时任务cron表达式的填写规则介绍</a></li>
+</ul>
+<h4 id="订阅任务仓库以野比大佬的任务仓库为"><a class="markdownIt-Anchor" href="#订阅任务仓库以野比大佬的任务仓库为"></a> 订阅任务仓库：以野比大佬的任务仓库为?</h4>
+<p><strong>步骤</strong>:上方“小盒子”?输入任务仓库raw链接?点击想添加的任务“➕”</p>
+<p><code>https://raw.githubusercontent.com/NobyDa/Script/8f882c9634896702011da3bfe1923fb2db627f8a/NobyDa_BoxJs.json</code></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083309875.png" alt="img" /></p>
+<h4 id="实操练习以野比大佬的京东签到为"><a class="markdownIt-Anchor" href="#实操练习以野比大佬的京东签到为"></a> 实操练习：以野比大佬的京东签到为?</h4>
+<p>确认重写、MitM、圈x总开关都打开了。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083310092.png" alt="img" /></p>
+<h5 id="1-获取京东cookie根据脚本说明复制下面️其中一个网址到safari登录你的jd"><a class="markdownIt-Anchor" href="#1-获取京东cookie根据脚本说明复制下面️其中一个网址到safari登录你的jd"></a> 1、**获取京东Cookie：**根据脚本说明，复制下面⬇️其中一个网址到safari，登录你的JD。</h5>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://home.m.jd.com/myJd/newhome.action%EF%BC%9A%E7%82%B9%E5%87%BB%E2%80%9C%E6%88%91%E7%9A%84%E2%80%9D">https://home.m.jd.com/myJd/newhome.action：点击“我的”</a></li>
+<li><a target="_blank" rel="noopener" href="https://bean.m.jd.com/bean/signIndex.action%EF%BC%9A%E7%82%B9%E5%87%BB%E2%80%9C%E7%AD%BE%E5%88%B0%E2%80%9D%E5%B9%B6%E5%87%BA%E7%8E%B0%E7%AD%BE%E5%88%B0%E6%97%A5%E5%8E%86">https://bean.m.jd.com/bean/signIndex.action：点击“签到”并出现签到日历</a></li>
+</ul>
+<p>如果成功，会收到“cookie获取成功”的通知。如果没有弹出通知，可以去“首页-日志”里面查看一下。</p>
+<p>因为我之前获取过了，所以日志提示已经写入。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083310367.png" alt="img" /></p>
+<h5 id="2-运行京东多合一签到工具分析构造http请求右滑京东多合一签到选择️运行"><a class="markdownIt-Anchor" href="#2-运行京东多合一签到工具分析构造http请求右滑京东多合一签到选择️运行"></a> 2、<strong>运行“京东多合一签到”：</strong>“工具&amp;分析”?“<strong>构造HTTP请求</strong>“?右滑“京东多合一签到”?选择“▶️”运行</h5>
+<p>脚本需要跑一会儿，成功后会发送通知。或者选择左边第二个“≡”，实时查看运行状态。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083310918.png" alt="img" /></p>
+<h3 id="软件交互"><a class="markdownIt-Anchor" href="#软件交互"></a> 软件交互</h3>
+<h4 id="1-底部大风车"><a class="markdownIt-Anchor" href="#1-底部大风车"></a> 1、底部大风车</h4>
+<ul>
+<li>
+<p><strong>短按</strong>：进入设置</p>
+</li>
+<li>
+<p><strong>长按</strong>：切换dl模式（全部dl、直连、规则分流）<br />
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083311038.png" alt="img" /></p>
+</li>
+<li>
+<p><strong>快速轻滑</strong>：唤出底部菜单（编辑配置文件、脚本记录、请求列表）<br />
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083311229.png" alt="img" /></p>
+</li>
+</ul>
+<h4 id="2-顶部工具条"><a class="markdownIt-Anchor" href="#2-顶部工具条"></a> 2、顶部工具条</h4>
+<ul>
+<li>
+<p><strong>“节点“方块轻按右滑</strong>：切换工具块UI<br />
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083311473.png" alt="img" /></p>
+</li>
+<li>
+<p><strong>短按</strong>：查看相关资源明细</p>
+</li>
+<li>
+<p><strong>长按</strong>：显示资源列表、日志文件等</p>
+</li>
+</ul>
+<h4 id="3-其他点一点滑一滑都是基本操作"><a class="markdownIt-Anchor" href="#3-其他点一点滑一滑都是基本操作"></a> 3、<strong>其他</strong>：点一点，滑一滑，都是基本操作。</h4>
+<h2 id="小白配置"><a class="markdownIt-Anchor" href="#小白配置"></a> 小白配置</h2>
+<p>小白配置会覆盖你之前配置哦。</p>
+<p>新知识学完了，下面来一个小白配置，感受一下大佬们的威武霸气。</p>
+<p>开头说了，圈x有一个核心的“配置文件”，就像人的大脑?一样支配着软件运行。<br />
+有大佬自己整理好了相对完整的配置文件，并分享出来给大家使用。<br />
+我这里以“orz”大佬为?来介绍。<br />
+大佬集成了分流、策略、去广告、比价、boxjs等功能，并给了非常详细的任务订阅列表，非常方便。<br />
+项目地址：<a target="_blank" rel="noopener" href="https://github.com/Orz-3/QuantumultX">https://github.com/Orz-3/QuantumultX</a><br />
+TG频道：<a target="_blank" rel="noopener" href="https://t.me/Orzmini">https://t.me/Orzmini</a><br />
+TG群组：<a target="_blank" rel="noopener" href="https://t.me/Orz_mini">https://t.me/Orz_mini</a></p>
+<blockquote>
+<p>Quantumult X小白配置说明：<br />
+本配置由神机规则修改而来，修改了默认策略组，增加了正则筛选策略组，并集成了多个作者的脚本及重写。<br />
+附带按task脚本作者分类的task订阅，可按需求订阅。</p>
+<p>引用大佬原话</p>
+</blockquote>
+<h3 id="食用方法就是把远程配置文件下到本地覆盖再进行设置"><a class="markdownIt-Anchor" href="#食用方法就是把远程配置文件下到本地覆盖再进行设置"></a> 食用方法：就是把远程配置文件下到本地覆盖再进行设置。</h3>
+<h4 id="1-找到库里的orz-3conf文件生成raw链接复制地址"><a class="markdownIt-Anchor" href="#1-找到库里的orz-3conf文件生成raw链接复制地址"></a> 1、找到库里的<strong>Orz-3.conf</strong>文件，生成raw链接，复制地址</h4>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083311554.png" alt="img" /></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083311617.png" alt="img" /></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083311757.png" alt="img" /></p>
+<h4 id="2-回到圈x右下角大风车配置文件-下载粘贴raw链接并保存"><a class="markdownIt-Anchor" href="#2-回到圈x右下角大风车配置文件-下载粘贴raw链接并保存"></a> 2、回到圈x?右下角大风车?配置文件-下载?粘贴raw链接并保存。</h4>
+<p>这时候你会发现你之前添加的节点都已经被覆盖了，没有了。正常现象，不要惊慌。核心文件都换了，能不被覆盖么？</p>
+<h4 id="3-重新打开重写和mitm生成证书配置证书安装证书信任证书"><a class="markdownIt-Anchor" href="#3-重新打开重写和mitm生成证书配置证书安装证书信任证书"></a> 3、重新打开重写和MitM：生成证书?配置证书?安装证书?信任证书</h4>
+<p>如果你之前已经配置过证书，也需要重新配置，否则打开圈x服务时，会提示错误。记得把之前的证书顺便删除。</p>
+<h4 id="4-添加节点右下角大风车选择节点-引用输入节点信息打开资源解析器右上角保存"><a class="markdownIt-Anchor" href="#4-添加节点右下角大风车选择节点-引用输入节点信息打开资源解析器右上角保存"></a> 4、添加节点：右下角<strong>大风车</strong>?选择“节点-引用”?输入节点信息?打开资源解析器?右上角“保存”</h4>
+<h3 id="真香体验报告"><a class="markdownIt-Anchor" href="#真香体验报告"></a> 真香体验报告</h3>
+<h4 id="1-分流及策略组选择规则分流模式爽歪歪"><a class="markdownIt-Anchor" href="#1-分流及策略组选择规则分流模式爽歪歪"></a> 1、分流及策略组：选择“规则分流”模式，爽歪歪。</h4>
+<p>长按右下角“大风车”?选择“白色大风车”（规则分流）</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083312099.png" alt="img" /></p>
+<ul>
+<li>参考作者的注意事项，梳理说明如下：<br />
+<strong>5个正则策略组</strong>：添加节点时，自动将香港，台湾，新加坡，美国，日本地区节点筛选出来<br />
+<strong>5个嵌套策略组</strong>：根据上面5个策略组进行了嵌套，方便切换选择<br />
+全球加速→国外网站<br />
+苹果服务→Appstore，Testflight<br />
+港台番剧→哔哩哔哩，爱奇艺<br />
+国际媒体→YouTube、Netflix、Amazon Prime Video<br />
+这类覆盖地区广泛或没有进行区域限制的流媒体服务<br />
+黑白名单→Final，即规则没有涉及到的<br />
+<strong>其他说明：</strong><br />
+限定区域的流媒体服务已经指向对应区域策略（UK和KR除外）<br />
+TikTok默认指定全球加速<br />
+国内网站默认指定Direct（直连?）<br />
+去广告默认指定Reject（拒绝❌）</li>
+</ul>
+<h4 id="2-重写勾选️去广告和比价是真的香cookie是跑脚本获取cookie用的按需勾选"><a class="markdownIt-Anchor" href="#2-重写勾选️去广告和比价是真的香cookie是跑脚本获取cookie用的按需勾选"></a> 2、重写：勾选☑️去广告，和比价是真的香，Cookie是跑脚本获取cookie用的，按需勾选。</h4>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083312326.png" alt="img" /></p>
+<ul>
+<li>油管去广告：打开很流畅，卡顿不明显。<br />
+京东比价：打开商品页稍有那么一点点延迟，可接受范围内。<br />
+淘宝比价：需要点击”保障“页面显示。如果没有显示，尝试卸载重装就好了。<br />
+Cookie：就是跑脚本用的，可以在需要的时候再打开，不知道会不会和比价冲突，懒得试了。<br />
+Tiktok解锁：这个我是用不上，直接看作者说明：默认解锁日区，如需改区，本地在[rewrite_local]下方添加(?&lt;=_region=)CN(?=&amp;) url 307 JP 将JP更改成你想改的区域。<br />
+其他：你们自己去体验吧</li>
+</ul>
+<h4 id="3-添加task任务工具分析构造http请求添加请求列表上面的左一小盒子图标"><a class="markdownIt-Anchor" href="#3-添加task任务工具分析构造http请求添加请求列表上面的左一小盒子图标"></a> 3、添加Task任务：工具&amp;分析?构造HTTP请求?添加请求列表?上面的左一“小盒子图标”</h4>
+<p>作者详细整理了各位大佬们的任务仓库，简直不能更贴心了，小姐姐我佩服。当然你去找作者原生库地址，也一样的。</p>
+<p>“orz”大佬把原库地址都放在了描述里，真的感动哭了。?具体列表去大佬库里自己看吧。</p>
+<p>Task库地址：<a target="_blank" rel="noopener" href="https://github.com/Orz-3/QuantumultX/tree/master/Task">https://github.com/Orz-3/QuantumultX/tree/master/Task</a></p>
+<p>库里找到你想要添加的脚本json文件?生成raw链接?复制到请求列表任务仓库?添加你想要执行的任务</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083312599.png" alt="img" /></p>
+<h4 id="4-boxjs配置文件也集成了完全就是一条龙服务"><a class="markdownIt-Anchor" href="#4-boxjs配置文件也集成了完全就是一条龙服务"></a> 4、Boxjs：配置文件也集成了，完全就是一条龙服务。</h4>
+<p>Boxjs的多账号管理，确实还挺舒服的。访问地址：<a target="_blank" rel="noopener" href="http://boxjs.com:9999/">http://boxjs.com:9999/</a></p>
+<p>工具&amp;分析?HTTP Backend?确认勾选☑️?浏览器访问http://boxjs.com:9999/</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083312894.png" alt="img" /></p>
+<p>如果你跟我一样使用了Scriptable，请记得将网页小组件商店域名进行更改为<a target="_blank" rel="noopener" href="http://boxjs.com:9999/">boxjs.com:9999</a>，否则无法访问。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/10/webp-20211210083313080.png" alt="img" /></p>
+<p><strong>恭喜你，又成功掌握一项新技能！</strong></p>
+<p><strong>后话</strong>：终于写完了，本来真的只是想简单说说，结果越写越多，怪我知道的太多了！！！<br />
+希望小白能读的懂吧。如果通篇读透了，应该也就略知一二了。<br />
+反正不管你们能不能懂，我写完之后，我又更懂了。?</p>
+<h3 id="转载于科技玩家小姐姐教程快速跳转链接"><a class="markdownIt-Anchor" href="#转载于科技玩家小姐姐教程快速跳转链接"></a> 转载于科技玩家小姐姐教程：<a target="_blank" rel="noopener" href="https://www.kejiwanjia.com/jiaocheng/zheteng/notes/21016.html">快速跳转链接</a></h3>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">YML</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://menglei.xyz/2021121050270/">http://menglei.xyz/2021121050270/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://menglei.xyz" target="_blank">梦磊の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%85%8D%E7%BD%AE/">配置</a><a class="post-meta__tags" href="/tags/Quantumult-X/">Quantumult X</a><a class="post-meta__tags" href="/tags/%E8%BD%AC%E8%BD%BD/">转载</a></div><div class="post_share"><div class="social-share" data-image="https://yml-img.ml:521/images/2021/12/10/----.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://fastly.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">打赏请随意（点击有彩蛋）</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://yml-img.ml:521/images/2022/02/28/wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://yml-img.ml:521/images/2022/02/28/zfb.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://fastly.jsdelivr.net/npm/yml2213-mp3@1.0.0/%E5%97%B7%E5%91%9C.m4a"></audio><script defer="defer" src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021121119419/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/KRwZYL.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)</div></div></a></div><div class="next-post pull-right"><a href="/2021120828455/"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/08/dc4046c9f30c15104cff5b1fd514d63e.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用onebot对接新版傻妞</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021111119046/" title="vlw框架的配置、使用"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/11/11/TZUlHg.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-11-11</div><div class="title">vlw框架的配置、使用</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/vue-color-avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">YML</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yml2213"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yml2213" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2213290201&amp;site=qq&amp;menu=yes" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://qm.qq.com/cgi-bin/qm/qr?k=fAjxG9OEA7GjmbMfuZWI702gEPzD1Ey8&amp;jump_from=webapi" target="_blank" title="Group"><i class="fas fa-users"></i></a><a class="social-icon" href="https://fastly.jsdelivr.net/gh/yml2213/yml2213.github.io/atom.xml" target="_blank" title="rss"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">哇,又有大佬来看我の博客啦！ <br>  <img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/lKSaL6.gif"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text"> 基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-number">1.1.</span> <span class="toc-text"> 说在前面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text"> 软件设置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%BE%E7%BD%AE%E7%B2%97%E7%95%A5%E7%86%9F%E6%82%89%E4%B8%80%E4%B8%8B%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 初始化设置：粗略熟悉一下基本设置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text"> 节点设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%B5%81%E8%A7%84%E5%88%99-%E7%AD%96%E7%95%A5%E7%BB%84"><span class="toc-number">1.4.</span> <span class="toc-text"> 分流规则、策略组</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E6%B5%81%E8%A7%84%E5%88%99%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84filter_local%E6%9C%AC%E5%9C%B0%E6%B7%BB%E5%8A%A0-filter_remote%E8%BF%9C%E7%A8%8B%E8%AE%A2%E9%98%85"><span class="toc-number">1.4.0.1.</span> <span class="toc-text"> 分流规则:配置文件中的[filter_local](本地添加)&#x2F; [filter_remote](远程订阅)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%AD%96%E7%95%A5%E7%BB%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84proxy%E6%A8%A1%E5%9D%97"><span class="toc-number">1.4.0.2.</span> <span class="toc-text"> 策略组:配置文件中的[proxy]模块</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B%E8%AE%BF%E9%97%AE%E7%9A%84%E7%BD%91%E7%AB%99%E5%8C%B9%E9%85%8D%E5%88%86%E6%B5%81%E8%A7%84%E5%88%99a%E4%B8%8D%E5%90%8C%E7%9A%84%E8%8A%82%E7%82%B9%E6%88%96%E8%80%85%E6%98%AF%E7%9B%B4%E8%BF%9E%E7%AD%89%E7%AD%96%E7%95%A5%E7%BB%84%E6%9C%80%E7%BB%88%E8%A2%AB%E5%A4%84%E7%90%86%E5%A4%84%E7%90%86%E6%95%88%E6%9E%9C%E5%8F%96%E5%86%B3%E4%BA%8E%E4%BD%A0%E7%9A%84%E7%AD%96%E7%95%A5%E7%BB%84%E6%88%96%E8%8A%82%E7%82%B9"><span class="toc-number">1.4.0.3.</span> <span class="toc-text"> 整体流程：访问的网站匹配分流规则A?不同的节点或者是“直连”等策略(组)?最终被处理（处理效果取决于你的策略(组)或节点）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%B5%81%E8%A7%84%E5%88%99"><span class="toc-number">1.4.1.</span> <span class="toc-text"> 分流规则</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%9A%8F%E4%BE%BF%E6%89%BE%E4%B8%80%E4%B8%AAlist%E5%B7%A6%E4%B8%8A%E8%A7%92raw%E5%A4%8D%E5%88%B6%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%AF%94%E5%A6%82chinalist"><span class="toc-number">1.4.1.1.</span> <span class="toc-text"> 1、随便找一个list?左上角Raw?复制浏览器地址，比如China.list</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E9%80%89%E6%8B%A9%E5%88%86%E6%B5%81-%E5%BC%95%E7%94%A8%E6%A0%87%E7%AD%BEchinalist%E5%8F%AF%E8%87%AA%E5%AE%9A%E4%B9%89%E8%B5%84%E6%BA%90%E8%B7%AF%E5%BE%84%E7%B2%98%E8%B4%B4raw%E9%93%BE%E6%8E%A5%E5%8F%B3%E4%B8%8A%E8%A7%92%E4%BF%9D%E5%AD%98"><span class="toc-number">1.4.1.2.</span> <span class="toc-text"> 2、选择”分流-引用“?标签“Chinalist”（可自定义）?”资源路径“，粘贴raw链接?右上角”保存“</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%86%99%E4%B8%8Emitm"><span class="toc-number">1.5.</span> <span class="toc-text"> 重写与MitM</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E5%86%99%E5%AF%B9%E5%BA%94%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84rewrite_remote%E4%BB%A5%E5%8F%8Arewrite_local%E6%A8%A1%E5%9D%97"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 重写：对应配置文件中的[rewrite_remote]以及[rewrite_local]模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mitm%E5%AF%B9%E5%BA%94%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84mitm%E6%A8%A1%E5%9D%97"><span class="toc-number">1.5.2.</span> <span class="toc-text"> MitM：对应配置文件中的[mitm]模块</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E7%94%9F%E6%88%90%E5%B9%B6%E9%85%8D%E7%BD%AE%E8%AF%81%E4%B9%A6"><span class="toc-number">1.5.2.1.</span> <span class="toc-text"> 1、生成并配置证书</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85%E8%AF%81%E4%B9%A6"><span class="toc-number">1.5.2.2.</span> <span class="toc-text"> 2、安装证书</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E4%BF%A1%E4%BB%BB%E8%AF%81%E4%B9%A6%E8%AE%BE%E7%BD%AE%E9%80%9A%E7%94%A8%E5%85%B3%E4%BA%8E%E6%9C%AC%E6%9C%BA%E8%AF%81%E4%B9%A6%E4%BF%A1%E4%BB%BB%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.5.2.3.</span> <span class="toc-text"> 3、信任证书：设置?通用?关于本机?证书信任设置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E5%88%86%E6%9E%90"><span class="toc-number">1.6.</span> <span class="toc-text"> 工具&amp;分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0"><span class="toc-number">1.6.1.</span> <span class="toc-text"> 手动添加</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A2%E9%98%85%E4%BB%BB%E5%8A%A1%E4%BB%93%E5%BA%93%E4%BB%A5%E9%87%8E%E6%AF%94%E5%A4%A7%E4%BD%AC%E7%9A%84%E4%BB%BB%E5%8A%A1%E4%BB%93%E5%BA%93%E4%B8%BA"><span class="toc-number">1.6.2.</span> <span class="toc-text"> 订阅任务仓库：以野比大佬的任务仓库为?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E6%93%8D%E7%BB%83%E4%B9%A0%E4%BB%A5%E9%87%8E%E6%AF%94%E5%A4%A7%E4%BD%AC%E7%9A%84%E4%BA%AC%E4%B8%9C%E7%AD%BE%E5%88%B0%E4%B8%BA"><span class="toc-number">1.6.3.</span> <span class="toc-text"> 实操练习：以野比大佬的京东签到为?</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E8%8E%B7%E5%8F%96%E4%BA%AC%E4%B8%9Ccookie%E6%A0%B9%E6%8D%AE%E8%84%9A%E6%9C%AC%E8%AF%B4%E6%98%8E%E5%A4%8D%E5%88%B6%E4%B8%8B%E9%9D%A2%EF%B8%8F%E5%85%B6%E4%B8%AD%E4%B8%80%E4%B8%AA%E7%BD%91%E5%9D%80%E5%88%B0safari%E7%99%BB%E5%BD%95%E4%BD%A0%E7%9A%84jd"><span class="toc-number">1.6.3.1.</span> <span class="toc-text"> 1、**获取京东Cookie：**根据脚本说明，复制下面⬇️其中一个网址到safari，登录你的JD。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E8%BF%90%E8%A1%8C%E4%BA%AC%E4%B8%9C%E5%A4%9A%E5%90%88%E4%B8%80%E7%AD%BE%E5%88%B0%E5%B7%A5%E5%85%B7%E5%88%86%E6%9E%90%E6%9E%84%E9%80%A0http%E8%AF%B7%E6%B1%82%E5%8F%B3%E6%BB%91%E4%BA%AC%E4%B8%9C%E5%A4%9A%E5%90%88%E4%B8%80%E7%AD%BE%E5%88%B0%E9%80%89%E6%8B%A9%EF%B8%8F%E8%BF%90%E8%A1%8C"><span class="toc-number">1.6.3.2.</span> <span class="toc-text"> 2、运行“京东多合一签到”：“工具&amp;分析”?“构造HTTP请求“?右滑“京东多合一签到”?选择“▶️”运行</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E4%BA%A4%E4%BA%92"><span class="toc-number">1.7.</span> <span class="toc-text"> 软件交互</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%BA%95%E9%83%A8%E5%A4%A7%E9%A3%8E%E8%BD%A6"><span class="toc-number">1.7.1.</span> <span class="toc-text"> 1、底部大风车</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%A1%B6%E9%83%A8%E5%B7%A5%E5%85%B7%E6%9D%A1"><span class="toc-number">1.7.2.</span> <span class="toc-text"> 2、顶部工具条</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%85%B6%E4%BB%96%E7%82%B9%E4%B8%80%E7%82%B9%E6%BB%91%E4%B8%80%E6%BB%91%E9%83%BD%E6%98%AF%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">1.7.3.</span> <span class="toc-text"> 3、其他：点一点，滑一滑，都是基本操作。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%99%BD%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text"> 小白配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95%E5%B0%B1%E6%98%AF%E6%8A%8A%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%8B%E5%88%B0%E6%9C%AC%E5%9C%B0%E8%A6%86%E7%9B%96%E5%86%8D%E8%BF%9B%E8%A1%8C%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.1.</span> <span class="toc-text"> 食用方法：就是把远程配置文件下到本地覆盖再进行设置。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%89%BE%E5%88%B0%E5%BA%93%E9%87%8C%E7%9A%84orz-3conf%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90raw%E9%93%BE%E6%8E%A5%E5%A4%8D%E5%88%B6%E5%9C%B0%E5%9D%80"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 1、找到库里的Orz-3.conf文件，生成raw链接，复制地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%9B%9E%E5%88%B0%E5%9C%88x%E5%8F%B3%E4%B8%8B%E8%A7%92%E5%A4%A7%E9%A3%8E%E8%BD%A6%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-%E4%B8%8B%E8%BD%BD%E7%B2%98%E8%B4%B4raw%E9%93%BE%E6%8E%A5%E5%B9%B6%E4%BF%9D%E5%AD%98"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 2、回到圈x?右下角大风车?配置文件-下载?粘贴raw链接并保存。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%87%8D%E6%96%B0%E6%89%93%E5%BC%80%E9%87%8D%E5%86%99%E5%92%8Cmitm%E7%94%9F%E6%88%90%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE%E8%AF%81%E4%B9%A6%E5%AE%89%E8%A3%85%E8%AF%81%E4%B9%A6%E4%BF%A1%E4%BB%BB%E8%AF%81%E4%B9%A6"><span class="toc-number">2.1.3.</span> <span class="toc-text"> 3、重新打开重写和MitM：生成证书?配置证书?安装证书?信任证书</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9%E5%8F%B3%E4%B8%8B%E8%A7%92%E5%A4%A7%E9%A3%8E%E8%BD%A6%E9%80%89%E6%8B%A9%E8%8A%82%E7%82%B9-%E5%BC%95%E7%94%A8%E8%BE%93%E5%85%A5%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF%E6%89%93%E5%BC%80%E8%B5%84%E6%BA%90%E8%A7%A3%E6%9E%90%E5%99%A8%E5%8F%B3%E4%B8%8A%E8%A7%92%E4%BF%9D%E5%AD%98"><span class="toc-number">2.1.4.</span> <span class="toc-text"> 4、添加节点：右下角大风车?选择“节点-引用”?输入节点信息?打开资源解析器?右上角“保存”</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9C%9F%E9%A6%99%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A"><span class="toc-number">2.2.</span> <span class="toc-text"> 真香体验报告</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%86%E6%B5%81%E5%8F%8A%E7%AD%96%E7%95%A5%E7%BB%84%E9%80%89%E6%8B%A9%E8%A7%84%E5%88%99%E5%88%86%E6%B5%81%E6%A8%A1%E5%BC%8F%E7%88%BD%E6%AD%AA%E6%AD%AA"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 1、分流及策略组：选择“规则分流”模式，爽歪歪。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%87%8D%E5%86%99%E5%8B%BE%E9%80%89%EF%B8%8F%E5%8E%BB%E5%B9%BF%E5%91%8A%E5%92%8C%E6%AF%94%E4%BB%B7%E6%98%AF%E7%9C%9F%E7%9A%84%E9%A6%99cookie%E6%98%AF%E8%B7%91%E8%84%9A%E6%9C%AC%E8%8E%B7%E5%8F%96cookie%E7%94%A8%E7%9A%84%E6%8C%89%E9%9C%80%E5%8B%BE%E9%80%89"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 2、重写：勾选☑️去广告，和比价是真的香，Cookie是跑脚本获取cookie用的，按需勾选。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%B7%BB%E5%8A%A0task%E4%BB%BB%E5%8A%A1%E5%B7%A5%E5%85%B7%E5%88%86%E6%9E%90%E6%9E%84%E9%80%A0http%E8%AF%B7%E6%B1%82%E6%B7%BB%E5%8A%A0%E8%AF%B7%E6%B1%82%E5%88%97%E8%A1%A8%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%B7%A6%E4%B8%80%E5%B0%8F%E7%9B%92%E5%AD%90%E5%9B%BE%E6%A0%87"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 3、添加Task任务：工具&amp;分析?构造HTTP请求?添加请求列表?上面的左一“小盒子图标”</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-boxjs%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B9%9F%E9%9B%86%E6%88%90%E4%BA%86%E5%AE%8C%E5%85%A8%E5%B0%B1%E6%98%AF%E4%B8%80%E6%9D%A1%E9%BE%99%E6%9C%8D%E5%8A%A1"><span class="toc-number">2.2.4.</span> <span class="toc-text"> 4、Boxjs：配置文件也集成了，完全就是一条龙服务。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E8%BD%BD%E4%BA%8E%E7%A7%91%E6%8A%80%E7%8E%A9%E5%AE%B6%E5%B0%8F%E5%A7%90%E5%A7%90%E6%95%99%E7%A8%8B%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E9%93%BE%E6%8E%A5"><span class="toc-number">2.3.</span> <span class="toc-text"> 转载于科技玩家小姐姐教程：快速跳转链接</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022041231679/" title="如何写一个简单的签到脚本(小白向)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/04/11/technology-3389893_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何写一个简单的签到脚本(小白向)"/></a><div class="content"><a class="title" href="/2022041231679/" title="如何写一个简单的签到脚本(小白向)">如何写一个简单的签到脚本(小白向)</a><time datetime="2022-04-12T09:00:54.000Z" title="发表于 2022-04-12 17:00:54">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022020945082/" title="通过浏览器获取cookie"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/xhhMQG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通过浏览器获取cookie"/></a><div class="content"><a class="title" href="/2022020945082/" title="通过浏览器获取cookie">通过浏览器获取cookie</a><time datetime="2022-02-09T02:00:54.000Z" title="发表于 2022-02-09 10:00:54">2022-02-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021123119294/" title="我的第一个Java Scripts脚本"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/31/technology-1283624_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一个Java Scripts脚本"/></a><div class="content"><a class="title" href="/2021123119294/" title="我的第一个Java Scripts脚本">我的第一个Java Scripts脚本</a><time datetime="2021-12-31T06:20:54.000Z" title="发表于 2021-12-31 14:20:54">2021-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021122635704/" title="记一次auto.js脚本编写"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/QiYAqX.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记一次auto.js脚本编写"/></a><div class="content"><a class="title" href="/2021122635704/" title="记一次auto.js脚本编写">记一次auto.js脚本编写</a><time datetime="2021-12-26T03:15:54.000Z" title="发表于 2021-12-26 11:15:54">2021-12-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021121119419/" title="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/KRwZYL.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)"/></a><div class="content"><a class="title" href="/2021121119419/" title="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)">巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)</a><time datetime="2021-12-11T01:15:54.000Z" title="发表于 2021-12-11 09:15:54">2021-12-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright"><span>&copy;2019 - 2022</span><svg style="width:1.5em; height:1.5em" aria-hidden="true"><use xlink:href="#icon-Butterfly"></use></svg><span>YML</span></div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/鲁ICP备-2021023764号-d021d6?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3JpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDExNi4xNjQ2NTUsIDIwMjEvMDEvMjYtMTU6NDE6MjAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6OTJhYTAzNGEtZTA5Ny03NzQ5LWFiNWEtN2UyYjEyNTE5NmY2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU0OUI0MzdBNEU3QTExRUNBRUIzOEUzRjg5QTdFMTE3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU0OUI0Mzc5NEU3QTExRUNBRUIzOEUzRjg5QTdFMTE3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NDkzYjU2ZS1jNjJjLWNiNGYtYTMwZi1jOWQ5NzBjY2U5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTJhYTAzNGEtZTA5Ny03NzQ5LWFiNWEtN2UyYjEyNTE5NmY2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+4ZgnQgAABOtJREFUeNqslX9sE2UYx793vV6vt3a9/lpX10n2Q2ATxpShgmMIGgHDBs6EgDEqBhE0SCDyh4Z/CMbAPzOiQcyEKIQYFRKSbSGMOaPAIhgDceA2Rhnb2rF1/bH22rv2rnf1LeAUg/Ef3tzzXN6893zyvfd5nvelcrkcHuRg8i6LobuTQuILAOUiBk914pHVW4qlG5eafjz165sZOcs+8/y8VkdNzcm+E98EqhqbAbaCfB9C5NrJ2/HOmTvuAO8zlhLb/NWW7U05eZAbzfAw2AVIx/s/lQ+2fVz/bHkbWT9MrP3fgfR9YFz354e6X93UtTaZHuZmWgzYyE1gMzeKRQs9cCz0MBs3nXmxc//ePNT0f0Bf5tKe058ci2P9xnK87kvA9sVVRAY0RPwa4qsOYrXWi21H1qH1hIrcwJff5wX8F7BqpH2Xv2FVb4NQ6cE7rl4MHUuALhWgiQqQ0UG5BfRsPY+1/CV4nn4Mz63qaJw8d+gGiZ11DzDV5weTPm1pG7CyF8fqsLJORPIygY3EQQkmmKIa0ucnYCxzgkvKCH99Ac3LFXRfr8bRs5rXQqXMjrLX7lHo03/5oUWnzCTVEgrFMSTGAaOmAtE0qAoe7HwB9K0UWOgID8kocWQAikIsScPkZloIo2waONx/5iUlGKy3W1hSQybkvF646ouRRA7iIie09T5YdteC31YD2s2jaL4LKYlsA6lhbxEPBC4vjY72vDEN5C32qoSootydJlvsROcFHsyyQkQaZ0ALiqB+T0HqmIA6NAV2Zz0c2+fh+JHY7Zqtncsg5Q8hHfD7poF6dKwxEWMwxyfC9wSLA0cL8NPeAGoXeGHjrZCuxqCHMkj3xmANTuHKnmvYf8QET62AuSVxhIMZqNH++mkgzaQEMUGjcPIa1i7XkFUtUNvH4fz2N9AlRihuA/QiBq5lXni7byDcegUpxYDmJiOskUGICQaMlTZOt56Zf7iLnnWzSfOUYMOTIlpK3DgQrII6ehVOEkDbzJCJSrGyCEG7F9/RJHmFAjY8FULW6oPwKAXeXtoxDSQai3KJHMb8IuZUDeHD9+Zj184GtItzgYSKJikCh0DjeIeVJIokAXbseJvDgspBjA2SaVqCnhXnTQMZQanLWj1Qx1UEQn14t96E5q4CdJ+S0E/XYEX1dXjNYWTbSqDEZJTO5vHBipuY6LkJSeXAuVjCYGfnWVT++MokL74cubDvmDyuIBMmtRcYRsWaWpg8pKu0CHkYJEMybGUOYIaTrIcxdHIAstUFS7kF5mIetsr1S1j7Cz//BYSBMr0SvdLymZaWbeGz42AKciheUgUtKkOVUqB5osRRAIo1ItLjR1ZjYKurgJpGxDarYR1r5LsI8M4vZ8I68XIwPW6WOY9u8yyrhBZPkR5OkCJlYWAFsCQPylQSqUAMHFHJ+TzITElIB8WcuTQJheyuw363bAw4l7f3ix63FhtJFjNxHTpRoGsGpCdF0hE6lEgcycFJUAbj7ZZL3wrDaKbhWex1sbz4FrG/T2yTc0H+tSY2dnafEvhjA2uQCninCdkUaS9KhSEzhayswDrbBQNngCInQRe4QNmLR7JMRSvHuz+65wq4OyRiW2N9nt1yfHJlRh1d8lC1u1oXKQsn0A7GbIV4CyNmtyAxRQ2Xo/5Qlzwc65yxGPo/z0PqQV9SfwowADr3CMhT4y5gAAAAAElFTkSuQmCC" title="本站已备案"></a>  <a style="margin-inline:5px" target="_blank" href="https://hexo.io/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><a style="margin-inline:5px" target="_blank" href="https://butterfly.js.org/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><a style="margin-inline:5px" target="_blank" href="https://www.jsdelivr.com/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/CDN-%E5%8F%88%E6%8B%8D%E4%BA%91-blue?style=flat&logo=appveyor" title="本站使用又拍云源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})
+setTimeout(function(){preloader.endLoading();}, 3000);</script></div><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://hexo-twikoo-gamma.vercel.app/',
+      region: 'ap-shandong'
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://hexo-twikoo-gamma.vercel.app/',
+      region: 'ap-shandong',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://fastly.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'U5krrjXnNHeUL4Rn0PHuSJjk-MdYXbMMI',
+      appKey: 'lIOIn4oWgccXxmq8YVQIYBfE',
+      placeholder: '-(゜-゜)つロ乾杯~  昵称输入QQ号的话，我就可以获取你的头像跟昵称了呦︿(￣︶￣)︿',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://fastly.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Twikoo' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://hexo-twikoo-gamma.vercel.app/',
+        region: 'ap-shandong',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://fastly.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="984492368" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><script defer src="https://fastly.jsdelivr.net/gh/yml2213/live2d-widget@2.4/autoload.js"></script><script async src="/js/diytitle.js"></script><script src="https://fastly.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script><script defer src="/js/qipao.js"></script><script async src="//at.alicdn.com/t/font_2634563_07wj3016ndwr.js"></script><script src="https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="true"></script><script id="click-show-text" src="https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="(ﾟ∀ﾟ),ヽ(✿ﾟ▽ﾟ)ノ,(｡◕∀◕｡),(๑ơ ₃ ơ)♥,(*´艸`*),(๑•̀ㅁ•́๑)✧,＼(◎o◎)／,⎝༼ ◕Д ◕ ༽⎠,(*´∀`)~♥,(♥д♥),ヾ (o ° ω ° O ) ノ゙" data-fontsize="15px" data-random="fals" async="async"></script><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://fastly.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://fastly.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>

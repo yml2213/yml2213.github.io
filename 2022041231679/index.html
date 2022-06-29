@@ -1,0 +1,623 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>如何写一个简单的签到脚本(小白向) | 梦磊の博客</title><meta name="keywords" content="教程,JavaScript,脚本,小白适合"><meta name="author" content="YML"><meta name="copyright" content="YML"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="背景: 最近羊毛没啥好写的了,京东也慢慢薅不动了(blog也鸽🕊了好久了呢),最近也有人问我脚本的问题,这里就统一写一个基础的脚本教程,给大家抛砖引玉,做一个基础基础!(本人小白水平,其中有啥错误 ❎ ,也希望各位大佬指教 )   一 : 梳理思路：   想要签到 , 必须有一个可以签到的软件 , 网页 , 小程序等   抓包 你想要进行签到的 软件 , 网页 , 小程序等(不会抓包或抓不到包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何写一个简单的签到脚本(小白向)">
+<meta property="og:url" content="http://menglei.xyz/2022041231679/index.html">
+<meta property="og:site_name" content="梦磊の博客">
+<meta property="og:description" content="背景: 最近羊毛没啥好写的了,京东也慢慢薅不动了(blog也鸽🕊了好久了呢),最近也有人问我脚本的问题,这里就统一写一个基础的脚本教程,给大家抛砖引玉,做一个基础基础!(本人小白水平,其中有啥错误 ❎ ,也希望各位大佬指教 )   一 : 梳理思路：   想要签到 , 必须有一个可以签到的软件 , 网页 , 小程序等   抓包 你想要进行签到的 软件 , 网页 , 小程序等(不会抓包或抓不到包">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yml-img.ml:521/images/2022/04/11/technology-3389893_1920.jpg">
+<meta property="article:published_time" content="2022-04-12T09:00:54.000Z">
+<meta property="article:modified_time" content="2022-06-20T03:19:26.591Z">
+<meta property="article:author" content="YML">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="脚本">
+<meta property="article:tag" content="小白适合">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yml-img.ml:521/images/2022/04/11/technology-3389893_1920.jpg"><link rel="shortcut icon" href="https://yml-img.ml:521/images/2022/02/28/logo.png"><link rel="canonical" href="http://menglei.xyz/2022041231679/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://fastly.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://fastly.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '如何写一个简单的签到脚本(小白向)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-20 11:19:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.css"><link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="梦磊の博客" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="iron-container iron-circle"><div class="iron-box1 iron-circle iron-center"></div><div class="iron-box2 iron-circle iron-center"></div><div class="iron-box3 iron-circle iron-center"></div><div class="iron-box4 iron-circle iron-center"></div><div class="iron-box5 iron-circle iron-center"></div><div class="iron-box6 iron-circle"><div class="iron-coil" style="--i: 0"></div><div class="iron-coil" style="--i: 1"></div><div class="iron-coil" style="--i: 2"></div><div class="iron-coil" style="--i: 3"></div><div class="iron-coil" style="--i: 4"></div><div class="iron-coil" style="--i: 5"></div><div class="iron-coil" style="--i: 6"></div><div class="iron-coil" style="--i: 7"></div></div></div></div><div id="web_bg"> </div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/vue-color-avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shouye"></use></svg><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/tuku/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tubiaozhizuomoban"></use></svg><span> 设计灵感</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shijian"></use></svg><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiewenzhang"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fun"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yingshi"></use></svg><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-lianjie"></use></svg><span> 友链</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://yml-img.ml:521/images/2022/04/11/technology-3389893_1920.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">梦磊の博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shouye"></use></svg><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/tuku/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tubiaozhizuomoban"></use></svg><span> 设计灵感</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shijian"></use></svg><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xiewenzhang"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fun"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yingshi"></use></svg><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-lianjie"></use></svg><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">如何写一个简单的签到脚本(小白向)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-12T09:00:54.000Z" title="发表于 2022-04-12 17:00:54">2022-04-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-20T03:19:26.591Z" title="更新于 2022-06-20 11:19:26">2022-06-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>25分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="如何写一个简单的签到脚本(小白向)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p><strong>背景</strong>: 最近羊毛没啥好写的了,京东也慢慢薅不动了(blog也鸽🕊了好久了呢),最近也有人问我脚本的问题,这里就统一写一个基础的脚本教程,给大家抛砖引玉,做一个基础基础!(本人小白水平,其中有啥错误 ❎ ,也希望各位大佬指教 )</p>
+</blockquote>
+<h2 id="一-梳理思路"><a class="markdownIt-Anchor" href="#一-梳理思路"></a> <strong>一 : 梳理思路：</strong></h2>
+<ol>
+<li>
+<p>想要签到 , 必须有一个可以签到的软件 , 网页 , 小程序等</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://www.wangan.com/p/7fygfgd3e50bbcae">抓包</a> 你想要进行签到的 软件 , 网页 , 小程序等(不会抓包或抓不到包的点击<a target="_blank" rel="noopener" href="https://www.wangan.com/p/7fygfgd3e50bbcae">抓包</a> 的超链接去学习)</p>
+</li>
+<li>
+<p>然后就是分析(很有可能需要解密的相关知识)你抓的数据包 , 直到找到 <strong>签到</strong> (或其他操作) 包</p>
+</li>
+<li>
+<p>使用测试工具进行测试,确定是否可以请求成功(不成功自己寻找并解决问题)直到可以成功请求</p>
+</li>
+<li>
+<p>最后就是写脚本了, 只要前面的完成了, 写脚本那就很快了</p>
+</li>
+</ol>
+<h2 id="二-思路有了-那就开始吧"><a class="markdownIt-Anchor" href="#二-思路有了-那就开始吧"></a> 二: 思路有了, 那就开始吧!</h2>
+<blockquote>
+<p>博主是小白  博主是小白  博主是小白  博主是小白  博主是小白</p>
+<p>有任何错误笑笑就好了 ,  当然更加欢迎您指出我的错误 , 万分感激的!</p>
+</blockquote>
+<h3 id="首先确定一个目标今天来个简单的例子"><a class="markdownIt-Anchor" href="#首先确定一个目标今天来个简单的例子"></a> 首先确定一个目标(今天来个简单的例子🌰)</h3>
+<p>微信小程序:骁友会 (直接搜索或扫码进入:扫码有邀请 没啥用的,在意的自己搜索)</p>
+<ul>
+<li>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/04/11/image-20220411213118940.png" alt="image-20220411213118940" style="zoom: 33%;" />
+</li>
+<li>注册登录后可以找到 <strong>任务列表</strong> 里面有 <strong>每日签到</strong>  跟其他的很多任务(今天就搞这个签到)</li>
+<li>然后就是下一步了</li>
+</ul>
+<h3 id="进行-签到-相关操作的抓包"><a class="markdownIt-Anchor" href="#进行-签到-相关操作的抓包"></a> 进行 <strong>签到</strong> (相关操作)的抓包</h3>
+<h4 id="根据不同的机型-我们需要分类讨论了-首先来说说ios吧"><a class="markdownIt-Anchor" href="#根据不同的机型-我们需要分类讨论了-首先来说说ios吧"></a> 根据不同的机型 , 我们需要分类讨论了  首先来说说ios吧</h4>
+<ul>
+<li>ios 抓包相关
+<ul>
+<li>抓包软件
+<ul>
+<li>免费的 : stream  图标就是个心电图是的 , 免费软件 , 国区可自行下载</li>
+<li>收费软件:
+<ol>
+<li>不得不说的就是 <strong><a target="_blank" rel="noopener" href="https://www.kejiwanjia.com/jiaocheng/zheteng/notes/21016.html">圈x</a></strong> ios绕不开的软件 , 操作教程找科技玩家小姐姐(点击超链接即可)(不会告诉你我搬运到我的bolg了) , 需要自行外区下载</li>
+<li>thor 也叫锤子 , 就是长得像索尔的🔨吧  , 需要自行外区下载 (有这个软件的应该不需要教程)</li>
+<li>Http Catcher 也叫网球 🎾 ,可能就是长得像🎾吧  国区可下载 , 高级功能需要付费解锁 🔓 , 有这个软件的也不需要教程</li>
+<li>别的没怎么用过 , 听说过了</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>抓包操作
+<ul>
+<li>不同的软件 , 操作也有所差异 , 但是本质都是一样的 , 都是通过建立 vpn 进行代理网络流量 , 从而进行捕获数据包 . 想要捕获https 数据包 , 都需要进行证书的信任工作 , 记得有两个关于证书的操作就够了,一个地方安装证书 , 一个地方信任证书 ;  详细教程自己百度  , google 去吧!</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="android-抓包相关"><a class="markdownIt-Anchor" href="#android-抓包相关"></a> Android 抓包相关</h4>
+<ul>
+<li>相对比 ios 来说 , 安卓的抓包就有利有弊了,得益于安卓的生态,也毁在安卓的生态(个人见解哈)
+<ul>
+<li>抓包软件
+<ul>
+<li>小黄鸟(3.3.6) ,  小蓝鸟 , 还有各种小黄鸟的改版 ; 安卓端知名的抓包软件 , 推荐3.3.6版本,别问为啥</li>
+<li>抓包精灵  跟小黄鸟差不多的</li>
+<li>还有好多好多好多好多没听说过的软件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>抓包操作 同ios  自行搜索研究去吧!</li>
+</ul>
+<h4 id="pc-抓包相关"><a class="markdownIt-Anchor" href="#pc-抓包相关"></a> PC 抓包相关</h4>
+<ul>
+<li>上面的软件基本都是基于手机的 , 总有这样那样的不方便的地方,个人觉得还是配合电脑抓包,才能更好 , 更更快的分析数据包 (当然,你只有手机就当我在💨)</li>
+<li>PC 抓包软件推荐
+<ol>
+<li><strong>Fiddler</strong>   首推fd,mac的话可以考虑 <strong>charles</strong> , fd的强大是人尽皆知的:学习链接 – <a target="_blank" rel="noopener" href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=1171662&amp;highlight=Fiddler">52破解基础基础</a>   <a target="_blank" rel="noopener" href="https://www.52pojie.cn/home.php?mod=space&amp;uid=1075167&amp;do=thread&amp;view=me&amp;order=dateline&amp;from=space&amp;page=2">进阶教程</a></li>
+<li><strong>charles</strong>  （也叫花瓶、青花瓷等）mac用户首推这个 , 当然win也有这个 分类很好用; <a target="_blank" rel="noopener" href="https://zhuanlan.kanxue.com/article-13139.htm">看雪charles教程</a></li>
+<li>别的没怎么用过  , 当然抓包工具还有超级多的</li>
+</ol>
+</li>
+</ul>
+<h4 id="抓包签到"><a class="markdownIt-Anchor" href="#抓包签到"></a> 抓包签到</h4>
+<ul>
+<li>打开你的抓包软件 , 或者手机连上你的电脑抓包软件</li>
+<li>确定开始正常抓包后去app执行签到相关操作</li>
+<li>返回抓包工具 , 停止抓包 , 备注刚才抓包的app 进行的操作(不能备注的也没办法)</li>
+<li>至此,抓包结束 🔚</li>
+</ul>
+<h3 id="分析刚才抓的数据包"><a class="markdownIt-Anchor" href="#分析刚才抓的数据包"></a> 分析刚才抓的数据包</h3>
+<blockquote>
+<p>分析数据包这个东西吧  , 没法教 ,主要看自己的悟性(就是猜) , 自己的英语水平 (数据包基本没有中文,只有部分中文的提示,基本全是英语) ,  还有就是自己的经验(废话) ,我们一点点来说吧！</p>
+</blockquote>
+<h4 id="首先可以根据-url-链接寻找关键字进行定位-就是有根据的瞎猜"><a class="markdownIt-Anchor" href="#首先可以根据-url-链接寻找关键字进行定位-就是有根据的瞎猜"></a> 首先可以根据 <strong>url</strong> 链接,寻找关键字进行定位 📌 (就是有根据的瞎猜)</h4>
+<ul>
+<li>例如: 某个url如下</li>
+<li><code>https://qualcomm.growthideadata.com/qualcomm-app/api/user/signIn?userId=xxx</code> 请你判断下这个url 是做什么工作的       <span class="hide-inline"><button type="button" class="hide-button button--animated" style="background-color: #FF7242;color: #fff">点击我查看答案
+  </button><span class="hide-content">用户登录 </span></span></li>
+<li>我们来分析下这个 <strong>url</strong>
+<ol>
+<li>首先前面是固定的 <code>https://</code>  这个是 <strong>https</strong> 请求</li>
+<li><code>qualcomm.growthideadata.com</code> 是他的域名(也就是host)</li>
+<li><code>/user/signIn</code>  很明显就是<code>/用户/登录</code> 了鸭</li>
+</ol>
+</li>
+<li>像这种的根据 <strong>url</strong> 中的英文单词来判断 这个数据包功能是 非常非常非常 常见的,因为你第一眼看到的就是这玩意了</li>
+</ul>
+<h4 id="然后我们还可以根据-响应体-来进行判断-请求头-请求体-响应头-响应体还不懂的自行去补课-简书"><a class="markdownIt-Anchor" href="#然后我们还可以根据-响应体-来进行判断-请求头-请求体-响应头-响应体还不懂的自行去补课-简书"></a> 然后我们还可以根据 <strong>响应体</strong> 来进行判断  (请求头  请求体 响应头 响应体还不懂的自行去补课: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/eb3e5ec98a66">简书</a> )</h4>
+<ul>
+<li>例如: 某个响应体如下 ;</li>
+</ul>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;code&quot;</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="string">&quot;message&quot;</span>: <span class="string">&quot;success！&quot;</span>,</span><br><span class="line">  <span class="string">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;coins&quot;</span>: <span class="number">5</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>请你判断下这个 响应体  可能是什么的 , 我们经常用的数据有哪些?     <span class="hide-inline"><button type="button" class="hide-button button--animated" style="background-color: #FF7242;color: #fff">点击我查看答案
+  </button><span class="hide-content">用户签到获得硬币(金币等) 常用数据:code message coins </span></span></li>
+</ul>
+<h4 id="我们可以根据数据包的类型来进行初步筛选"><a class="markdownIt-Anchor" href="#我们可以根据数据包的类型来进行初步筛选"></a> 我们可以根据数据包的类型来进行初步筛选</h4>
+<ul>
+<li>一般请求都是 <code>post</code> 或者 <code>get</code> 请求 , 我们根据数据包类型减少工作量</li>
+<li>一般有携带账号密码信息的请求都是使用 <code>post</code> 进行的</li>
+<li>一些简单的请求可能使用 <code>get</code></li>
+</ul>
+<h4 id="我们可以根据获得的数据进行搜索筛选"><a class="markdownIt-Anchor" href="#我们可以根据获得的数据进行搜索筛选"></a> 我们可以根据获得的数据进行搜索筛选</h4>
+<ul>
+<li>例如: 我们签到获得了5 积分 , 我们就可以直接搜索 <code>5</code> 作为关键字搜索响应体(因为这个数据是服务器发回我们的,所以搜索响应体) ; 搜索出来数据可能超级多 因为 <code>5</code> 太常见了  ;  如果 <code>33</code>  <code>78</code> 等这样的值这样搜索 效果比较好</li>
+<li>同理，也可以进行中文的搜索筛选（效果非常不理想，很多返回都是英文的）</li>
+</ul>
+<h4 id="可以通过软件内的时间来进行辅助定位"><a class="markdownIt-Anchor" href="#可以通过软件内的时间来进行辅助定位"></a> 可以通过软件内的时间来进行辅助定位</h4>
+<ul>
+<li>例如：你签到成功后，很多软件都会给你一个积分（金币）啥的明细表，就是你什么时间，做了什么操作，然后获得了多少积分等</li>
+<li>可以根据软件给的时间 来进行辅助定位，很多软件会精确到毫秒 ，所以这不失为一个好方法呢(<sup>o</sup>)/~</li>
+</ul>
+<h4 id="没有别的办法那就只能查看所有数据包慢慢寻找你要的数据包了"><a class="markdownIt-Anchor" href="#没有别的办法那就只能查看所有数据包慢慢寻找你要的数据包了"></a> 没有别的办法那就只能查看所有数据包，慢慢寻找你要的数据包了</h4>
+<ul>
+<li>找的过程也要慢慢积累，尽可能的搞清楚他的命名逻辑，对以后的找包速度会有明显提升</li>
+</ul>
+<h4 id="下面给出本次试验对象的签到数据包"><a class="markdownIt-Anchor" href="#下面给出本次试验对象的签到数据包"></a> 下面给出本次试验对象的签到数据包</h4>
+<ul>
+<li>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/04/12/-1.jpg" alt="image-20220411213118940" style="zoom: 33%;" />
+</li>
+</ul>
+<h3 id="使用测试工具进行测试"><a class="markdownIt-Anchor" href="#使用测试工具进行测试"></a> 使用测试工具进行测试</h3>
+<blockquote>
+<p>其实这里我不知道该叫什么名字，反正我就按照我自己的理解进行教程，有不对，不合适的地方，请指出</p>
+</blockquote>
+<h4 id="使用抓包工具自带的软件进行测试"><a class="markdownIt-Anchor" href="#使用抓包工具自带的软件进行测试"></a> 使用抓包工具自带的软件进行测试</h4>
+<ul>
+<li>很多抓包工具都带有数据包 <strong>重发</strong> 功能，例如：
+<ul>
+<li>安卓：小黄鸟、小蓝鸟</li>
+<li>ios：圈x自带重放   锤子配合 anubis 网球没用过</li>
+<li>pc： fd自带重放   花瓶（charles）都可以直接进行重放</li>
+</ul>
+</li>
+<li>一般当你不能确定是否是这条数据包时，重放总是一个不错的选择！</li>
+</ul>
+<h4 id="使用第三方的调试工具进行测试"><a class="markdownIt-Anchor" href="#使用第三方的调试工具进行测试"></a> 使用第三方的调试工具进行测试</h4>
+<ul>
+<li>我比较常用的有 <strong>postman</strong>  <strong>apipost</strong>等</li>
+<li>这里主要是进行数据的重放与必要参数的测试</li>
+</ul>
+<h4 id="进行数据包参数测试"><a class="markdownIt-Anchor" href="#进行数据包参数测试"></a> 进行数据包参数测试</h4>
+<ul>
+<li>这一步主要是确定服务器会校验那些参数，那也就是我们写脚本必须要加强关注的参数</li>
+<li>所谓的服务器校验，也就是你发送过去后 他会判断这个参数是否正常，不正常的话一般会返回一些错误码等等</li>
+<li>也就是说，你要保证他检验的数据一定是正确的，你才有可能签到（别的什么操作）成功</li>
+<li>得到最简的参数时，这一步可以算完成了</li>
+</ul>
+<h3 id="接下来就是最后一步了我们开始写脚本吧"><a class="markdownIt-Anchor" href="#接下来就是最后一步了我们开始写脚本吧"></a> 接下来就是最后一步了，我们开始写脚本吧</h3>
+<blockquote>
+<p>开始写脚本之前我先声明几句</p>
+<ol>
+<li>我的js是自学的，难免有错误的地方</li>
+<li>很多地方都是大佬的开源脚本修改的，可能修改的四不像，但是我用着舒服就行了</li>
+<li>脚本我写了很多注释 // 就是双引号后面的内容，希望可以帮你可以尽快的理解这一行的作用</li>
+<li>有任何不懂得地方，直接百度、google查一下  很快就懂了</li>
+<li>没了没了  开始</li>
+</ol>
+</blockquote>
+<ul>
+<li>首先，脚本地址：<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/yml2213/template/master/jiaocheng.js">教程</a></li>
+<li>如果遇到任何问题，请首尝试自己解决它，这样你的成长才会更快；实在解决不了的可以群里问</li>
+<li>啰啰嗦嗦几千字了，第一版就先这样吧</li>
+<li>下面给懒得同学吧脚本内容搬运下，省的跳过去看了！</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 教程 </span></span><br><span class="line"><span class="comment"> * 地址： https://raw.githubusercontent.com/yml2213/template/master/jiaocheng.js</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * 教程    这里是写脚本说明的地方</span></span><br><span class="line"><span class="comment"> * 本脚本仅用于学习使用请勿直接运行</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * ========= 青龙 =========</span></span><br><span class="line"><span class="comment"> * 变量格式：export jiaocheng_data=&#x27; xxxx &amp; xxx @  xxxx &amp; xxx &#x27;  多个账号用 @分割 </span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> jsname = <span class="string">&quot;教程&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> $ = Env(jsname);</span><br><span class="line"><span class="keyword">const</span> notify = $.isNode() ? <span class="built_in">require</span>(<span class="string">&#x27;./sendNotify&#x27;</span>) : <span class="string">&#x27;&#x27;</span>;      <span class="comment">// 这里是 node（青龙属于node环境）通知相关的</span></span><br><span class="line"><span class="keyword">const</span> Notify = <span class="number">1</span>; <span class="comment">//0为关闭通知，1为打开通知,默认为1</span></span><br><span class="line"><span class="keyword">const</span> debug = <span class="number">1</span>; <span class="comment">//0为关闭调试，1为打开调试,默认为0</span></span><br><span class="line"><span class="comment">//////////////////////</span></span><br><span class="line"><span class="keyword">let</span> jiaocheng_data = process.env.jiaocheng_data;               <span class="comment">// 这里是 从青龙的 配置文件 读取你写的变量</span></span><br><span class="line"><span class="keyword">let</span> jiaocheng_dataArr = [];</span><br><span class="line"><span class="keyword">let</span> data = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> msg = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">!(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (!(<span class="keyword">await</span> Envs()))  	<span class="comment">//多账号分割 判断变量是否为空  初步处理多账号</span></span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">`本地脚本4-11 )`</span>);       <span class="comment">// console.log是输出信息的，可以在脚本日志中看到输出（打印）的信息</span></span><br><span class="line"></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">`\n\n=========================================    \n脚本执行 - 北京时间(UTC+8)：<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>(</span></span></span><br><span class="line"><span class="subst"><span class="string">			<span class="keyword">new</span> <span class="built_in">Date</span>().getTime() + <span class="keyword">new</span> <span class="built_in">Date</span>().getTimezoneOffset() * <span class="number">60</span> * <span class="number">1000</span> +</span></span></span><br><span class="line"><span class="subst"><span class="string">			<span class="number">8</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>).toLocaleString()&#125;</span> \n=========================================\n`</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">await</span> wyy();</span><br><span class="line"></span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">`\n=================== 共找到 <span class="subst">$&#123;jiaocheng_dataArr.length&#125;</span> 个账号 ===================`</span>)</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (debug) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">`【debug】 这是你的全部账号数组:\n <span class="subst">$&#123;jiaocheng_dataArr&#125;</span>`</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">let</span> index = <span class="number">0</span>; index &lt; jiaocheng_dataArr.length; index++) &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			<span class="keyword">let</span> num = index + <span class="number">1</span></span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">`\n========= 开始【第 <span class="subst">$&#123;num&#125;</span> 个账号】=========\n`</span>)</span><br><span class="line"></span><br><span class="line">			data = jiaocheng_dataArr[index].split(<span class="string">&#x27;&amp;&#x27;</span>);      <span class="comment">// 这里是分割你每个账号的每个小项   </span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (debug) &#123;</span><br><span class="line">				<span class="built_in">console</span>.log(<span class="string">`\n 【debug】 这是你第 <span class="subst">$&#123;num&#125;</span> 账号信息:\n <span class="subst">$&#123;data&#125;</span>\n`</span>);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			<span class="comment">// 这里是开始做任务    需要注意的点</span></span><br><span class="line">			<span class="comment">// 	1. await只能运行与async函数中</span></span><br><span class="line">			<span class="comment">// 	2. 函数的名字不可以相同</span></span><br><span class="line">			<span class="comment">//      3. 不够可以自己复制</span></span><br><span class="line"></span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">&#x27;开始 xx&#x27;</span>);</span><br><span class="line">			<span class="keyword">await</span> signin();</span><br><span class="line">			<span class="keyword">await</span> $.wait(<span class="number">2</span> * <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">			<span class="comment">// 这里是开始做任务   </span></span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">&#x27;开始 yy&#x27;</span>);</span><br><span class="line">			<span class="keyword">await</span> yyyy();</span><br><span class="line">			<span class="keyword">await</span> $.wait(<span class="number">2</span> * <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			<span class="comment">// 这里是开始做任务   </span></span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">&#x27;开始 zz&#x27;</span>);</span><br><span class="line">			<span class="keyword">await</span> zzzzz();</span><br><span class="line">			<span class="keyword">await</span> $.wait(<span class="number">2</span> * <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			<span class="keyword">await</span> SendMsg(msg);    <span class="comment">// 与发送通知有关系</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;)()</span><br><span class="line">	.catch(<span class="function">(<span class="params">e</span>) =&gt;</span> <span class="built_in">console</span>.logErr(e))</span><br><span class="line">	.finally(<span class="function">() =&gt;</span> $.done())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 签到  骁友会</span></span><br><span class="line"><span class="comment"> * 下面我们来看看函数需要注意的东西吧</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">signin</span>(<span class="params">timeout = <span class="number">3</span> * <span class="number">1000</span></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">		<span class="keyword">let</span> url = &#123;</span><br><span class="line">			<span class="attr">url</span>: <span class="string">`https://qualcomm.growthideadata.com/qualcomm-app/api/user/signIn?userId=<span class="subst">$&#123;data[<span class="number">1</span>]&#125;</span>`</span>,    <span class="comment">// 这是请求的 url 可以直接用我们抓包、精简后的URL</span></span><br><span class="line">			<span class="attr">headers</span>: &#123;            <span class="comment">// headers 是请求体  可以直接用精简后的 hd  也就是服务器校验的部分，他需要啥，我们就给他啥  </span></span><br><span class="line"></span><br><span class="line">				<span class="string">&quot;userId&quot;</span>: data[<span class="number">1</span>],</span><br><span class="line">				<span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/x-www-form-urlencoded;charset=UTF-8&quot;</span>,</span><br><span class="line">				<span class="string">&quot;Host&quot;</span>: <span class="string">&quot;qualcomm.growthideadata.com&quot;</span>,</span><br><span class="line">				<span class="string">&quot;User-Agent&quot;</span>: UA,</span><br><span class="line">				<span class="string">&quot;sessionKey&quot;</span>: data[<span class="number">0</span>],</span><br><span class="line">				<span class="string">&quot;Referer&quot;</span>: <span class="string">&quot;https://servicewechat.com/wx026c06df6adc5d06/176/page-frame.html&quot;</span>,</span><br><span class="line">				<span class="string">&quot;Connection&quot;</span>: <span class="string">&quot;keep-alive&quot;</span></span><br><span class="line">			&#125;,</span><br><span class="line">			<span class="comment">// body: &#x27;&#x27;,       // 这是一个 get 请求，没有请求体 body   如果是 post 不要忘记他鸭！</span></span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (debug) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">`\n【debug】=============== 这是 签到 请求 url ===============`</span>);</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(url));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		$.get(url, <span class="keyword">async</span> (error, response, data) =&gt; &#123;     <span class="comment">// 这是一个 get 请求 , 如果是 post  记得把这里改了 </span></span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> (debug) &#123;</span><br><span class="line">					<span class="built_in">console</span>.log(<span class="string">`\n\n【debug】===============这是 签到 返回data==============`</span>);</span><br><span class="line">					<span class="built_in">console</span>.log(data)</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">let</span> result = <span class="built_in">JSON</span>.parse(data);</span><br><span class="line">				<span class="keyword">if</span> (result.code == <span class="number">200</span>) &#123;        <span class="comment">// 这里是根据服务器返回的数据做判断  方便我们知道任务是否完成了</span></span><br><span class="line"></span><br><span class="line">					<span class="built_in">console</span>.log(<span class="string">`【签到】<span class="subst">$&#123;result.message&#125;</span> 🎉 `</span>)</span><br><span class="line">					msg += <span class="string">`\n【签到】<span class="subst">$&#123;result.message&#125;</span> 🎉`</span></span><br><span class="line"></span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (result.code === <span class="number">1</span>) &#123;    <span class="comment">// 这里是根据服务器返回的数据做判断  方便我们知道任务是否完成了</span></span><br><span class="line"></span><br><span class="line">					<span class="built_in">console</span>.log(<span class="string">`\n【签到】 失败 ,可能是:<span class="subst">$&#123;result.message&#125;</span>!\n `</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (result.code === <span class="number">40001</span>) &#123;   <span class="comment">// 这里是根据服务器返回的数据做判断  方便我们知道任务是否完成了</span></span><br><span class="line"></span><br><span class="line">					<span class="built_in">console</span>.log(<span class="string">`\n【签到】 失败 ,可能是:<span class="subst">$&#123;result.message&#125;</span>!\n `</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;    <span class="comment">// 这里是根据服务器返回的数据做判断  方便我们知道任务是否完成了</span></span><br><span class="line"></span><br><span class="line">					<span class="built_in">console</span>.log(<span class="string">`\n【签到】 失败 ❌ 了呢,可能是网络被外星人抓走了!\n `</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">			&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">				<span class="built_in">console</span>.log(e)</span><br><span class="line">			&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">				resolve();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;, timeout)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果有更多的需求，直接复制上一个函数，改个名   然后稍微更改一下内容   就可以用了   </span></span><br><span class="line"><span class="comment">// 不要忘记与上面的 函数调用对应起来鸭</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//#region 固定代码 可以不管他</span></span><br><span class="line"><span class="comment">// ============================================变量检查============================================ \\</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">Envs</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (jiaocheng_data) &#123;</span><br><span class="line">		<span class="keyword">if</span> (jiaocheng_data.indexOf(<span class="string">&quot;@&quot;</span>) != -<span class="number">1</span>) &#123;</span><br><span class="line">			jiaocheng_data.split(<span class="string">&quot;@&quot;</span>).forEach(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">				jiaocheng_dataArr.push(item);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			jiaocheng_dataArr.push(jiaocheng_data);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">`\n 【<span class="subst">$&#123;$.name&#125;</span>】：未填写变量 jiaocheng_data`</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ============================================发送消息============================================ \\</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">SendMsg</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!message)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (Notify &gt; <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> ($.isNode()) &#123;</span><br><span class="line">			<span class="keyword">var</span> notify = <span class="built_in">require</span>(<span class="string">&#x27;./sendNotify&#x27;</span>);</span><br><span class="line">			<span class="keyword">await</span> notify.sendNotify($.name, message);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			$.msg(message);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(message);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 随机数生成</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">randomString</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">	e = e || <span class="number">32</span>;</span><br><span class="line">	<span class="keyword">var</span> t = <span class="string">&quot;QWERTYUIOPASDFGHJKLZXCVBNM1234567890&quot;</span>,</span><br><span class="line">		a = t.length,</span><br><span class="line">		n = <span class="string">&quot;&quot;</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; e; i++)</span><br><span class="line">		n += t.charAt(<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * a));</span><br><span class="line">	<span class="keyword">return</span> n</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 随机整数生成</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">randomInt</span>(<span class="params">min, max</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random() * (max - min) + min)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//每日网抑云</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wyy</span>(<span class="params">timeout = <span class="number">3</span> * <span class="number">1000</span></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">		<span class="keyword">let</span> url = &#123;</span><br><span class="line">			<span class="attr">url</span>: <span class="string">`https://keai.icu/apiwyy/api`</span></span><br><span class="line">		&#125;</span><br><span class="line">		$.get(url, <span class="keyword">async</span> (err, resp, data) =&gt; &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				data = <span class="built_in">JSON</span>.parse(data)</span><br><span class="line">				<span class="built_in">console</span>.log(<span class="string">`\n 【网抑云时间】: <span class="subst">$&#123;data.content&#125;</span>  by--<span class="subst">$&#123;data.music&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line">			&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">				<span class="built_in">console</span>.logErr(e, resp);</span><br><span class="line">			&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">				resolve()</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;, timeout)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//#endregion</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// prettier-ignore   固定代码  不用管他</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Env</span>(<span class="params">t, e</span>) </span>&#123; <span class="string">&quot;undefined&quot;</span> != <span class="keyword">typeof</span> process &amp;&amp; <span class="built_in">JSON</span>.stringify(process.env).indexOf(<span class="string">&quot;GITHUB&quot;</span>) &gt; -<span class="number">1</span> &amp;&amp; process.exit(<span class="number">0</span>); <span class="class"><span class="keyword">class</span> <span class="title">s</span> </span>&#123; <span class="function"><span class="title">constructor</span>(<span class="params">t</span>)</span> &#123; <span class="built_in">this</span>.env = t &#125; <span class="function"><span class="title">send</span>(<span class="params">t, e = <span class="string">&quot;GET&quot;</span></span>)</span> &#123; t = <span class="string">&quot;string&quot;</span> == <span class="keyword">typeof</span> t ? &#123; <span class="attr">url</span>: t &#125; : t; <span class="keyword">let</span> s = <span class="built_in">this</span>.get; <span class="keyword">return</span> <span class="string">&quot;POST&quot;</span> === e &amp;&amp; (s = <span class="built_in">this</span>.post), <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">e, i</span>) =&gt;</span> &#123; s.call(<span class="built_in">this</span>, t, <span class="function">(<span class="params">t, s, r</span>) =&gt;</span> &#123; t ? i(t) : e(s) &#125;) &#125;) &#125; <span class="function"><span class="title">get</span>(<span class="params">t</span>)</span> &#123; <span class="keyword">return</span> <span class="built_in">this</span>.send.call(<span class="built_in">this</span>.env, t) &#125; <span class="function"><span class="title">post</span>(<span class="params">t</span>)</span> &#123; <span class="keyword">return</span> <span class="built_in">this</span>.send.call(<span class="built_in">this</span>.env, t, <span class="string">&quot;POST&quot;</span>) &#125; &#125; <span class="keyword">return</span> <span class="keyword">new</span> <span class="class"><span class="keyword">class</span> </span>&#123; <span class="function"><span class="title">constructor</span>(<span class="params">t, e</span>)</span> &#123; <span class="built_in">this</span>.name = t, <span class="built_in">this</span>.http = <span class="keyword">new</span> s(<span class="built_in">this</span>), <span class="built_in">this</span>.data = <span class="literal">null</span>, <span class="built_in">this</span>.dataFile = <span class="string">&quot;box.dat&quot;</span>, <span class="built_in">this</span>.logs = [], <span class="built_in">this</span>.isMute = !<span class="number">1</span>, <span class="built_in">this</span>.isNeedRewrite = !<span class="number">1</span>, <span class="built_in">this</span>.logSeparator = <span class="string">&quot;\n&quot;</span>, <span class="built_in">this</span>.startTime = (<span class="keyword">new</span> <span class="built_in">Date</span>).getTime(), <span class="built_in">Object</span>.assign(<span class="built_in">this</span>, e), <span class="built_in">this</span>.log(<span class="string">&quot;&quot;</span>, <span class="string">`🔔<span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>, 开始!`</span>) &#125; <span class="function"><span class="title">isNode</span>(<span class="params"></span>)</span> &#123; <span class="keyword">return</span> <span class="string">&quot;undefined&quot;</span> != <span class="keyword">typeof</span> <span class="built_in">module</span> &amp;&amp; !!<span class="built_in">module</span>.exports &#125; <span class="function"><span class="title">isQuanX</span>(<span class="params"></span>)</span> &#123; <span class="keyword">return</span> <span class="string">&quot;undefined&quot;</span> != <span class="keyword">typeof</span> $task &#125; <span class="function"><span class="title">isSurge</span>(<span class="params"></span>)</span> &#123; <span class="keyword">return</span> <span class="string">&quot;undefined&quot;</span> != <span class="keyword">typeof</span> $httpClient &amp;&amp; <span class="string">&quot;undefined&quot;</span> == <span class="keyword">typeof</span> $loon &#125; <span class="function"><span class="title">isLoon</span>(<span class="params"></span>)</span> &#123; <span class="keyword">return</span> <span class="string">&quot;undefined&quot;</span> != <span class="keyword">typeof</span> $loon &#125; <span class="function"><span class="title">toObj</span>(<span class="params">t, e = <span class="literal">null</span></span>)</span> &#123; <span class="keyword">try</span> &#123; <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(t) &#125; <span class="keyword">catch</span> &#123; <span class="keyword">return</span> e &#125; &#125; <span class="function"><span class="title">toStr</span>(<span class="params">t, e = <span class="literal">null</span></span>)</span> &#123; <span class="keyword">try</span> &#123; <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(t) &#125; <span class="keyword">catch</span> &#123; <span class="keyword">return</span> e &#125; &#125; <span class="function"><span class="title">getjson</span>(<span class="params">t, e</span>)</span> &#123; <span class="keyword">let</span> s = e; <span class="keyword">const</span> i = <span class="built_in">this</span>.getdata(t); <span class="keyword">if</span> (i) <span class="keyword">try</span> &#123; s = <span class="built_in">JSON</span>.parse(<span class="built_in">this</span>.getdata(t)) &#125; <span class="keyword">catch</span> &#123; &#125; <span class="keyword">return</span> s &#125; <span class="function"><span class="title">setjson</span>(<span class="params">t, e</span>)</span> &#123; <span class="keyword">try</span> &#123; <span class="keyword">return</span> <span class="built_in">this</span>.setdata(<span class="built_in">JSON</span>.stringify(t), e) &#125; <span class="keyword">catch</span> &#123; <span class="keyword">return</span> !<span class="number">1</span> &#125; &#125; <span class="function"><span class="title">getScript</span>(<span class="params">t</span>)</span> &#123; <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">e</span> =&gt;</span> &#123; <span class="built_in">this</span>.get(&#123; <span class="attr">url</span>: t &#125;, <span class="function">(<span class="params">t, s, i</span>) =&gt;</span> e(i)) &#125;) &#125; <span class="function"><span class="title">runScript</span>(<span class="params">t, e</span>)</span> &#123; <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">s</span> =&gt;</span> &#123; <span class="keyword">let</span> i = <span class="built_in">this</span>.getdata(<span class="string">&quot;@chavy_boxjs_userCfgs.httpapi&quot;</span>); i = i ? i.replace(<span class="regexp">/\n/g</span>, <span class="string">&quot;&quot;</span>).trim() : i; <span class="keyword">let</span> r = <span class="built_in">this</span>.getdata(<span class="string">&quot;@chavy_boxjs_userCfgs.httpapi_timeout&quot;</span>); r = r ? <span class="number">1</span> * r : <span class="number">20</span>, r = e &amp;&amp; e.timeout ? e.timeout : r; <span class="keyword">const</span> [o, h] = i.split(<span class="string">&quot;@&quot;</span>), n = &#123; <span class="attr">url</span>: <span class="string">`http://<span class="subst">$&#123;h&#125;</span>/v1/scripting/evaluate`</span>, <span class="attr">body</span>: &#123; <span class="attr">script_text</span>: t, <span class="attr">mock_type</span>: <span class="string">&quot;cron&quot;</span>, <span class="attr">timeout</span>: r &#125;, <span class="attr">headers</span>: &#123; <span class="string">&quot;X-Key&quot;</span>: o, <span class="attr">Accept</span>: <span class="string">&quot;*/*&quot;</span> &#125; &#125;; <span class="built_in">this</span>.post(n, <span class="function">(<span class="params">t, e, i</span>) =&gt;</span> s(i)) &#125;).catch(<span class="function"><span class="params">t</span> =&gt;</span> <span class="built_in">this</span>.logErr(t)) &#125; <span class="function"><span class="title">loaddata</span>(<span class="params"></span>)</span> &#123; <span class="keyword">if</span> (!<span class="built_in">this</span>.isNode()) <span class="keyword">return</span> &#123;&#125;; &#123; <span class="built_in">this</span>.fs = <span class="built_in">this</span>.fs ? <span class="built_in">this</span>.fs : <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>), <span class="built_in">this</span>.path = <span class="built_in">this</span>.path ? <span class="built_in">this</span>.path : <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>); <span class="keyword">const</span> t = <span class="built_in">this</span>.path.resolve(<span class="built_in">this</span>.dataFile), e = <span class="built_in">this</span>.path.resolve(process.cwd(), <span class="built_in">this</span>.dataFile), s = <span class="built_in">this</span>.fs.existsSync(t), i = !s &amp;&amp; <span class="built_in">this</span>.fs.existsSync(e); <span class="keyword">if</span> (!s &amp;&amp; !i) <span class="keyword">return</span> &#123;&#125;; &#123; <span class="keyword">const</span> i = s ? t : e; <span class="keyword">try</span> &#123; <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(<span class="built_in">this</span>.fs.readFileSync(i)) &#125; <span class="keyword">catch</span> (t) &#123; <span class="keyword">return</span> &#123;&#125; &#125; &#125; &#125; &#125; <span class="function"><span class="title">writedata</span>(<span class="params"></span>)</span> &#123; <span class="keyword">if</span> (<span class="built_in">this</span>.isNode()) &#123; <span class="built_in">this</span>.fs = <span class="built_in">this</span>.fs ? <span class="built_in">this</span>.fs : <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>), <span class="built_in">this</span>.path = <span class="built_in">this</span>.path ? <span class="built_in">this</span>.path : <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>); <span class="keyword">const</span> t = <span class="built_in">this</span>.path.resolve(<span class="built_in">this</span>.dataFile), e = <span class="built_in">this</span>.path.resolve(process.cwd(), <span class="built_in">this</span>.dataFile), s = <span class="built_in">this</span>.fs.existsSync(t), i = !s &amp;&amp; <span class="built_in">this</span>.fs.existsSync(e), r = <span class="built_in">JSON</span>.stringify(<span class="built_in">this</span>.data); s ? <span class="built_in">this</span>.fs.writeFileSync(t, r) : i ? <span class="built_in">this</span>.fs.writeFileSync(e, r) : <span class="built_in">this</span>.fs.writeFileSync(t, r) &#125; &#125; <span class="function"><span class="title">lodash_get</span>(<span class="params">t, e, s</span>)</span> &#123; <span class="keyword">const</span> i = e.replace(<span class="regexp">/\[(\d+)\]/g</span>, <span class="string">&quot;.$1&quot;</span>).split(<span class="string">&quot;.&quot;</span>); <span class="keyword">let</span> r = t; <span class="keyword">for</span> (<span class="keyword">const</span> t <span class="keyword">of</span> i) <span class="keyword">if</span> (r = <span class="built_in">Object</span>(r)[t], <span class="keyword">void</span> <span class="number">0</span> === r) <span class="keyword">return</span> s; <span class="keyword">return</span> r &#125; <span class="function"><span class="title">lodash_set</span>(<span class="params">t, e, s</span>)</span> &#123; <span class="keyword">return</span> <span class="built_in">Object</span>(t) !== t ? t : (<span class="built_in">Array</span>.isArray(e) || (e = e.toString().match(<span class="regexp">/[^.[\]]+/g</span>) || []), e.slice(<span class="number">0</span>, -<span class="number">1</span>).reduce(<span class="function">(<span class="params">t, s, i</span>) =&gt;</span> <span class="built_in">Object</span>(t[s]) === t[s] ? t[s] : t[s] = <span class="built_in">Math</span>.abs(e[i + <span class="number">1</span>]) &gt;&gt; <span class="number">0</span> == +e[i + <span class="number">1</span>] ? [] : &#123;&#125;, t)[e[e.length - <span class="number">1</span>]] = s, t) &#125; <span class="function"><span class="title">getdata</span>(<span class="params">t</span>)</span> &#123; <span class="keyword">let</span> e = <span class="built_in">this</span>.getval(t); <span class="keyword">if</span> (<span class="regexp">/^@/</span>.test(t)) &#123; <span class="keyword">const</span> [, s, i] = <span class="regexp">/^@(.*?)\.(.*?)$/</span>.exec(t), r = s ? <span class="built_in">this</span>.getval(s) : <span class="string">&quot;&quot;</span>; <span class="keyword">if</span> (r) <span class="keyword">try</span> &#123; <span class="keyword">const</span> t = <span class="built_in">JSON</span>.parse(r); e = t ? <span class="built_in">this</span>.lodash_get(t, i, <span class="string">&quot;&quot;</span>) : e &#125; <span class="keyword">catch</span> (t) &#123; e = <span class="string">&quot;&quot;</span> &#125; &#125; <span class="keyword">return</span> e &#125; <span class="function"><span class="title">setdata</span>(<span class="params">t, e</span>)</span> &#123; <span class="keyword">let</span> s = !<span class="number">1</span>; <span class="keyword">if</span> (<span class="regexp">/^@/</span>.test(e)) &#123; <span class="keyword">const</span> [, i, r] = <span class="regexp">/^@(.*?)\.(.*?)$/</span>.exec(e), o = <span class="built_in">this</span>.getval(i), h = i ? <span class="string">&quot;null&quot;</span> === o ? <span class="literal">null</span> : o || <span class="string">&quot;&#123;&#125;&quot;</span> : <span class="string">&quot;&#123;&#125;&quot;</span>; <span class="keyword">try</span> &#123; <span class="keyword">const</span> e = <span class="built_in">JSON</span>.parse(h); <span class="built_in">this</span>.lodash_set(e, r, t), s = <span class="built_in">this</span>.setval(<span class="built_in">JSON</span>.stringify(e), i) &#125; <span class="keyword">catch</span> (e) &#123; <span class="keyword">const</span> o = &#123;&#125;; <span class="built_in">this</span>.lodash_set(o, r, t), s = <span class="built_in">this</span>.setval(<span class="built_in">JSON</span>.stringify(o), i) &#125; &#125; <span class="keyword">else</span> s = <span class="built_in">this</span>.setval(t, e); <span class="keyword">return</span> s &#125; <span class="function"><span class="title">getval</span>(<span class="params">t</span>)</span> &#123; <span class="keyword">return</span> <span class="built_in">this</span>.isSurge() || <span class="built_in">this</span>.isLoon() ? $persistentStore.read(t) : <span class="built_in">this</span>.isQuanX() ? $prefs.valueForKey(t) : <span class="built_in">this</span>.isNode() ? (<span class="built_in">this</span>.data = <span class="built_in">this</span>.loaddata(), <span class="built_in">this</span>.data[t]) : <span class="built_in">this</span>.data &amp;&amp; <span class="built_in">this</span>.data[t] || <span class="literal">null</span> &#125; <span class="function"><span class="title">setval</span>(<span class="params">t, e</span>)</span> &#123; <span class="keyword">return</span> <span class="built_in">this</span>.isSurge() || <span class="built_in">this</span>.isLoon() ? $persistentStore.write(t, e) : <span class="built_in">this</span>.isQuanX() ? $prefs.setValueForKey(t, e) : <span class="built_in">this</span>.isNode() ? (<span class="built_in">this</span>.data = <span class="built_in">this</span>.loaddata(), <span class="built_in">this</span>.data[e] = t, <span class="built_in">this</span>.writedata(), !<span class="number">0</span>) : <span class="built_in">this</span>.data &amp;&amp; <span class="built_in">this</span>.data[e] || <span class="literal">null</span> &#125; <span class="function"><span class="title">initGotEnv</span>(<span class="params">t</span>)</span> &#123; <span class="built_in">this</span>.got = <span class="built_in">this</span>.got ? <span class="built_in">this</span>.got : <span class="built_in">require</span>(<span class="string">&quot;got&quot;</span>), <span class="built_in">this</span>.cktough = <span class="built_in">this</span>.cktough ? <span class="built_in">this</span>.cktough : <span class="built_in">require</span>(<span class="string">&quot;tough-cookie&quot;</span>), <span class="built_in">this</span>.ckjar = <span class="built_in">this</span>.ckjar ? <span class="built_in">this</span>.ckjar : <span class="keyword">new</span> <span class="built_in">this</span>.cktough.CookieJar, t &amp;&amp; (t.headers = t.headers ? t.headers : &#123;&#125;, <span class="keyword">void</span> <span class="number">0</span> === t.headers.Cookie &amp;&amp; <span class="keyword">void</span> <span class="number">0</span> === t.cookieJar &amp;&amp; (t.cookieJar = <span class="built_in">this</span>.ckjar)) &#125; <span class="function"><span class="title">get</span>(<span class="params">t, e = (() =&gt; &#123; &#125;)</span>)</span> &#123; t.headers &amp;&amp; (<span class="keyword">delete</span> t.headers[<span class="string">&quot;Content-Type&quot;</span>], <span class="keyword">delete</span> t.headers[<span class="string">&quot;Content-Length&quot;</span>]), <span class="built_in">this</span>.isSurge() || <span class="built_in">this</span>.isLoon() ? (<span class="built_in">this</span>.isSurge() &amp;&amp; <span class="built_in">this</span>.isNeedRewrite &amp;&amp; (t.headers = t.headers || &#123;&#125;, <span class="built_in">Object</span>.assign(t.headers, &#123; <span class="string">&quot;X-Surge-Skip-Scripting&quot;</span>: !<span class="number">1</span> &#125;)), $httpClient.get(t, <span class="function">(<span class="params">t, s, i</span>) =&gt;</span> &#123; !t &amp;&amp; s &amp;&amp; (s.body = i, s.statusCode = s.status), e(t, s, i) &#125;)) : <span class="built_in">this</span>.isQuanX() ? (<span class="built_in">this</span>.isNeedRewrite &amp;&amp; (t.opts = t.opts || &#123;&#125;, <span class="built_in">Object</span>.assign(t.opts, &#123; <span class="attr">hints</span>: !<span class="number">1</span> &#125;)), $task.fetch(t).then(<span class="function"><span class="params">t</span> =&gt;</span> &#123; <span class="keyword">const</span> &#123; <span class="attr">statusCode</span>: s, <span class="attr">statusCode</span>: i, <span class="attr">headers</span>: r, <span class="attr">body</span>: o &#125; = t; e(<span class="literal">null</span>, &#123; <span class="attr">status</span>: s, <span class="attr">statusCode</span>: i, <span class="attr">headers</span>: r, <span class="attr">body</span>: o &#125;, o) &#125;, <span class="function"><span class="params">t</span> =&gt;</span> e(t))) : <span class="built_in">this</span>.isNode() &amp;&amp; (<span class="built_in">this</span>.initGotEnv(t), <span class="built_in">this</span>.got(t).on(<span class="string">&quot;redirect&quot;</span>, <span class="function">(<span class="params">t, e</span>) =&gt;</span> &#123; <span class="keyword">try</span> &#123; <span class="keyword">if</span> (t.headers[<span class="string">&quot;set-cookie&quot;</span>]) &#123; <span class="keyword">const</span> s = t.headers[<span class="string">&quot;set-cookie&quot;</span>].map(<span class="built_in">this</span>.cktough.Cookie.parse).toString(); s &amp;&amp; <span class="built_in">this</span>.ckjar.setCookieSync(s, <span class="literal">null</span>), e.cookieJar = <span class="built_in">this</span>.ckjar &#125; &#125; <span class="keyword">catch</span> (t) &#123; <span class="built_in">this</span>.logErr(t) &#125; &#125;).then(<span class="function"><span class="params">t</span> =&gt;</span> &#123; <span class="keyword">const</span> &#123; <span class="attr">statusCode</span>: s, <span class="attr">statusCode</span>: i, <span class="attr">headers</span>: r, <span class="attr">body</span>: o &#125; = t; e(<span class="literal">null</span>, &#123; <span class="attr">status</span>: s, <span class="attr">statusCode</span>: i, <span class="attr">headers</span>: r, <span class="attr">body</span>: o &#125;, o) &#125;, <span class="function"><span class="params">t</span> =&gt;</span> &#123; <span class="keyword">const</span> &#123; <span class="attr">message</span>: s, <span class="attr">response</span>: i &#125; = t; e(s, i, i &amp;&amp; i.body) &#125;)) &#125; <span class="function"><span class="title">post</span>(<span class="params">t, e = (() =&gt; &#123; &#125;)</span>)</span> &#123; <span class="keyword">if</span> (t.body &amp;&amp; t.headers &amp;&amp; !t.headers[<span class="string">&quot;Content-Type&quot;</span>] &amp;&amp; (t.headers[<span class="string">&quot;Content-Type&quot;</span>] = <span class="string">&quot;application/x-www-form-urlencoded&quot;</span>), t.headers &amp;&amp; <span class="keyword">delete</span> t.headers[<span class="string">&quot;Content-Length&quot;</span>], <span class="built_in">this</span>.isSurge() || <span class="built_in">this</span>.isLoon()) <span class="built_in">this</span>.isSurge() &amp;&amp; <span class="built_in">this</span>.isNeedRewrite &amp;&amp; (t.headers = t.headers || &#123;&#125;, <span class="built_in">Object</span>.assign(t.headers, &#123; <span class="string">&quot;X-Surge-Skip-Scripting&quot;</span>: !<span class="number">1</span> &#125;)), $httpClient.post(t, <span class="function">(<span class="params">t, s, i</span>) =&gt;</span> &#123; !t &amp;&amp; s &amp;&amp; (s.body = i, s.statusCode = s.status), e(t, s, i) &#125;); <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">this</span>.isQuanX()) t.method = <span class="string">&quot;POST&quot;</span>, <span class="built_in">this</span>.isNeedRewrite &amp;&amp; (t.opts = t.opts || &#123;&#125;, <span class="built_in">Object</span>.assign(t.opts, &#123; <span class="attr">hints</span>: !<span class="number">1</span> &#125;)), $task.fetch(t).then(<span class="function"><span class="params">t</span> =&gt;</span> &#123; <span class="keyword">const</span> &#123; <span class="attr">statusCode</span>: s, <span class="attr">statusCode</span>: i, <span class="attr">headers</span>: r, <span class="attr">body</span>: o &#125; = t; e(<span class="literal">null</span>, &#123; <span class="attr">status</span>: s, <span class="attr">statusCode</span>: i, <span class="attr">headers</span>: r, <span class="attr">body</span>: o &#125;, o) &#125;, <span class="function"><span class="params">t</span> =&gt;</span> e(t)); <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">this</span>.isNode()) &#123; <span class="built_in">this</span>.initGotEnv(t); <span class="keyword">const</span> &#123; <span class="attr">url</span>: s, ...i &#125; = t; <span class="built_in">this</span>.got.post(s, i).then(<span class="function"><span class="params">t</span> =&gt;</span> &#123; <span class="keyword">const</span> &#123; <span class="attr">statusCode</span>: s, <span class="attr">statusCode</span>: i, <span class="attr">headers</span>: r, <span class="attr">body</span>: o &#125; = t; e(<span class="literal">null</span>, &#123; <span class="attr">status</span>: s, <span class="attr">statusCode</span>: i, <span class="attr">headers</span>: r, <span class="attr">body</span>: o &#125;, o) &#125;, <span class="function"><span class="params">t</span> =&gt;</span> &#123; <span class="keyword">const</span> &#123; <span class="attr">message</span>: s, <span class="attr">response</span>: i &#125; = t; e(s, i, i &amp;&amp; i.body) &#125;) &#125; &#125; <span class="function"><span class="title">time</span>(<span class="params">t, e = <span class="literal">null</span></span>)</span> &#123; <span class="keyword">const</span> s = e ? <span class="keyword">new</span> <span class="built_in">Date</span>(e) : <span class="keyword">new</span> <span class="built_in">Date</span>; <span class="keyword">let</span> i = &#123; <span class="string">&quot;M+&quot;</span>: s.getMonth() + <span class="number">1</span>, <span class="string">&quot;d+&quot;</span>: s.getDate(), <span class="string">&quot;H+&quot;</span>: s.getHours(), <span class="string">&quot;m+&quot;</span>: s.getMinutes(), <span class="string">&quot;s+&quot;</span>: s.getSeconds(), <span class="string">&quot;q+&quot;</span>: <span class="built_in">Math</span>.floor((s.getMonth() + <span class="number">3</span>) / <span class="number">3</span>), <span class="attr">S</span>: s.getMilliseconds() &#125;; <span class="regexp">/(y+)/</span>.test(t) &amp;&amp; (t = t.replace(<span class="built_in">RegExp</span>.$1, (s.getFullYear() + <span class="string">&quot;&quot;</span>).substr(<span class="number">4</span> - <span class="built_in">RegExp</span>.$1.length))); <span class="keyword">for</span> (<span class="keyword">let</span> e <span class="keyword">in</span> i) <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&quot;(&quot;</span> + e + <span class="string">&quot;)&quot;</span>).test(t) &amp;&amp; (t = t.replace(<span class="built_in">RegExp</span>.$1, <span class="number">1</span> == <span class="built_in">RegExp</span>.$1.length ? i[e] : (<span class="string">&quot;00&quot;</span> + i[e]).substr((<span class="string">&quot;&quot;</span> + i[e]).length))); <span class="keyword">return</span> t &#125; <span class="function"><span class="title">msg</span>(<span class="params">e = t, s = <span class="string">&quot;&quot;</span>, i = <span class="string">&quot;&quot;</span>, r</span>)</span> &#123; <span class="keyword">const</span> o = <span class="function"><span class="params">t</span> =&gt;</span> &#123; <span class="keyword">if</span> (!t) <span class="keyword">return</span> t; <span class="keyword">if</span> (<span class="string">&quot;string&quot;</span> == <span class="keyword">typeof</span> t) <span class="keyword">return</span> <span class="built_in">this</span>.isLoon() ? t : <span class="built_in">this</span>.isQuanX() ? &#123; <span class="string">&quot;open-url&quot;</span>: t &#125; : <span class="built_in">this</span>.isSurge() ? &#123; <span class="attr">url</span>: t &#125; : <span class="keyword">void</span> <span class="number">0</span>; <span class="keyword">if</span> (<span class="string">&quot;object&quot;</span> == <span class="keyword">typeof</span> t) &#123; <span class="keyword">if</span> (<span class="built_in">this</span>.isLoon()) &#123; <span class="keyword">let</span> e = t.openUrl || t.url || t[<span class="string">&quot;open-url&quot;</span>], s = t.mediaUrl || t[<span class="string">&quot;media-url&quot;</span>]; <span class="keyword">return</span> &#123; <span class="attr">openUrl</span>: e, <span class="attr">mediaUrl</span>: s &#125; &#125; <span class="keyword">if</span> (<span class="built_in">this</span>.isQuanX()) &#123; <span class="keyword">let</span> e = t[<span class="string">&quot;open-url&quot;</span>] || t.url || t.openUrl, s = t[<span class="string">&quot;media-url&quot;</span>] || t.mediaUrl; <span class="keyword">return</span> &#123; <span class="string">&quot;open-url&quot;</span>: e, <span class="string">&quot;media-url&quot;</span>: s &#125; &#125; <span class="keyword">if</span> (<span class="built_in">this</span>.isSurge()) &#123; <span class="keyword">let</span> e = t.url || t.openUrl || t[<span class="string">&quot;open-url&quot;</span>]; <span class="keyword">return</span> &#123; <span class="attr">url</span>: e &#125; &#125; &#125; &#125;; <span class="keyword">if</span> (<span class="built_in">this</span>.isMute || (<span class="built_in">this</span>.isSurge() || <span class="built_in">this</span>.isLoon() ? $notification.post(e, s, i, o(r)) : <span class="built_in">this</span>.isQuanX() &amp;&amp; $notify(e, s, i, o(r))), !<span class="built_in">this</span>.isMuteLog) &#123; <span class="keyword">let</span> t = [<span class="string">&quot;&quot;</span>, <span class="string">&quot;==============📣系统通知📣==============&quot;</span>]; t.push(e), s &amp;&amp; t.push(s), i &amp;&amp; t.push(i), <span class="built_in">console</span>.log(t.join(<span class="string">&quot;\n&quot;</span>)), <span class="built_in">this</span>.logs = <span class="built_in">this</span>.logs.concat(t) &#125; &#125; <span class="function"><span class="title">log</span>(<span class="params">...t</span>)</span> &#123; t.length &gt; <span class="number">0</span> &amp;&amp; (<span class="built_in">this</span>.logs = [...this.logs, ...t]), <span class="built_in">console</span>.log(t.join(<span class="built_in">this</span>.logSeparator)) &#125; <span class="function"><span class="title">logErr</span>(<span class="params">t, e</span>)</span> &#123; <span class="keyword">const</span> s = !<span class="built_in">this</span>.isSurge() &amp;&amp; !<span class="built_in">this</span>.isQuanX() &amp;&amp; !<span class="built_in">this</span>.isLoon(); s ? <span class="built_in">this</span>.log(<span class="string">&quot;&quot;</span>, <span class="string">`❗️<span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>, 错误!`</span>, t.stack) : <span class="built_in">this</span>.log(<span class="string">&quot;&quot;</span>, <span class="string">`❗️<span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>, 错误!`</span>, t) &#125; <span class="function"><span class="title">wait</span>(<span class="params">t</span>)</span> &#123; <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">e</span> =&gt;</span> <span class="built_in">setTimeout</span>(e, t)) &#125; <span class="function"><span class="title">done</span>(<span class="params">t = &#123;&#125;</span>)</span> &#123; <span class="keyword">const</span> e = (<span class="keyword">new</span> <span class="built_in">Date</span>).getTime(), s = (e - <span class="built_in">this</span>.startTime) / <span class="number">1e3</span>; <span class="built_in">this</span>.log(<span class="string">&quot;&quot;</span>, <span class="string">`🔔<span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>, 结束! 🕛 <span class="subst">$&#123;s&#125;</span> 秒`</span>), <span class="built_in">this</span>.log(), (<span class="built_in">this</span>.isSurge() || <span class="built_in">this</span>.isQuanX() || <span class="built_in">this</span>.isLoon()) &amp;&amp; $done(t) &#125; &#125;(t, e) &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="你竟然还能看到这里"><a class="markdownIt-Anchor" href="#你竟然还能看到这里"></a> 你竟然还能看到这里</h2>
+<ul>
+<li>没想到你竟然还能看到这里，那不点击一下下面的赞赏？</li>
+<li>偷偷告诉你  赞赏的点击彩蛋 我能玩一天</li>
+<li>不信试试吧!</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">YML</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://menglei.xyz/2022041231679/">http://menglei.xyz/2022041231679/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://menglei.xyz" target="_blank">梦磊の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/JavaScript/">JavaScript</a><a class="post-meta__tags" href="/tags/%E8%84%9A%E6%9C%AC/">脚本</a><a class="post-meta__tags" href="/tags/%E5%B0%8F%E7%99%BD%E9%80%82%E5%90%88/">小白适合</a></div><div class="post_share"><div class="social-share" data-image="https://yml-img.ml:521/images/2022/04/11/technology-3389893_1920.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://fastly.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><link rel="stylesheet" href="/css/coin.css" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">打赏请随意（点击有彩蛋）</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://yml-img.ml:521/images/2022/02/28/wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://yml-img.ml:521/images/2022/02/28/zfb.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://fastly.jsdelivr.net/npm/yml2213-mp3@1.0.0/%E5%97%B7%E5%91%9C.m4a"></audio><script defer="defer" src="/js/coin.js"></script><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022020945082/"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/xhhMQG.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">通过浏览器获取cookie</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/202106245593/" title="docker安装青龙面板2.2（薅羊毛-京东）"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/eCdiSb.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-24</div><div class="title">docker安装青龙面板2.2（薅羊毛-京东）</div></div></a></div><div><a href="/2021123119294/" title="我的第一个Java Scripts脚本"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/31/technology-1283624_1920.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-31</div><div class="title">我的第一个Java Scripts脚本</div></div></a></div><div><a href="/2021122635704/" title="记一次auto.js脚本编写"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/QiYAqX.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-26</div><div class="title">记一次auto.js脚本编写</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/vue-color-avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">YML</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yml2213"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yml2213" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2213290201&amp;site=qq&amp;menu=yes" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://qm.qq.com/cgi-bin/qm/qr?k=fAjxG9OEA7GjmbMfuZWI702gEPzD1Ey8&amp;jump_from=webapi" target="_blank" title="Group"><i class="fas fa-users"></i></a><a class="social-icon" href="https://fastly.jsdelivr.net/gh/yml2213/yml2213.github.io/atom.xml" target="_blank" title="rss"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">哇,又有大佬来看我の博客啦！ <br>  <img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/lKSaL6.gif"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E6%A2%B3%E7%90%86%E6%80%9D%E8%B7%AF"><span class="toc-number">1.</span> <span class="toc-text"> 一 : 梳理思路：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E6%80%9D%E8%B7%AF%E6%9C%89%E4%BA%86-%E9%82%A3%E5%B0%B1%E5%BC%80%E5%A7%8B%E5%90%A7"><span class="toc-number">2.</span> <span class="toc-text"> 二: 思路有了, 那就开始吧!</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E7%A1%AE%E5%AE%9A%E4%B8%80%E4%B8%AA%E7%9B%AE%E6%A0%87%E4%BB%8A%E5%A4%A9%E6%9D%A5%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-number">2.1.</span> <span class="toc-text"> 首先确定一个目标(今天来个简单的例子🌰)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C-%E7%AD%BE%E5%88%B0-%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C%E7%9A%84%E6%8A%93%E5%8C%85"><span class="toc-number">2.2.</span> <span class="toc-text"> 进行 签到 (相关操作)的抓包</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E4%B8%8D%E5%90%8C%E7%9A%84%E6%9C%BA%E5%9E%8B-%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E5%88%86%E7%B1%BB%E8%AE%A8%E8%AE%BA%E4%BA%86-%E9%A6%96%E5%85%88%E6%9D%A5%E8%AF%B4%E8%AF%B4ios%E5%90%A7"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 根据不同的机型 , 我们需要分类讨论了  首先来说说ios吧</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#android-%E6%8A%93%E5%8C%85%E7%9B%B8%E5%85%B3"><span class="toc-number">2.2.2.</span> <span class="toc-text"> Android 抓包相关</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pc-%E6%8A%93%E5%8C%85%E7%9B%B8%E5%85%B3"><span class="toc-number">2.2.3.</span> <span class="toc-text"> PC 抓包相关</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%93%E5%8C%85%E7%AD%BE%E5%88%B0"><span class="toc-number">2.2.4.</span> <span class="toc-text"> 抓包签到</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E5%88%9A%E6%89%8D%E6%8A%93%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85"><span class="toc-number">2.3.</span> <span class="toc-text"> 分析刚才抓的数据包</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E5%8F%AF%E4%BB%A5%E6%A0%B9%E6%8D%AE-url-%E9%93%BE%E6%8E%A5%E5%AF%BB%E6%89%BE%E5%85%B3%E9%94%AE%E5%AD%97%E8%BF%9B%E8%A1%8C%E5%AE%9A%E4%BD%8D-%E5%B0%B1%E6%98%AF%E6%9C%89%E6%A0%B9%E6%8D%AE%E7%9A%84%E7%9E%8E%E7%8C%9C"><span class="toc-number">2.3.1.</span> <span class="toc-text"> 首先可以根据 url 链接,寻找关键字进行定位 📌 (就是有根据的瞎猜)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%84%B6%E5%90%8E%E6%88%91%E4%BB%AC%E8%BF%98%E5%8F%AF%E4%BB%A5%E6%A0%B9%E6%8D%AE-%E5%93%8D%E5%BA%94%E4%BD%93-%E6%9D%A5%E8%BF%9B%E8%A1%8C%E5%88%A4%E6%96%AD-%E8%AF%B7%E6%B1%82%E5%A4%B4-%E8%AF%B7%E6%B1%82%E4%BD%93-%E5%93%8D%E5%BA%94%E5%A4%B4-%E5%93%8D%E5%BA%94%E4%BD%93%E8%BF%98%E4%B8%8D%E6%87%82%E7%9A%84%E8%87%AA%E8%A1%8C%E5%8E%BB%E8%A1%A5%E8%AF%BE-%E7%AE%80%E4%B9%A6"><span class="toc-number">2.3.2.</span> <span class="toc-text"> 然后我们还可以根据 响应体 来进行判断  (请求头  请求体 响应头 响应体还不懂的自行去补课: 简书 )</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E6%A0%B9%E6%8D%AE%E6%95%B0%E6%8D%AE%E5%8C%85%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%9D%A5%E8%BF%9B%E8%A1%8C%E5%88%9D%E6%AD%A5%E7%AD%9B%E9%80%89"><span class="toc-number">2.3.3.</span> <span class="toc-text"> 我们可以根据数据包的类型来进行初步筛选</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E6%A0%B9%E6%8D%AE%E8%8E%B7%E5%BE%97%E7%9A%84%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E6%90%9C%E7%B4%A2%E7%AD%9B%E9%80%89"><span class="toc-number">2.3.4.</span> <span class="toc-text"> 我们可以根据获得的数据进行搜索筛选</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E8%BD%AF%E4%BB%B6%E5%86%85%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%BE%85%E5%8A%A9%E5%AE%9A%E4%BD%8D"><span class="toc-number">2.3.5.</span> <span class="toc-text"> 可以通过软件内的时间来进行辅助定位</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B2%A1%E6%9C%89%E5%88%AB%E7%9A%84%E5%8A%9E%E6%B3%95%E9%82%A3%E5%B0%B1%E5%8F%AA%E8%83%BD%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%8C%85%E6%85%A2%E6%85%A2%E5%AF%BB%E6%89%BE%E4%BD%A0%E8%A6%81%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85%E4%BA%86"><span class="toc-number">2.3.6.</span> <span class="toc-text"> 没有别的办法那就只能查看所有数据包，慢慢寻找你要的数据包了</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E9%9D%A2%E7%BB%99%E5%87%BA%E6%9C%AC%E6%AC%A1%E8%AF%95%E9%AA%8C%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%AD%BE%E5%88%B0%E6%95%B0%E6%8D%AE%E5%8C%85"><span class="toc-number">2.3.7.</span> <span class="toc-text"> 下面给出本次试验对象的签到数据包</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95"><span class="toc-number">2.4.</span> <span class="toc-text"> 使用测试工具进行测试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E8%87%AA%E5%B8%A6%E7%9A%84%E8%BD%AF%E4%BB%B6%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95"><span class="toc-number">2.4.1.</span> <span class="toc-text"> 使用抓包工具自带的软件进行测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E7%9A%84%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95"><span class="toc-number">2.4.2.</span> <span class="toc-text"> 使用第三方的调试工具进行测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%8C%85%E5%8F%82%E6%95%B0%E6%B5%8B%E8%AF%95"><span class="toc-number">2.4.3.</span> <span class="toc-text"> 进行数据包参数测试</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%B0%B1%E6%98%AF%E6%9C%80%E5%90%8E%E4%B8%80%E6%AD%A5%E4%BA%86%E6%88%91%E4%BB%AC%E5%BC%80%E5%A7%8B%E5%86%99%E8%84%9A%E6%9C%AC%E5%90%A7"><span class="toc-number">2.5.</span> <span class="toc-text"> 接下来就是最后一步了，我们开始写脚本吧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E7%AB%9F%E7%84%B6%E8%BF%98%E8%83%BD%E7%9C%8B%E5%88%B0%E8%BF%99%E9%87%8C"><span class="toc-number">3.</span> <span class="toc-text"> 你竟然还能看到这里</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022041231679/" title="如何写一个简单的签到脚本(小白向)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/04/11/technology-3389893_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何写一个简单的签到脚本(小白向)"/></a><div class="content"><a class="title" href="/2022041231679/" title="如何写一个简单的签到脚本(小白向)">如何写一个简单的签到脚本(小白向)</a><time datetime="2022-04-12T09:00:54.000Z" title="发表于 2022-04-12 17:00:54">2022-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022020945082/" title="通过浏览器获取cookie"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/xhhMQG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通过浏览器获取cookie"/></a><div class="content"><a class="title" href="/2022020945082/" title="通过浏览器获取cookie">通过浏览器获取cookie</a><time datetime="2022-02-09T02:00:54.000Z" title="发表于 2022-02-09 10:00:54">2022-02-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021123119294/" title="我的第一个Java Scripts脚本"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2021/12/31/technology-1283624_1920.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一个Java Scripts脚本"/></a><div class="content"><a class="title" href="/2021123119294/" title="我的第一个Java Scripts脚本">我的第一个Java Scripts脚本</a><time datetime="2021-12-31T06:20:54.000Z" title="发表于 2021-12-31 14:20:54">2021-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021122635704/" title="记一次auto.js脚本编写"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/QiYAqX.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记一次auto.js脚本编写"/></a><div class="content"><a class="title" href="/2021122635704/" title="记一次auto.js脚本编写">记一次auto.js脚本编写</a><time datetime="2021-12-26T03:15:54.000Z" title="发表于 2021-12-26 11:15:54">2021-12-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021121119419/" title="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://yml-img.ml:521/images/2022/02/28/KRwZYL.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)"/></a><div class="content"><a class="title" href="/2021121119419/" title="巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)">巧用docker里的ubuntu，跑傻妞、oicq (onebot:再见👋🏻)</a><time datetime="2021-12-11T01:15:54.000Z" title="发表于 2021-12-11 09:15:54">2021-12-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright"><span>&copy;2019 - 2022</span><svg style="width:1.5em; height:1.5em" aria-hidden="true"><use xlink:href="#icon-Butterfly"></use></svg><span>YML</span></div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/鲁ICP备-2021023764号-d021d6?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3JpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDExNi4xNjQ2NTUsIDIwMjEvMDEvMjYtMTU6NDE6MjAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6OTJhYTAzNGEtZTA5Ny03NzQ5LWFiNWEtN2UyYjEyNTE5NmY2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU0OUI0MzdBNEU3QTExRUNBRUIzOEUzRjg5QTdFMTE3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU0OUI0Mzc5NEU3QTExRUNBRUIzOEUzRjg5QTdFMTE3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NDkzYjU2ZS1jNjJjLWNiNGYtYTMwZi1jOWQ5NzBjY2U5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTJhYTAzNGEtZTA5Ny03NzQ5LWFiNWEtN2UyYjEyNTE5NmY2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+4ZgnQgAABOtJREFUeNqslX9sE2UYx793vV6vt3a9/lpX10n2Q2ATxpShgmMIGgHDBs6EgDEqBhE0SCDyh4Z/CMbAPzOiQcyEKIQYFRKSbSGMOaPAIhgDceA2Rhnb2rF1/bH22rv2rnf1LeAUg/Ef3tzzXN6893zyvfd5nvelcrkcHuRg8i6LobuTQuILAOUiBk914pHVW4qlG5eafjz165sZOcs+8/y8VkdNzcm+E98EqhqbAbaCfB9C5NrJ2/HOmTvuAO8zlhLb/NWW7U05eZAbzfAw2AVIx/s/lQ+2fVz/bHkbWT9MrP3fgfR9YFz354e6X93UtTaZHuZmWgzYyE1gMzeKRQs9cCz0MBs3nXmxc//ePNT0f0Bf5tKe058ci2P9xnK87kvA9sVVRAY0RPwa4qsOYrXWi21H1qH1hIrcwJff5wX8F7BqpH2Xv2FVb4NQ6cE7rl4MHUuALhWgiQqQ0UG5BfRsPY+1/CV4nn4Mz63qaJw8d+gGiZ11DzDV5weTPm1pG7CyF8fqsLJORPIygY3EQQkmmKIa0ucnYCxzgkvKCH99Ac3LFXRfr8bRs5rXQqXMjrLX7lHo03/5oUWnzCTVEgrFMSTGAaOmAtE0qAoe7HwB9K0UWOgID8kocWQAikIsScPkZloIo2waONx/5iUlGKy3W1hSQybkvF646ouRRA7iIie09T5YdteC31YD2s2jaL4LKYlsA6lhbxEPBC4vjY72vDEN5C32qoSootydJlvsROcFHsyyQkQaZ0ALiqB+T0HqmIA6NAV2Zz0c2+fh+JHY7Zqtncsg5Q8hHfD7poF6dKwxEWMwxyfC9wSLA0cL8NPeAGoXeGHjrZCuxqCHMkj3xmANTuHKnmvYf8QET62AuSVxhIMZqNH++mkgzaQEMUGjcPIa1i7XkFUtUNvH4fz2N9AlRihuA/QiBq5lXni7byDcegUpxYDmJiOskUGICQaMlTZOt56Zf7iLnnWzSfOUYMOTIlpK3DgQrII6ehVOEkDbzJCJSrGyCEG7F9/RJHmFAjY8FULW6oPwKAXeXtoxDSQai3KJHMb8IuZUDeHD9+Zj184GtItzgYSKJikCh0DjeIeVJIokAXbseJvDgspBjA2SaVqCnhXnTQMZQanLWj1Qx1UEQn14t96E5q4CdJ+S0E/XYEX1dXjNYWTbSqDEZJTO5vHBipuY6LkJSeXAuVjCYGfnWVT++MokL74cubDvmDyuIBMmtRcYRsWaWpg8pKu0CHkYJEMybGUOYIaTrIcxdHIAstUFS7kF5mIetsr1S1j7Cz//BYSBMr0SvdLymZaWbeGz42AKciheUgUtKkOVUqB5osRRAIo1ItLjR1ZjYKurgJpGxDarYR1r5LsI8M4vZ8I68XIwPW6WOY9u8yyrhBZPkR5OkCJlYWAFsCQPylQSqUAMHFHJ+TzITElIB8WcuTQJheyuw363bAw4l7f3ix63FhtJFjNxHTpRoGsGpCdF0hE6lEgcycFJUAbj7ZZL3wrDaKbhWex1sbz4FrG/T2yTc0H+tSY2dnafEvhjA2uQCninCdkUaS9KhSEzhayswDrbBQNngCInQRe4QNmLR7JMRSvHuz+65wq4OyRiW2N9nt1yfHJlRh1d8lC1u1oXKQsn0A7GbIV4CyNmtyAxRQ2Xo/5Qlzwc65yxGPo/z0PqQV9SfwowADr3CMhT4y5gAAAAAElFTkSuQmCC" title="本站已备案"></a>  <a style="margin-inline:5px" target="_blank" href="https://hexo.io/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><a style="margin-inline:5px" target="_blank" href="https://butterfly.js.org/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><a style="margin-inline:5px" target="_blank" href="https://www.jsdelivr.com/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/CDN-%E5%8F%88%E6%8B%8D%E4%BA%91-blue?style=flat&logo=appveyor" title="本站使用又拍云源提供CDN加速"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://fastly.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://fastly.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})
+setTimeout(function(){preloader.endLoading();}, 3000);</script></div><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://hexo-twikoo-gamma.vercel.app/',
+      region: 'ap-shandong'
+    }, null))
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'https://hexo-twikoo-gamma.vercel.app/',
+      region: 'ap-shandong',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://fastly.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'U5krrjXnNHeUL4Rn0PHuSJjk-MdYXbMMI',
+      appKey: 'lIOIn4oWgccXxmq8YVQIYBfE',
+      placeholder: '-(゜-゜)つロ乾杯~  昵称输入QQ号的话，我就可以获取你的头像跟昵称了呦︿(￣︶￣)︿',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://fastly.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Twikoo' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://hexo-twikoo-gamma.vercel.app/',
+        region: 'ap-shandong',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://fastly.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="984492368" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><script defer src="https://fastly.jsdelivr.net/gh/yml2213/live2d-widget@2.4/autoload.js"></script><script async src="/js/diytitle.js"></script><script src="https://fastly.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script><script defer src="/js/qipao.js"></script><script async src="//at.alicdn.com/t/font_2634563_07wj3016ndwr.js"></script><script src="https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="true"></script><script id="click-show-text" src="https://fastly.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="(ﾟ∀ﾟ),ヽ(✿ﾟ▽ﾟ)ノ,(｡◕∀◕｡),(๑ơ ₃ ơ)♥,(*´艸`*),(๑•̀ㅁ•́๑)✧,＼(◎o◎)／,⎝༼ ◕Д ◕ ༽⎠,(*´∀`)~♥,(♥д♥),ヾ (o ° ω ° O ) ノ゙" data-fontsize="15px" data-random="fals" async="async"></script><link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://fastly.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://fastly.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/img/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-clock/lib/clock.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
