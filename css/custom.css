@@ -189,8 +189,8 @@ a#site-name {
 
 }
 
-/* 阿里图标库 */
-@import "//at.alicdn.com/t/font_2634563_bzlkk3okx6u.css";
+
+
 
 /* 阿里图标库--外挂标签*/
 svg.icon {
@@ -228,3 +228,54 @@ svg.icon {
     transform: rotateY(0deg);
   }
 }
+
+
+
+/* 以下是阿里图标库 */
+@import "//at.alicdn.com/t/font_2264842_b004iy0kk2b.css";
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 3em;
+  /* 可以定义图标大小 */
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+  /* 若已经在项目设置中勾选了彩色选项，则无需再定义图标颜色*/
+  .icon-rat:before {
+    color: #85c3de;
+  }
+  .icon-ox:before {
+    color: #ffaf6e;
+  }
+  .icon-tiger:before {
+    color: #f7c768;
+  }
+  .icon-rabbit:before {
+    color: #ffbdd8;
+  }
+  .icon-dragon:before {
+    color: #ff8787;
+  }
+  .icon-snake:before {
+    color: #c3d686;
+  }
+  .icon-horse:before {
+    color: #ffaf6e;
+  }
+  .icon-goat:before {
+    color: #f7c768;
+  }
+  .icon-monkey:before {
+    color: #c3d686;
+  }
+  .icon-rooster:before {
+    color: #ff8787;
+  }
+  .icon-dog:before {
+    color: #85c3de;
+  }
+  .icon-boar:before {
+    color: #ffbdd8;
+  }
